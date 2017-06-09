@@ -52,11 +52,17 @@ export interface BarcodeScanResult {
 export class BarcodeScannerMock extends BarcodeScanner {
   index:number = 0;
 
-  scan(options?:BarcodeScannerOptions) {
+  scan(options?:BarcodeScannerOptions):Promise<BarcodeScanResult> {
     let theResult:BarcodeScanResult = {format: 'QR_CODE', cancelled: false, text: 'RESPONSE' };
 
     return new Promise((resolve, reject) => {
       resolve(theResult);
+    });
+  }
+
+  encode(type: string, data: any): Promise<any> {
+    return new Promise((resolve, reject) => {
+      resolve();
     })
   }
 }
