@@ -1,0 +1,23 @@
+{
+  "name": "ionic-native-mocks",
+  "version": "1.0.0",
+  "description": "Mocks for Ionic Native for Cordova and Ionic with TypeScript, ES6+, Promise and Observable support",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrisgriffith/IonicMocks.git"
+  },
+  "keywords": [
+    "Ionic",
+    "Cordova",
+    "mocks"
+  ],
+  "author": "Chris Griffith",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chrisgriffith/IonicMocks/issues"
+  },
+  "homepage": "https://github.com/chrisgriffith/IonicMocks#readme"
+}
