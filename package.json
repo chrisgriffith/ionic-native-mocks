@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Mocks for Ionic Native for Cordova and Ionic with TypeScript, ES6+, Promise and Observable support",
   "homepage": "https://ionicframework.com/",
-  "author": "Chris GRiffith <chris.griffith@gmail.com> (https://aj-sofwtare.com)",
+  "author": "Chris Griffith <chris.griffith@gmail.com> (https://aj-sofwtare.com)",
   "license": "MIT",
   "devDependencies": {
     "@angular/compiler": "4.1.3",
