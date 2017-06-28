@@ -76,8 +76,8 @@ export class SQLiteMock extends SQLite {
      * @param config {SQLiteDatabaseConfig} database configuration
      * @return Promise<SQLiteObject>
      */
-    create(config: SQLiteDatabaseConfig): Promise<SQLiteObject>{
-        let theResult: SQLiteObject
+    create(config: SQLiteDatabaseConfig): Promise<SQLiteObject> {
+        let theResult: SQLiteObject;
         return new Promise((resolve, reject) => {
             resolve(theResult);
         });
@@ -86,7 +86,7 @@ export class SQLiteMock extends SQLite {
      * Verify that both the Javascript and native part of this plugin are installed in your application
      * @returns {Promise<any>}
      */
-    echoTest(): Promise<any>{
+    echoTest(): Promise<any> {
         return new Promise((resolve, reject) => {
             resolve();
         });
@@ -96,7 +96,7 @@ export class SQLiteMock extends SQLite {
      * @param config {SQLiteDatabaseConfig} database configuration
      * @returns {Promise<any>}
      */
-    deleteDatabase(config: SQLiteDatabaseConfig): Promise<any>{
+    deleteDatabase (config: SQLiteDatabaseConfig): Promise<any> {
         return new Promise((resolve, reject) => {
             resolve();
         });

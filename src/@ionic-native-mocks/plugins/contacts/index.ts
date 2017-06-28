@@ -35,7 +35,7 @@ export interface IContactProperties {
  * @hidden
  */
 export class Contact implements IContactProperties {
-    private _objectInstance:any;
+    // private _objectInstance: any;
     id: string;
     displayName: string;
     name: IContactName;
@@ -51,7 +51,7 @@ export class Contact implements IContactProperties {
     categories: IContactField[];
     urls: IContactField[];
     [key: string]: any;
-    constructor(){};
+    constructor() {};
     clone(): Contact { return new Contact(); };
     remove(): Promise<any> {
         return new Promise(resolve => {
@@ -216,9 +216,9 @@ export class ContactsMock extends Contacts {
      * @returns {Contact} Returns a Contact object
      */
     create(): any {
-        let newContact:Contact = new Contact();
+        let newContact: Contact = new Contact();
         console.log(newContact);
-        return ( newContact );
+        return (newContact);
     };
     /**
      * Search for contacts in the Contacts list.
@@ -226,27 +226,26 @@ export class ContactsMock extends Contacts {
      * @param options {IContactFindOptions} Optional options for the query
      * @returns {Promise<Contact[]>} Returns a Promise that resolves with the search results (an array of Contact objects)
      */
-    find(fields: ContactFieldType[], options?: IContactFindOptions): Promise<any[]>{
+    find(fields: ContactFieldType[], options?: IContactFindOptions): Promise<any[]> {
 
-         let theContact:Contact = new Contact();
+        let theContact: Contact = new Contact();
 
-         
-        theContact.displayName = "Max Lynch";
-        
+        theContact.displayName = 'Max Lynch';
+
         return new Promise((resolve, reject) => {
-            resolve( theContact );
+            resolve(theContact);
         });
     }
     /**
      * Select a single Contact.
      * @returns {Promise<Contact>} Returns a Promise that resolves with the selected Contact
      */
-    pickContact(): Promise<any>{
-        let theContact:Contact = new Contact();
-        theContact.displayName = "Max Lynch";
+    pickContact(): Promise<any> {
+        let theContact: Contact = new Contact();
+        theContact.displayName = 'Max Lynch';
 
-         return new Promise((resolve, reject) => {
-            resolve( theContact );
+        return new Promise((resolve, reject) => {
+            resolve(theContact);
         });
     }
 }

@@ -18,7 +18,7 @@ export class EmailComposerMock extends EmailComposer {
      * @param [app] {string} App id or uri scheme.
      * @returns {Promise<any>} Resolves if available, rejects if not available
      */
-    isAvailable(app?: string): Promise<any>{
+    isAvailable(app?: string): Promise<any> {
         return new Promise((resolve, reject) => {
             resolve();
         });
@@ -37,7 +37,7 @@ export class EmailComposerMock extends EmailComposer {
      * @param [scope] {any} Scope for the promise
      * @returns {Promise<any>} Resolves promise when the EmailComposer has been opened
      */
-    open(options: EmailComposerOptions, scope?: any): Promise<any>{
+    open(options: EmailComposerOptions, scope?: any): Promise<any> {
         return new Promise((resolve, reject) => {
             resolve();
         });

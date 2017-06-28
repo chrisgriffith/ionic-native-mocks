@@ -17,7 +17,7 @@
     "noImplicitAny": true
   },
   "files": [
-    "../../src/@ionic-native/core/index.ts"
+    "../../src/@ionic-native-mocks/core/index.ts"
   ],
   "angularCompilerOptions": {
     "genDir": "../../.tmp/core-aot"

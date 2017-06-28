@@ -17,7 +17,7 @@ export class TouchIDMock extends TouchID {
      * @param {string} message  The message to display
      * @returns {Promise<any>} Returns a Promise the resolves if the fingerprint scan was successful, rejects with an error code (see above).
      */
-    verifyFingerprint(message: string): Promise<any>{
+    verifyFingerprint ( message: string): Promise<any> {
         return new Promise((resolve, reject) => {
             resolve();
         });
@@ -28,7 +28,7 @@ export class TouchIDMock extends TouchID {
      * @param {string} message  The message to display
      * @returns {Promise<any>} Returns a Promise the resolves if the fingerprint scan was successful, rejects with an error code (see above).
      */
-    verifyFingerprintWithCustomPasswordFallback(message: string): Promise<any>{
+    verifyFingerprintWithCustomPasswordFallback ( message: string): Promise<any> {
         return new Promise((resolve, reject) => {
             resolve(true);
         });
@@ -40,7 +40,7 @@ export class TouchIDMock extends TouchID {
      * @param {string} enterPasswordLabel  Custom text for the 'Enter Password' button
      * @returns {Promise<any>} Returns a Promise the resolves if the fingerprint scan was successful, rejects with an error code (see above).
      */
-    verifyFingerprintWithCustomPasswordFallbackAndEnterPasswordLabel(message: string, enterPasswordLabel: string): Promise<any>{
+    verifyFingerprintWithCustomPasswordFallbackAndEnterPasswordLabel ( message: string, enterPasswordLabel: string): Promise<any> {
         return new Promise((resolve, reject) => {
             resolve();
         });
@@ -50,7 +50,7 @@ export class TouchIDMock extends TouchID {
      *
      * @returns {Promise<any>} Returns a Promise that resolves if yes, rejects if no.
      */
-    didFingerprintDatabaseChange(): Promise<any>{
+    didFingerprintDatabaseChange (): Promise<any> {
         return new Promise((resolve, reject) => {
             resolve();
         });

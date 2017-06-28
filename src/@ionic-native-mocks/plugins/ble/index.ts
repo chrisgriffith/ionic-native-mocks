@@ -1,5 +1,6 @@
 import { BLE } from '@ionic-native/ble';
 import { Observable } from 'rxjs/Observable';
+import { Observer } from 'rxjs/Observer';
 
 export class BLEMock extends BLE {
   /**
@@ -16,7 +17,7 @@ export class BLEMock extends BLE {
        * @returns {Observable<any>} Returns an Observable that notifies of each peripheral that is discovered during the specified time.
        */
   scan(services: string[], seconds: number): Observable<any> {
-    return Observable.create(observer => {
+    return Observable.create( (observer: Observer<any>) => {
       observer.next('');
       observer.complete();
     });
@@ -39,7 +40,7 @@ export class BLEMock extends BLE {
        */
 
   startScan(services: string[]): Observable<any> {
-    return Observable.create(observer => {
+    return Observable.create(( observer: Observer<any>) => {
       observer.next('');
       observer.complete();
     });
@@ -51,7 +52,7 @@ export class BLEMock extends BLE {
        * @returns {Observable<any>} Returns an Observable that notifies of each peripheral discovered.
        */
   startScanWithOptions(services: string[], options: { reportDuplicates?: boolean; } | any): Observable<any> {
-    return Observable.create(observer => {
+    return Observable.create( (observer: Observer<any>) => {
       observer.next('');
       observer.complete();
     });
@@ -100,7 +101,7 @@ export class BLEMock extends BLE {
   * @return Returns a Promise
   */
   connect(deviceId: string): Observable<any> {
-    return Observable.create(observer => {
+    return Observable.create( (observer: Observer<any>) => {
       observer.next('');
       observer.complete();
     });
@@ -197,7 +198,7 @@ export class BLEMock extends BLE {
       * @return Returns an Observable that notifies of characteristic changes.
       */
   startNotification(deviceId: string, serviceUUID: string, characteristicUUID: string): Observable<any> {
-    return Observable.create(observer => {
+    return Observable.create( (observer: Observer<any>) => {
       observer.next('');
       observer.complete();
     });

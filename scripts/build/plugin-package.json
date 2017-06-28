@@ -1,7 +1,7 @@
 {
-  "name": "@ionic-native/{{PLUGIN}}",
+  "name": "@ionic-native-mocks/{{PLUGIN}}",
   "version": "{{VERSION}}",
-  "description": "Ionic Native - Native plugins for ionic apps",
+  "description": "Ionic Native Mocks- Native plugins for ionic apps",
   "module": "index.js",
   "typings": "index.d.ts",
   "author": "ionic",

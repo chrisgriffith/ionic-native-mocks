@@ -1,9 +1,10 @@
 import { DBMeter } from '@ionic-native/db-meter';
 import { Observable } from 'rxjs/Observable';
+import { Observer } from 'rxjs/Observer';
 
 export class DBMeterMock extends DBMeter {
-    start(): Observable<any>{
-        return Observable.create(observer => {
+    start(): Observable<any> {
+        return Observable.create( (observer: Observer<any>) => {
             observer.next('');
             observer.complete();
         });
@@ -33,6 +34,6 @@ export class DBMeterMock extends DBMeter {
     delete(): Promise<any> {
         return new Promise((resolve, reject) => {
             resolve();
-        });;
-    }
+        });
+    };
 }

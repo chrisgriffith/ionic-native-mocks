@@ -50,14 +50,14 @@ export interface BarcodeScanResult {
 }
 
 export class BarcodeScannerMock extends BarcodeScanner {
-  index:number = 0;
+  index: number = 0;
   /**
      * Open the barcode scanner.
      * @param options {BarcodeScannerOptions} Optional options to pass to the scanner
      * @returns {Promise<any>} Returns a Promise that resolves with scanner data, or rejects with an error.
      */
-  scan(options?:BarcodeScannerOptions):Promise<BarcodeScanResult> {
-    let theResult:BarcodeScanResult = {format: 'QR_CODE', cancelled: false, text: 'RESPONSE' };
+  scan(options?: BarcodeScannerOptions): Promise<BarcodeScanResult> {
+    let theResult: BarcodeScanResult = {format: 'QR_CODE', cancelled: false, text: 'RESPONSE' };
 
     return new Promise((resolve, reject) => {
       resolve(theResult);

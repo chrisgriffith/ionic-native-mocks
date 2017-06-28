@@ -1,5 +1,6 @@
 import { Geolocation } from '@ionic-native/geolocation';
 import { Observable } from 'rxjs/Observable';
+import { Observer } from 'rxjs/Observer';
 
 export interface Coordinates {
     /**
@@ -96,8 +97,8 @@ export class GeolocationMock extends Geolocation {
      * @param {GeolocationOptions} options  The [geolocation options](https://developer.mozilla.org/en-US/docs/Web/API/PositionOptions).
      * @returns {Promise<Geoposition>} Returns a Promise that resolves with the [position](https://developer.mozilla.org/en-US/docs/Web/API/Position) of the device, or rejects with an error.
      */
-    getCurrentPosition(options?: GeolocationOptions): Promise<Geoposition>{
-        let theResult:Geoposition;
+    getCurrentPosition(options?: GeolocationOptions): Promise<Geoposition> {
+        let theResult: Geoposition;
         return new Promise((resolve, reject) => {
             resolve(theResult);
         });
@@ -121,9 +122,9 @@ export class GeolocationMock extends Geolocation {
      * @returns {Observable<Geoposition>} Returns an Observable that notifies with the [position](https://developer.mozilla.org/en-US/docs/Web/API/Position) of the device, or errors.
      */
     watchPosition(options?: GeolocationOptions): Observable<Geoposition> {
-        let theData:Geoposition;
+        let theData: Geoposition;
 
-        return Observable.create(observer => {
+        return Observable.create( (observer: Observer<any>) => {
             observer.next(theData);
             observer.complete();
         });

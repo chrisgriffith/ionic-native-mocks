@@ -7,12 +7,12 @@ const fs = require('fs-extra-promise').useFs(require('fs-extra')),
 
 // Constants for the build process. Paths and JSON files templates
 const ROOT = path.resolve(path.join(__dirname, '../../')), // root ionic-native directory
-  PLUGINS_PATH = path.resolve(ROOT, 'src/@ionic-native/plugins'), // path to plugins source files
+  PLUGINS_PATH = path.resolve(ROOT, 'src/@ionic-native-mocks/plugins'), // path to plugins source files
   CORE_PACKAGE_JSON = require(path.resolve(__dirname, 'core-package.json')), // core package.json
   PLUGIN_PACKAGE_JSON = require(path.resolve(__dirname, 'plugin-package.json')), // plugin package.json template
   PLUGIN_TS_CONFIG = require(path.resolve(__dirname, 'tsconfig-plugin.json')), // plugin tsconfig template
   BUILD_TMP = path.resolve(ROOT, '.tmp'), // tmp directory path
-  BUILD_DIST_ROOT = path.resolve(ROOT, 'dist/@ionic-native'), // dist directory root path
+  BUILD_DIST_ROOT = path.resolve(ROOT, 'dist/@ionic-native-mocks'), // dist directory root path
   BUILD_CORE_DIST = path.resolve(BUILD_DIST_ROOT, 'core'); // core dist directory path
 
 
@@ -28,7 +28,7 @@ const CORE_PEER_DEPS = {
 };
 
 const PLUGIN_PEER_DEPS = {
-  '@ionic-native/core': MIN_CORE_VERSION,
+  '@ionic-native-mocks/core': MIN_CORE_VERSION,
   '@angular/core': ANGULAR_VERSION,
   'rxjs': RXJS_VERSION
 };
@@ -76,62 +76,62 @@ const QUEUE = queue({
 const addPluginToQueue = pluginName => {
 
   QUEUE.push((callback) => {
+    if (pluginName !== '.DS_Store') {
+      console.log(`Building plugin: ${pluginName}`);
 
-    console.log(`Building plugin: ${pluginName}`);
+      const PLUGIN_BUILD_DIR = path.resolve(BUILD_TMP, 'plugins', pluginName),
+        PLUGIN_SRC_PATH = path.resolve(PLUGINS_PATH, pluginName, 'index.ts');
 
-    const PLUGIN_BUILD_DIR = path.resolve(BUILD_TMP, 'plugins', pluginName),
-      PLUGIN_SRC_PATH = path.resolve(PLUGINS_PATH, pluginName, 'index.ts');
+      let tsConfigPath;
 
-    let tsConfigPath;
+      fs.mkdirpAsync(PLUGIN_BUILD_DIR) // create tmp build dir
+        .then(() => fs.mkdirpAsync(path.resolve(BUILD_DIST_ROOT, pluginName))) // create dist dir
+        .then(() => {
 
-    fs.mkdirpAsync(PLUGIN_BUILD_DIR) // create tmp build dir
-      .then(() => fs.mkdirpAsync(path.resolve(BUILD_DIST_ROOT, pluginName))) // create dist dir
-      .then(() => {
+          // Write tsconfig.json
+          const tsConfig = JSON.parse(JSON.stringify(PLUGIN_TS_CONFIG));
+          tsConfig.files = [PLUGIN_SRC_PATH];
+          // tsConfig.compilerOptions.paths['@ionic-native/core'] = [BUILD_CORE_DIST];
 
-        // Write tsconfig.json
-        const tsConfig = JSON.parse(JSON.stringify(PLUGIN_TS_CONFIG));
-        tsConfig.files = [PLUGIN_SRC_PATH];
-        // tsConfig.compilerOptions.paths['@ionic-native/core'] = [BUILD_CORE_DIST];
+          tsConfigPath = path.resolve(PLUGIN_BUILD_DIR, 'tsconfig.json');
 
-        tsConfigPath = path.resolve(PLUGIN_BUILD_DIR, 'tsconfig.json');
+          return fs.writeJsonAsync(tsConfigPath, tsConfig);
+        })
+        .then(() => {
+          // clone package.json
+          const packageJson = JSON.parse(JSON.stringify(PLUGIN_PACKAGE_JSON));
 
-        return fs.writeJsonAsync(tsConfigPath, tsConfig);
-      })
-      .then(() => {
-        // clone package.json
-        const packageJson = JSON.parse(JSON.stringify(PLUGIN_PACKAGE_JSON));
+          packageJson.name = `@ionic-native-mocks/${pluginName}`;
+          packageJson.version = IONIC_NATIVE_VERSION;
 
-        packageJson.name = `@ionic-native/${pluginName}`;
-        packageJson.version = IONIC_NATIVE_VERSION;
+          return fs.writeJsonAsync(path.resolve(BUILD_DIST_ROOT, pluginName, 'package.json'), packageJson);
+        })
+        .then(() => {
 
-        return fs.writeJsonAsync(path.resolve(BUILD_DIST_ROOT, pluginName, 'package.json'), packageJson);
-      })
-      .then(() => {
+          // compile the plugin
+          exec(`${ROOT}/node_modules/.bin/ngc -p ${tsConfigPath}`, (err, stdout, stderr) => {
 
-        // compile the plugin
-        exec(`${ROOT}/node_modules/.bin/ngc -p ${tsConfigPath}`, (err, stdout, stderr) => {
+            if (err) {
 
-          if (err) {
+              if (!ignoreErrors) {
+                // oops! something went wrong.
+                console.log(err);
+                callback(`\n\nBuilding ${pluginName} failed.`);
+                return;
+              } else {
+                errors.push(err);
+              }
 
-            if (!ignoreErrors) {
-              // oops! something went wrong.
-              console.log(err);
-              callback(`\n\nBuilding ${pluginName} failed.`);
-              return;
-            } else {
-              errors.push(err);
             }
 
-          }
+            // we're done with this plugin!
+            callback();
 
-          // we're done with this plugin!
-          callback();
+          });
 
-        });
-
-      })
-      .catch(callback);
-
+        })
+        .catch(callback);
+    }
   }); // QUEUE.push end
 
 };

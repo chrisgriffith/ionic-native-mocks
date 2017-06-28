@@ -48,7 +48,7 @@ export class GlobalizationMock extends Globalization {
         second: number;
         millisecond: number;
     }> {
-        let theResult:Object = { year: 0, month: 0, day: 0, hour: 0, minute: 0, second: 0, millisecond: 0 };
+        let theResult: Object = { year: 0, month: 0, day: 0, hour: 0, minute: 0, second: 0, millisecond: 0 };
         return new Promise((resolve, reject) => {
             resolve(theResult);
         });
@@ -67,7 +67,7 @@ export class GlobalizationMock extends Globalization {
         utf_offset: number;
         dst_offset: number;
     }> {
-        let theResult:Object = { pattern: '', timezone: '', utf_offset: 0, dst_offset: 0 };
+        let theResult: Object = { pattern: '', timezone: '', utf_offset: 0, dst_offset: 0 };
         return new Promise((resolve, reject) => {
             resolve(theResult);
         });
@@ -82,7 +82,7 @@ export class GlobalizationMock extends Globalization {
         item: string;
     }): Promise<{
         value: Array<string>;
-    }>{
+    }> {
         return new Promise((resolve, reject) => {
             resolve(['']);
         });
@@ -94,8 +94,8 @@ export class GlobalizationMock extends Globalization {
      */
     isDayLightSavingsTime(date: Date): Promise<{
         dst: string;
-    }>{
-        let theResult:Object = {dst: ''};
+    }> {
+        let theResult: Object = { dst: '' };
         return new Promise((resolve, reject) => {
             resolve(theResult);
         });
@@ -106,7 +106,7 @@ export class GlobalizationMock extends Globalization {
      */
     getFirstDayOfWeek(): Promise<{
         value: string;
-    }>{
+    }> {
         return new Promise((resolve, reject) => {
             resolve('');
         });
@@ -120,8 +120,8 @@ export class GlobalizationMock extends Globalization {
         type: string;
     }): Promise<{
         value: string;
-    }>{
-        let theResult:Object = {value: ''};
+    }> {
+        let theResult: Object = { value: '' };
         return new Promise((resolve, reject) => {
             resolve(theResult);
         });
@@ -136,8 +136,8 @@ export class GlobalizationMock extends Globalization {
         type: string;
     }): Promise<{
         value: number | string;
-    }>{
-        let theResult:Object = {value: ''};
+    }> {
+        let theResult: Object = { value: '' };
         return new Promise((resolve, reject) => {
             resolve(theResult);
         });
@@ -158,8 +158,8 @@ export class GlobalizationMock extends Globalization {
         negative: string;
         decimal: string;
         grouping: string;
-    }>{
-        let theResult:Object = {pattern: '', symbol: '', fraction: 0, rounding: 0, positive: '', negative: '', decimal: '', grouping: ''};
+    }> {
+        let theResult: Object = { pattern: '', symbol: '', fraction: 0, rounding: 0, positive: '', negative: '', decimal: '', grouping: '' };
         return new Promise((resolve, reject) => {
             resolve(theResult);
         });
@@ -176,8 +176,8 @@ export class GlobalizationMock extends Globalization {
         rounding: number;
         decimal: number;
         grouping: string;
-    }>{
-         let theResult:Object = {pattern: '', code: '', fraction: 0, rounding: 0, decimal:0, grouping: ''};
+    }> {
+        let theResult: Object = { pattern: '', code: '', fraction: 0, rounding: 0, decimal: 0, grouping: '' };
         return new Promise((resolve, reject) => {
             resolve(theResult);
         });

@@ -19,7 +19,7 @@ export class DialogsMock extends Dialogs {
      * @param {string} buttonName Button name. (Optional, defaults to OK)
      * @returns {Promise<any>} Returns a blank promise once the user has dismissed the alert.
      */
-    alert(message: string, title?: string, buttonName?: string): Promise<any>{
+    alert(message: string, title?: string, buttonName?: string): Promise<any> {
         return new Promise((resolve, reject) => {
             resolve();
         });
@@ -31,7 +31,7 @@ export class DialogsMock extends Dialogs {
      * @param {Array<string>} buttonLabels Array of strings specifying button labels. (Optional, defaults to [OK,Cancel])
      * @returns {Promise<number>} Returns a promise that resolves the button index that was clicked, or 0 if the user has dismissed the dialog by clicking outside the dialog box. Note that the index use one-based indexing.
      */
-    confirm(message: string, title?: string, buttonLabels?: string[]): Promise<number>{
+    confirm(message: string, title?: string, buttonLabels?: string[]): Promise<number> {
         return new Promise((resolve, reject) => {
             resolve(1);
         });
@@ -44,7 +44,7 @@ export class DialogsMock extends Dialogs {
      * @param {string} defaultText Default textbox input value.  (Optional, Default: empty string)
      * @returns {Promise<DialogsPromptCallback>} Returns a promise that resolves an object with the button index clicked and the text entered
      */
-    prompt(message?: string, title?: string, buttonLabels?: string[], defaultText?: string): Promise<DialogsPromptCallback>{
+    prompt(message?: string, title?: string, buttonLabels?: string[], defaultText?: string): Promise<DialogsPromptCallback> {
         let theResult: DialogsPromptCallback;
         return new Promise((resolve, reject) => {
             resolve(theResult);
@@ -56,4 +56,4 @@ export class DialogsMock extends Dialogs {
      * @param {numbers} times The number of times to repeat the beep.
      */
     beep(times: number): void {};
-}   
+}

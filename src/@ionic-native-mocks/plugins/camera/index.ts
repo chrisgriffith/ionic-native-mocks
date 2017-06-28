@@ -135,7 +135,7 @@ export class CameraMock extends Camera {
      * @param {CameraOptions} [options] Options that you want to pass to the camera. Encoding type, quality, etc. Platform-specific quirks are described in the [Cordova plugin docs](https://github.com/apache/cordova-plugin-camera#cameraoptions-errata-).
      * @returns {Promise<any>} Returns a Promise that resolves with Base64 encoding of the image data, or the image file URI, depending on cameraOptions, otherwise rejects with an error.
      */
-    getPicture(options?: CameraOptions): Promise<any>{
+    getPicture(options?: CameraOptions): Promise<any> {
          return new Promise((resolve, reject) => {
             resolve();
         });
@@ -145,7 +145,7 @@ export class CameraMock extends Camera {
      * Applies only when the value of Camera.sourceType equals Camera.PictureSourceType.CAMERA and the Camera.destinationType equals Camera.DestinationType.FILE_URI.
      * @returns {Promise<any>}
      */
-    cleanup(): Promise<any>{
+    cleanup(): Promise<any> {
          return new Promise((resolve, reject) => {
             resolve();
         });

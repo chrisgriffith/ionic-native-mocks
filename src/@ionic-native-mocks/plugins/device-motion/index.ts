@@ -1,5 +1,6 @@
 import { DeviceMotion } from '@ionic-native/device-motion';
 import { Observable } from 'rxjs/Observable';
+import { Observer } from 'rxjs/Observer';
 
 export interface DeviceMotionAccelerationData {
     /**
@@ -28,8 +29,8 @@ export interface DeviceMotionAccelerometerOptions {
 }
 
 export class DeviceMotionMock extends DeviceMotion {
-     getCurrentAcceleration(): Promise<DeviceMotionAccelerationData>{
-        let data:DeviceMotionAccelerationData;
+     getCurrentAcceleration(): Promise<DeviceMotionAccelerationData> {
+        let data: DeviceMotionAccelerationData;
         return new Promise((resolve, reject) => {
             resolve(data );
         });
@@ -40,12 +41,12 @@ export class DeviceMotionMock extends DeviceMotion {
      * @param {AccelerometerOptions} options list of options for the accelerometer.
      * @returns {Observable<DeviceMotionAccelerationData>} Observable returns an observable that you can subscribe to
      */
-    watchAcceleration(options?: DeviceMotionAccelerometerOptions): Observable<DeviceMotionAccelerationData>{
-        let data:DeviceMotionAccelerationData;
-        
-        return Observable.create(observer => {
+    watchAcceleration (options?: DeviceMotionAccelerometerOptions): Observable<DeviceMotionAccelerationData> {
+        let data: DeviceMotionAccelerationData;
+
+        return Observable.create( (observer: Observer<any>) => {
             observer.next(data);
             observer.complete();
-        });   
+        });
     };
 }

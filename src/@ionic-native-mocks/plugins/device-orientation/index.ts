@@ -1,5 +1,6 @@
 import { DeviceOrientation } from '@ionic-native/device-orientation';
 import { Observable } from 'rxjs/Observable';
+import { Observer } from 'rxjs/Observer';
 
 export interface DeviceOrientationCompassHeading {
     /**
@@ -32,8 +33,8 @@ export interface DeviceOrientationCompassOptions {
 }
 
 export class DeviceOrientationMock extends DeviceOrientation {
-    getCurrentHeading(): Promise<DeviceOrientationCompassHeading>{
-        let data: DeviceOrientationCompassHeading; 
+    getCurrentHeading(): Promise<DeviceOrientationCompassHeading> {
+        let data: DeviceOrientationCompassHeading;
 
         return new Promise((resolve, reject) => {
             resolve(data);
@@ -46,10 +47,10 @@ export class DeviceOrientationMock extends DeviceOrientation {
      * @param {DeviceOrientationCompassOptions} options Options for compass. Frequency and Filter. Optional
      * @returns {Observable<DeviceOrientationCompassHeading>} Returns an observable that contains the compass heading
      */
-    watchHeading(options?: DeviceOrientationCompassOptions): Observable<DeviceOrientationCompassHeading>{
-        let data: DeviceOrientationCompassHeading; 
-        
-        return Observable.create(observer => {
+    watchHeading(options?: DeviceOrientationCompassOptions): Observable<DeviceOrientationCompassHeading> {
+        let data: DeviceOrientationCompassHeading;
+
+        return Observable.create( (observer: Observer<any>) => {
             observer.next(data);
             observer.complete();
         });

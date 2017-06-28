@@ -19,5 +19,4 @@ export class DeviceMock extends Device {
     isVirtual: boolean;
     /** Get the device hardware serial number. */
     serial: string;
-
 }

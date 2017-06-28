@@ -1,5 +1,6 @@
 import { BluetoothSerial } from '@ionic-native/bluetooth-serial';
 import { Observable } from 'rxjs/Observable';
+import { Observer } from 'rxjs/Observer';
 
 export class BluetoothSerialMock extends BluetoothSerial {
     /**
@@ -8,7 +9,7 @@ export class BluetoothSerialMock extends BluetoothSerial {
      * @returns {Observable<any>} Subscribe to connect, unsubscribe to disconnect.
      */
     connect(macAddress_or_uuid: string): Observable<any> {
-        return Observable.create(observer => {
+        return Observable.create( (observer: Observer<any>) => {
             observer.next('');
             observer.complete();
         });
@@ -19,7 +20,7 @@ export class BluetoothSerialMock extends BluetoothSerial {
      * @returns {Observable<any>} Subscribe to connect, unsubscribe to disconnect.
      */
     connectInsecure(macAddress: string): Observable<any> {
-        return Observable.create(observer => {
+        return Observable.create( (observer: Observer<any>) => {
             observer.next('');
             observer.complete();
         });
@@ -77,7 +78,7 @@ export class BluetoothSerialMock extends BluetoothSerial {
      * @returns {Observable<any>} returns an observable.
      */
     subscribe(delimiter: string): Observable<any> {
-        return Observable.create(observer => {
+        return Observable.create( (observer: Observer<any>) => {
             observer.next('');
             observer.complete();
         });
@@ -87,7 +88,7 @@ export class BluetoothSerialMock extends BluetoothSerial {
      * @returns {Observable<any>} returns an observable
      */
     subscribeRawData(): Observable<any> {
-        return Observable.create(observer => {
+        return Observable.create( (observer: Observer<any>) => {
             observer.next('');
             observer.complete();
         });
@@ -169,7 +170,7 @@ export class BluetoothSerialMock extends BluetoothSerial {
      * @returns {Observable<any>} Returns an observable
      */
     setDeviceDiscoveredListener(): Observable<any> {
-        return Observable.create(observer => {
+        return Observable.create( (observer: Observer<any>) => {
             observer.next('');
             observer.complete();
         });

@@ -1,6 +1,6 @@
 import { Toast } from '@ionic-native/toast';
 import { Observable } from 'rxjs/Observable';
-
+import { Observer } from 'rxjs/Observer';
 
 export interface ToastOptions {
     /**
@@ -47,7 +47,7 @@ export class ToastMock extends Toast {
          * @returns {Observable<any>}  Returns an Observable that notifies first on success and then when tapped, rejects on error.
          */
     show(message: string, duration: string, position: string): Observable<any> {
-        return Observable.create(observer => {
+        return Observable.create( (observer: Observer<any>) => {
             observer.next('');
             observer.complete();
         });
@@ -56,7 +56,7 @@ export class ToastMock extends Toast {
      * Manually hide any currently visible toast.
      * @returns {Promise<any>} Returns a Promise that resolves on success.
      */
-    hide(): Promise<any>{
+    hide(): Promise<any> {
         return new Promise((resolve, reject) => {
             resolve();
         });
@@ -73,7 +73,7 @@ export class ToastMock extends Toast {
      * @returns {Observable<any>}  Returns an Observable that notifies first on success and then when tapped, rejects on error.
      */
     showWithOptions(options: ToastOptions): Observable<any> {
-        return Observable.create(observer => {
+        return Observable.create( (observer: Observer<any>) => {
             observer.next('');
             observer.complete();
         });
@@ -84,7 +84,7 @@ export class ToastMock extends Toast {
      * @returns {Observable<any>}  Returns an Observable that notifies first on success and then when tapped, rejects on error.
      */
     showShortTop(message: string): Observable<any> {
-        return Observable.create(observer => {
+        return Observable.create( (observer: Observer<any>) => {
             observer.next('');
             observer.complete();
         });
@@ -95,7 +95,7 @@ export class ToastMock extends Toast {
      * @returns {Observable<any>}  Returns an Observable that notifies first on success and then when tapped, rejects on error.
      */
     showShortCenter(message: string): Observable<any> {
-        return Observable.create(observer => {
+        return Observable.create( (observer: Observer<any>) => {
             observer.next('');
             observer.complete();
         });
@@ -106,7 +106,7 @@ export class ToastMock extends Toast {
      * @returns {Observable<any>}  Returns an Observable that notifies first on success and then when tapped, rejects on error.
      */
     showShortBottom(message: string): Observable<any> {
-        return Observable.create(observer => {
+        return Observable.create( (observer: Observer<any>) => {
             observer.next('');
             observer.complete();
         });
@@ -117,7 +117,7 @@ export class ToastMock extends Toast {
      * @returns {Observable<any>}  Returns an Observable that notifies first on success and then when tapped, rejects on error.
      */
     showLongTop(message: string): Observable<any> {
-        return Observable.create(observer => {
+        return Observable.create( (observer: Observer<any>) => {
             observer.next('');
             observer.complete();
         });
@@ -128,7 +128,7 @@ export class ToastMock extends Toast {
      * @returns {Observable<any>}  Returns an Observable that notifies first on success and then when tapped, rejects on error.
      */
     showLongCenter(message: string): Observable<any> {
-        return Observable.create(observer => {
+        return Observable.create( (observer: Observer<any>) => {
             observer.next('');
             observer.complete();
         });
@@ -139,7 +139,7 @@ export class ToastMock extends Toast {
      * @returns {Observable<any>}  Returns an Observable that notifies first on success and then when tapped, rejects on error.
      */
     showLongBottom(message: string): Observable<any> {
-        return Observable.create(observer => {
+        return Observable.create( (observer: Observer<any>) => {
             observer.next('');
             observer.complete();
         });

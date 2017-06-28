@@ -1,5 +1,6 @@
 import { Network } from '@ionic-native/network';
 import { Observable } from 'rxjs/Observable';
+import { Observer } from 'rxjs/Observer';
 import 'rxjs/add/observable/merge';
 
 export class NetworkMock extends Network {
@@ -8,7 +9,7 @@ export class NetworkMock extends Network {
      * The `type` property will return one of the following connection types: `unknown`, `ethernet`, `wifi`, `2g`, `3g`, `4g`, `cellular`, `none`
      * @return {string}
      */
-    type: string = "cellular";
+    type: string = 'cellular';
     /**
      * Downlink Max Speed
      * @return {string}
@@ -19,7 +20,7 @@ export class NetworkMock extends Network {
      * @return {Observable<any>}
      */
     onchange(): Observable<any> {
-        return Observable.create(observer => {
+        return Observable.create( (observer: Observer<any>) => {
             observer.next('');
             observer.complete();
         });
@@ -29,7 +30,7 @@ export class NetworkMock extends Network {
      * @returns {Observable<any>} Returns an observable.
      */
     onDisconnect(): Observable<any> {
-        return Observable.create(observer => {
+        return Observable.create( (observer: Observer<any>) => {
             observer.next('');
             observer.complete();
         });
@@ -39,7 +40,7 @@ export class NetworkMock extends Network {
      * @returns {Observable<any>} Returns an observable.
      */
     onConnect(): Observable<any> {
-        return Observable.create(observer => {
+        return Observable.create( (observer: Observer<any>) => {
             observer.next('');
             observer.complete();
         });

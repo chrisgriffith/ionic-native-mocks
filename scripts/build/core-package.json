@@ -1,5 +1,5 @@
 {
-  "name": "@ionic-native/core",
+  "name": "@ionic-native-mocks/core",
   "version": "{{VERSION}}",
   "description": "Ionic Native - Native plugins for ionic apps",
   "module": "index.js",

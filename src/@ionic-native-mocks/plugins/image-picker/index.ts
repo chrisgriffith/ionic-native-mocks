@@ -38,7 +38,7 @@ export class ImagePickerMock extends ImagePicker {
      * Check if we have permission to read images
      * @returns {Promise<boolean>} Returns a promise that resolves with a boolean that indicates whether we have permission
      */
-    hasReadPermission(): Promise<boolean>{
+    hasReadPermission(): Promise<boolean> {
         return new Promise((resolve, reject) => {
             resolve(true);
         });
@@ -47,7 +47,7 @@ export class ImagePickerMock extends ImagePicker {
      * Request permission to read images
      * @returns {Promise<any>}
      */
-    requestReadPermission(): Promise<any>{
+    requestReadPermission(): Promise<any> {
         return new Promise((resolve, reject) => {
             resolve();
         });

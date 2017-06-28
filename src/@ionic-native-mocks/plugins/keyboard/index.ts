@@ -1,5 +1,6 @@
 import { Keyboard } from '@ionic-native/keyboard';
 import { Observable } from 'rxjs/Observable';
+import { Observer } from 'rxjs/Observer';
 
 export class KeyboardMock extends Keyboard {
     /**
@@ -24,8 +25,8 @@ export class KeyboardMock extends Keyboard {
      * Creates an observable that notifies you when the keyboard is shown. Unsubscribe to observable to cancel event watch.
      * @returns {Observable<any>}
      */
-    onKeyboardShow(): Observable<any>{
-        return Observable.create(observer => {
+    onKeyboardShow(): Observable<any> {
+        return Observable.create( (observer: Observer<any>) => {
             observer.next('');
             observer.complete();
         });
@@ -34,8 +35,8 @@ export class KeyboardMock extends Keyboard {
      * Creates an observable that notifies you when the keyboard is hidden. Unsubscribe to observable to cancel event watch.
      * @returns {Observable<any>}
      */
-    onKeyboardHide(): Observable<any>{
-        return Observable.create(observer => {
+    onKeyboardHide(): Observable<any> {
+        return Observable.create( (observer: Observer<any>) => {
             observer.next('');
             observer.complete();
         });
