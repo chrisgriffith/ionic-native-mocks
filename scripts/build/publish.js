@@ -7,7 +7,7 @@ const fs = require('fs-extra-promise').useFs(require('fs-extra')),
 
 
 const ROOT = path.resolve(path.join(__dirname, '../../')),
-  DIST = path.resolve(ROOT, 'dist', '@ionic-native');
+  DIST = path.resolve(ROOT, 'dist', '@ionic-native-mocks');
 
 const FLAGS = '--access public'; // add any flags here if you want... (example: --tag alpha)
 
@@ -22,8 +22,8 @@ const QUEUE = queue({
 PACKAGES.forEach(packageName => {
 
   QUEUE.push(done => {
-
-    console.log(`Publishing @ionic-native/${packageName}`);
+    if (packageName !== '.DS_store' ) {
+    console.log(`Publishing @ionic-native-mocks/${packageName}`);
     const packagePath = path.resolve(DIST, packageName);
     exec(`npm publish ${packagePath} ${FLAGS}`)
       .then(() => done())
@@ -36,7 +36,7 @@ PACKAGES.forEach(packageName => {
         }
         done();
       });
-
+    }
   });
 
 });
@@ -44,12 +44,12 @@ PACKAGES.forEach(packageName => {
 QUEUE.start((err) => {
 
   if (err) {
-    console.log('Error publishing ionic-native. ', err);
+    console.log('Error publishing ionic-native-mocks. ', err);
   } else if (failedPackages.length > 0) {
     console.log(`${failedPackages.length} packages failed to publish.`);
     console.log(failedPackages);
   } else {
-    console.log('Done publishing ionic-native!');
+    console.log('Done publishing ionic-native-mocks!');
   }
 
 

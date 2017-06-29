@@ -4,11 +4,11 @@
   "description": "Ionic Native Mocks- Native plugins for ionic apps",
   "module": "index.js",
   "typings": "index.d.ts",
-  "author": "ionic",
+  "author": "Chris Griffith",
   "license": "MIT",
   "peerDependencies": {},
   "repository": {
     "type": "git",
-    "url": "https://github.com/ionic-team/ionic-native.git"
+    "url": "https://github.com/chrisgriffith/ionic-native-mocks.git"
   }
 }
