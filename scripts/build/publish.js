@@ -51,8 +51,5 @@ QUEUE.start((err) => {
   } else {
     console.log('Done publishing ionic-native-mocks!');
   }
-
-
-
 });
 
