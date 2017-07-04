@@ -1,20 +1,55 @@
 # Ionic Native Mocks
 
-Ionic Native Mocks are designed to be used as placeholders during development for the actual Ionic Native modules. Ionic Native is a curated set of wrappers for Cordova plugins that make adding any native functionality you need to your [Ionic](https://ionicframework.com/) mobile app easy.
+Ionic Native Mocks are designed to be used as placeholders during development for the actual Ionic Native modules. [Ionic Native](https://github.com/ionic-team/ionic-native) is a curated set of wrappers for [Apache Cordova](https://cordova.apache.org/) plugins that make adding any native functionality you need to your [Ionic](https://ionicframework.com/) mobile application easier.
 
 Ionic Native wraps plugin callbacks in a Promise or Observable, providing a common interface for all plugins and making it easy to use plugins with Angular change detection.
 
-Hwoever, once you integrate them into your Ionic applicaiton, testing and development often requires running in an emulator or on an actual device, slowing the process down.
+However, once you integrate these plugins into your Ionic application, use of a device or emulator is required for development and testing which can slow your workflow.
 
-These Ionic Native Mocks, allow you to use them in place of the actual Ionic Native module. They can be installed in via to methods. 
-1) via npm. These mocks are prebuilt and are not easily customized.
-2) via GitHub and manually added to your Ionic project. These versions can be customized with specific data that you might want, like a specific parsing of a QR code.
+## Currently Available Mocks
+- actions-sheets
+- barcode-scanner
+- ble
+- bluetooth-serial
+- calendar
+- camera
+- contacts
+- date-picker
+- db-meter
+- device-motion
+- device-orientation
+- device
+- dialog
+- email-composer
+- geolocation
+- globalization
+- image-picker
+- keyboard
+- network
+- social-sharing
+- splash-screen
+- sqlite
+- status-bar
+- toast
+- touch-id
+- vibration
 
 ## Installation
 
-Run following command to install Ionic Native in your project.
+This project allows developers to use Ionic Native Mocks in place of the actual Ionic Native modules. They can be installed in via to methods. 
+1) via npm: Installing these prebuilt mocks is easy but they are not easily customized.
+2) via GitHub and manually added to your Ionic project: Installing this way means the mocks can be customized to return specific data, like a specific parsing of a QR code.
+
+### Installation via npm
+
+Run following command to install a Ionic Native Mock into your project.
 ```bash
 npm install @ionic-native-mocks/[plug-in] --save
+```
+
+For instance, to install the camera mock:
+```bash
+npm install @ionic-native-mocks/camera --save
 ```
 
 You also need to install the Ionic Native package for each plugin you want to add. Please see the [Ionic Native documentation](https://ionicframework.com/docs/native/) for complete instructions on how to add and use the plugins.
@@ -77,11 +112,11 @@ export class MyComponent {
 }
 ```
 
-## Mock Missing?
-Let us know or submit a PR! We will be working to add in the rest of the Ionic Native collection over the coming days.
+## Missing a mock? Found a problem?  
+Let us know or submit a PR! We will be working to add in the rest of the Ionic Native collection in the future.
 
 # Credits
 
 Chris Griffith - [@chrisgriffith](https://github.com/chrisgriffith)
 
-Leif Wells - [@leifwells](https://twitter.com/leifwells)
+Leif Wells - [@leifwells](https://github.com/leifwells)
