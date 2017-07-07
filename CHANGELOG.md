@@ -1,0 +1,31 @@
+<a name="1.0.2"></a>
+## [1.0.2](https://github.com/chrisgriffith/ionic-native-mocks) (2017-07-05)
+
+### Features
+Inital Release
+- actions-sheets
+- barcode-scanner
+- ble
+- bluetooth-serial
+- calendar
+- camera
+- contacts
+- date-picker
+- db-meter
+- device-motion
+- device-orientation
+- device
+- dialog
+- email-composer
+- geolocation
+- globalization
+- image-picker
+- keyboard
+- network
+- social-sharing
+- splash-screen
+- sqlite
+- status-bar
+- toast
+- touch-id
+- vibration
