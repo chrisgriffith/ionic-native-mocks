@@ -1,5 +1,29 @@
+<a name="1.0.4"></a>
+## [1.0.4](https://github.com/chrisgriffith/ionic-native-mocks) (2017-07-11)
+
+### New Plugins
+- background-fetch
+- background-mode
+- backlight
+- brightness
+- broadcaster
+- browser-tab
+- call-number
+- camera-preview
+- card-io
+- clipboard
+- code-push
+- couchbase-lite
+- crop
+- deeplinks
+- device-accounts
+- device-feedback
+- document-viewer
+
 <a name="1.0.3"></a>
 ## [1.0.3](https://github.com/chrisgriffith/ionic-native-mocks) (2017-07-07)
+
+### New Plugins
 - admob
 - admob-free
 - app-preferences
