@@ -1,3 +1,24 @@
+<a name="1.0.3"></a>
+## [1.0.3](https://github.com/chrisgriffith/ionic-native-mocks) (2017-07-07)
+- admob
+- admob-free
+- app-preferences
+- app-rate
+- app-version
+- background-geolocation
+- badge
+- base64
+- base64-to-gallery
+- battery-status
+- file
+- gyroscope
+- in-app-browser
+- local-notifications
+- phonegap-local-notification
+- push
+- screen-orientation
+- secure-storage
+
 <a name="1.0.2"></a>
 ## [1.0.2](https://github.com/chrisgriffith/ionic-native-mocks) (2017-07-05)
 
