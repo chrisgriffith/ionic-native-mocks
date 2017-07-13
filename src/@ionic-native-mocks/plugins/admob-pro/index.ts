@@ -1,4 +1,4 @@
-import { AdMob } from '@ionic-native/admob';
+import { AdMobPro } from '@ionic-native/admob-pro';
 import { Observable } from 'rxjs/Observable';
 import { Observer } from 'rxjs/Observer';
 
@@ -66,7 +66,7 @@ export interface AdExtras {
     color_url: string;
 }
 
-export class AdMobMock extends AdMob {
+export class AdMobProMock extends AdMobPro {
     AD_POSITION: {
         NO_CHANGE: number;
         TOP_LEFT: number;
