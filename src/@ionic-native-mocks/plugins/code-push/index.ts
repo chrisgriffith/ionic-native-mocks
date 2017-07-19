@@ -291,15 +291,15 @@ export class CodePushMock extends CodePush {
      *
      * @param notifySucceeded Optional callback invoked if the plugin was successfully notified.
      * @param notifyFailed Optional callback invoked in case of an error during notifying the plugin.
-     * @returns {Promise<void>}
+     * @returns {Promise<any>}
      */
-    notifyApplicationReady(): Promise<void> { return; };
+    notifyApplicationReady(): Promise<any> { return; };
     /**
      * Reloads the application. If there is a pending update package installed using ON_NEXT_RESTART or ON_NEXT_RESUME modes, the update
      * will be immediately visible to the user. Otherwise, calling this function will simply reload the current version of the application.
-     * @returns {Promise<void>}
+     * @returns {Promise<any>}
      */
-    restartApplication(): Promise<void> { return; };
+    restartApplication(): Promise<any> { return; };
     /**
      * Convenience method for installing updates in one method call.
      * This method is provided for simplicity, and its behavior can be replicated by using window.codePush.checkForUpdate(), RemotePackage's download() and LocalPackage's install() methods.
