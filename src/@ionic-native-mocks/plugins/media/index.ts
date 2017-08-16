@@ -4,14 +4,14 @@ import { Observable } from 'rxjs/Observable';
 /**
  * @hidden
  */
-export class MediaObjectMock extends MediaObject {
+export class MediaObjectMock  {
     // private _objectInstance;
     onSuccess: Observable<any>;
     onError: Observable<any>;
     onStatusUpdate: Observable<any> ;
 
     constructor(_objectInstance: any, onSuccess: Observable<any>, onError: Observable<any>, onStatusUpdate: Observable<any>) {
-        super(_objectInstance, onSuccess, onError, onStatusUpdate);
+        // super(_objectInstance, onSuccess, onError, onStatusUpdate);
     };
     /**
      * Get the current amplitude of the current recording.
@@ -142,8 +142,8 @@ export class MediaMock extends Media {
      * @param [onError] {MediaErrorCallback} A callback function is be invoked if an error occurs.
      * @return {MediaObject}
      */
-    create(src: string): MediaObjectMock {
-        let response: MediaObjectMock;
+    create(src: string): MediaObject {
+        let response: MediaObject;
         return response;
     };
 }

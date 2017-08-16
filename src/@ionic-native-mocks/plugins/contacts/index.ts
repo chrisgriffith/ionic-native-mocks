@@ -233,7 +233,7 @@ export class ContactsMock extends Contacts {
         theContact.displayName = 'Max Lynch';
 
         return new Promise((resolve, reject) => {
-            resolve(theContact);
+            resolve([theContact]);
         });
     }
     /**

@@ -135,7 +135,7 @@ export class LocalNotificationsMocks extends LocalNotifications {
      * @returns {Promise<boolean>}
      */
     isPresent(notificationId: number): Promise<boolean> {
-        let response: Boolean;
+        let response: boolean;
         return new Promise((resolve, reject) => {
             resolve(response);
         });
@@ -146,7 +146,7 @@ export class LocalNotificationsMocks extends LocalNotifications {
      * @returns {Promise<boolean>}
      */
     isScheduled(notificationId: number): Promise<boolean> {
-        let response: Boolean;
+        let response: boolean;
         return new Promise((resolve, reject) => {
             resolve(response);
         });
@@ -157,7 +157,7 @@ export class LocalNotificationsMocks extends LocalNotifications {
      * @returns {Promise<boolean>}
      */
     isTriggered(notificationId: number): Promise<boolean> {
-        let response: Boolean;
+        let response: boolean;
         return new Promise((resolve, reject) => {
             resolve(response);
         });
@@ -260,7 +260,7 @@ export class LocalNotificationsMocks extends LocalNotifications {
      * @returns {Promise<boolean>}
      */
     registerPermission(): Promise<boolean> {
-        let response: Boolean;
+        let response: boolean;
         return new Promise((resolve, reject) => {
             resolve(response);
         });
@@ -270,7 +270,7 @@ export class LocalNotificationsMocks extends LocalNotifications {
      * @returns {Promise<boolean>}
      */
     hasPermission(): Promise<boolean> {
-        let response: Boolean;
+        let response: boolean;
         return new Promise((resolve, reject) => {
             resolve(response);
         });

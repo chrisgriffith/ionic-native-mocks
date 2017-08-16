@@ -147,7 +147,7 @@ export class AndroidFingerprintAuthMock extends AndroidFingerprintAuth {
         deleted: boolean;
     }> {
         return new Promise((resolve, reject) => {
-            resolve(true);
+            resolve({deleted:true});
         });
     };
 }
