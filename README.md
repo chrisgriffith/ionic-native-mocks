@@ -6,7 +6,7 @@ Ionic Native wraps plugin callbacks in a Promise or Observable, providing a comm
 
 However, once you integrate these plugins into your Ionic application, use of a device or emulator is required for development and testing which can slow your workflow.
 
-## Currently Available Mocks
+## Available Mocks
 - actions-sheet
 - admob-free
 - admob-pro
@@ -44,7 +44,6 @@ However, once you integrate these plugins into your Ionic application, use of a 
 - clipboard
 - code-push
 - contacts
-- core
 - couchbase-lite
 - crop
 - date-picker
@@ -86,6 +85,7 @@ However, once you integrate these plugins into your Ionic application, use of a 
 - hotspot
 - http
 - httpd
+- hyper-track
 - ibeacon
 - image-picker
 - image-resizer
@@ -104,19 +104,74 @@ However, once you integrate these plugins into your Ionic application, use of a 
 - linkedin
 - local-notifications
 - location-accuracy
+- market
 - media
+- media-capture
+- mixpanel
+- mobile-accessibility
+- music-controls
+- native-audio
+- native-geocoder
+- native-keyboard
+- native-page-transitions
+- native-ringtones
+- native-storage
+- navigation-bar
 - network
+- nfc
+- onesignal
+- open-native-settings
+- paypal
+- pedometer
 - phonegap-local-notification
+- photo-library
+- photo-viewer
+- pin-check
+- pin-dialog
+- pinterest
+- power-management
+- printer
 - push
+- qqsdk
+- qr-scanner
+- rollbar
+- safari-view-controller
 - screen-orientation
+- screenshot
 - secure-storage
+- serial
+- shake
+- sim
+- sms
 - social-sharing
+- speech-recognition
+- spinner-dialog
 - splash-screen
 - sqlite
+- sqlite-porter
 - status-bar
+- stepcounter
+- streaming-media
+- stripe
+- taptic-engine
+- text-to-speech
+- themeable-browser
+- three-dee-touch
 - toast
 - touch-id
+- twitter-connect
+- unique-device-id
+- user-agent
 - vibration
+- video-capture-plus
+- video-editor
+- video-player
+- web-intent
+- wheel-selector
+- youtube-video-player
+- zbar
+- zeroconf
+- zip
 
 ## Installation
 
@@ -195,9 +250,11 @@ export class MyComponent {
   }
 }
 ```
+### Customization
+To learn how to customize an Ionic Native Mock, see the guide at: https://chrisgriffith.wordpress.com/2017/08/21/customizing-ionic-native-mocks/ (https://chrisgriffith.wordpress.com/2017/08/21/customizing-ionic-native-mocks/)
 
 ## Missing a mock? Found a problem?  
-Let us know or submit a PR! We will be working to add in the rest of the Ionic Native collection in the future.
+Let us know or submit a PR!
 
 # Credits
 
