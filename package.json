@@ -242,6 +242,5 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
-  "dependencies": {},
-  "homepage": "https://github.com/chrisgriffith/ionic-native-mocks#readme",
+  "dependencies": {}
 }
