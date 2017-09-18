@@ -1,7 +1,7 @@
 
 import { Crop } from '@ionic-native/crop';
 
-export class Mock extends Crop {
+export class CropMock extends Crop {
     /**
      * Crops an image
      * @param pathToImage
