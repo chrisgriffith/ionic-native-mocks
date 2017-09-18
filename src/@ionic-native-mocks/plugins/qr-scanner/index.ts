@@ -64,7 +64,7 @@ export class QRScannerMock extends QRScanner {
      * @return {Promise<QRScannerStatus>}
      */
     prepare(): Promise<QRScannerStatus> {
-        let response:QRScannerStatus;
+        let response: QRScannerStatus;
         return new Promise((resolve, reject) => {
             resolve(response);
         });
@@ -85,7 +85,7 @@ export class QRScannerMock extends QRScanner {
      * @returns {Promise<QRScannerStatus>}
      */
     show(): Promise<QRScannerStatus> {
-        let response:QRScannerStatus;
+        let response: QRScannerStatus;
         return new Promise((resolve, reject) => {
             resolve(response);
         });
@@ -95,7 +95,7 @@ export class QRScannerMock extends QRScanner {
      * @returns {Promise<QRScannerStatus>}
      */
     hide(): Promise<QRScannerStatus> {
-        let response:QRScannerStatus;
+        let response: QRScannerStatus;
         return new Promise((resolve, reject) => {
             resolve(response);
         });
@@ -105,7 +105,7 @@ export class QRScannerMock extends QRScanner {
      * @returns {Promise<QRScannerStatus>}
      */
     enableLight(): Promise<QRScannerStatus> {
-        let response:QRScannerStatus;
+        let response: QRScannerStatus;
         return new Promise((resolve, reject) => {
             resolve(response);
         });
@@ -115,7 +115,7 @@ export class QRScannerMock extends QRScanner {
      * @return {Promise<QRScannerStatus>}
      */
     disableLight(): Promise<QRScannerStatus> {
-        let response:QRScannerStatus;
+        let response: QRScannerStatus;
         return new Promise((resolve, reject) => {
             resolve(response);
         });
@@ -125,7 +125,7 @@ export class QRScannerMock extends QRScanner {
      * @return {Promise<QRScannerStatus>}
      */
     useFrontCamera(): Promise<QRScannerStatus> {
-        let response:QRScannerStatus;
+        let response: QRScannerStatus;
         return new Promise((resolve, reject) => {
             resolve(response);
         });
@@ -135,7 +135,7 @@ export class QRScannerMock extends QRScanner {
      * @return {Promise<QRScannerStatus>}
      */
     useBackCamera(): Promise<QRScannerStatus> {
-        let response:QRScannerStatus;
+        let response: QRScannerStatus;
         return new Promise((resolve, reject) => {
             resolve(response);
         });
@@ -146,7 +146,7 @@ export class QRScannerMock extends QRScanner {
      * @return {Promise<QRScannerStatus>}
      */
     useCamera(camera: number): Promise<QRScannerStatus> {
-        let response:QRScannerStatus;
+        let response: QRScannerStatus;
         return new Promise((resolve, reject) => {
             resolve(response);
         });
@@ -156,7 +156,7 @@ export class QRScannerMock extends QRScanner {
      * @return {Promise<QRScannerStatus>}
      */
     pausePreview(): Promise<QRScannerStatus> {
-        let response:QRScannerStatus;
+        let response: QRScannerStatus;
         return new Promise((resolve, reject) => {
             resolve(response);
         });
@@ -166,7 +166,7 @@ export class QRScannerMock extends QRScanner {
      * @return {Promise<QRScannerStatus>}
      */
     resumePreview(): Promise<QRScannerStatus> {
-        let response:QRScannerStatus;
+        let response: QRScannerStatus;
         return new Promise((resolve, reject) => {
             resolve(response);
         });
@@ -176,7 +176,7 @@ export class QRScannerMock extends QRScanner {
      * @return {Promise<QRScannerStatus>}
      */
     getStatus(): Promise<QRScannerStatus> {
-        let response:QRScannerStatus;
+        let response: QRScannerStatus;
         return new Promise((resolve, reject) => {
             resolve(response);
         });
