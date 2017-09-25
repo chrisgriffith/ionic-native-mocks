@@ -79,7 +79,7 @@ export class GoogleAnalyticsMock extends GoogleAnalytics {
      * @param value {any}
      * @returns {Promise<any>}
      */
-    trackMetric(key: number, value?: number): Promise<any> {
+    trackMetric(key: string, value?: any): Promise<any> {
          return new Promise((resolve, reject) => {
             resolve();
         });
