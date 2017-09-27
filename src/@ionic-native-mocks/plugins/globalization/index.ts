@@ -1,12 +1,27 @@
 import { Globalization } from '@ionic-native/globalization';
 
 export class GlobalizationMock extends Globalization {
+
+    private _defaultLanguage: string = 'en-EN';
+
     /**
-        * Returns the BCP-47 compliant language identifier tag to the successCallback with a properties object as a parameter. That object should have a value property with a String value.
-        * @returns {Promise<{value: string}>}
-        */
+    * Starts globalization plugin mock with a default language if it is necessary, otherwise default language is English.
+    * If defaulLanguage property is used, please, You should use this format to inject provider:
+    * { provide: Globalization, useFactory: () => new GlobalizationMock('es-ES') },
+    * 
+    */
+    constructor(defaultLanguage?: string) {
+        super();
+        this._defaultLanguage = defaultLanguage || this._defaultLanguage;
+    }
+    /**
+    * Returns the BCP-47 compliant language identifier tag to the successCallback with a properties object as a parameter. That object should have a value property with a String value.
+    * @returns {Promise<{value: string}>}
+    */
     getPreferredLanguage(): Promise<{ value: string; }> {
-        let theResult = { value: '' };
+        let theResult = {
+            value: this._defaultLanguage
+        };
         return new Promise((resolve, reject) => {
             resolve(theResult);
         });
@@ -16,7 +31,9 @@ export class GlobalizationMock extends Globalization {
      * @returns {Promise<{value: string}>}
      */
     getLocaleName(): Promise<{ value: string; }> {
-        let theResult = { value: '' };
+        let theResult = {
+            value: this._defaultLanguage
+        };
         return new Promise((resolve, reject) => {
             resolve(theResult);
         });
