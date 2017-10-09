@@ -1,6 +1,6 @@
 import { Badge } from '@ionic-native/badge';
 
-export class BadgeMOck extends Badge {
+export class BadgeMock extends Badge {
     /**
      * Clear the badge of the app icon.
      * @returns {Promise<boolean>}
