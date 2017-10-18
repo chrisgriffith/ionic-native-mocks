@@ -251,7 +251,7 @@ export class MyComponent {
 }
 ```
 ### Customization
-To learn how to customize an Ionic Native Mock, see the guide at: https://chrisgriffith.wordpress.com/2017/08/21/customizing-ionic-native-mocks/ (https://chrisgriffith.wordpress.com/2017/08/21/customizing-ionic-native-mocks/)
+To learn how to customize an Ionic Native Mock, see the guide at: [https://chrisgriffith.wordpress.com/2017/08/21/customizing-ionic-native-mocks/](https://chrisgriffith.wordpress.com/2017/08/21/customizing-ionic-native-mocks/)
 
 ## Missing a mock? Found a problem?  
 Let us know or submit a PR!
