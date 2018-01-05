@@ -1,3 +1,4 @@
+
 import { AppMinimize } from '@ionic-native/app-minimize';
 
 export class AppMinimizeMock extends AppMinimize {

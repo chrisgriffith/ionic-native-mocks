@@ -1,3 +1,4 @@
+
 import { AppAvailability } from '@ionic-native/app-availability';
 
 export class AppAvailabilityMock extends AppAvailability {

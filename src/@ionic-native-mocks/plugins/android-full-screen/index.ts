@@ -3,7 +3,7 @@ import { AndroidFullScreen } from '@ionic-native/android-full-screen';
 export class AndroidFullScreenMock extends AndroidFullScreen {
     /**
      * Is this plugin supported?
-     * @return {Promise<any>}
+     * @return {Promise<void>}
      */
     isSupported(): Promise<any> {
         return new Promise((resolve, reject) => {
@@ -13,7 +13,7 @@ export class AndroidFullScreenMock extends AndroidFullScreen {
 
     /**
      * Is immersive mode supported?
-     * @return {Promise<any>}
+     * @return {Promise<void>}
      */
     isImmersiveModeSupported(): Promise<any> {
         return new Promise((resolve, reject) => {
@@ -42,7 +42,7 @@ export class AndroidFullScreenMock extends AndroidFullScreen {
     };
     /**
      * Hide system UI until user interacts.
-     * @return {Promise<any>}
+     * @return {Promise<void>}
      */
     leanMode(): Promise<any> {
         return new Promise((resolve, reject) => {
@@ -51,7 +51,7 @@ export class AndroidFullScreenMock extends AndroidFullScreen {
     };
     /**
      * Show system UI.
-     * @return {Promise<any>}
+     * @return {Promise<void>}
      */
     showSystemUI(): Promise<any> {
         return new Promise((resolve, reject) => {
@@ -60,7 +60,7 @@ export class AndroidFullScreenMock extends AndroidFullScreen {
     };
     /**
      * Extend your app underneath the status bar (Android 4.4+ only).
-     * @return {Promise<any>}
+     * @return {Promise<void>}
      */
     showUnderStatusBar(): Promise<any> {
         return new Promise((resolve, reject) => {
@@ -69,7 +69,7 @@ export class AndroidFullScreenMock extends AndroidFullScreen {
     };
     /**
      * Extend your app underneath the system UI (Android 4.4+ only).
-     * @return {Promise<any>}
+     * @return {Promise<void>}
      */
     showUnderSystemUI(): Promise<any> {
         return new Promise((resolve, reject) => {
@@ -78,7 +78,7 @@ export class AndroidFullScreenMock extends AndroidFullScreen {
     };
     /**
      * Hide system UI and keep it hidden (Android 4.4+ only).
-     * @return {Promise<any>}
+     * @return {Promise<void>}
      */
     immersiveMode(): Promise<any> {
         return new Promise((resolve, reject) => {

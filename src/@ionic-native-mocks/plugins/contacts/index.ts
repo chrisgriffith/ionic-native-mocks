@@ -35,7 +35,7 @@ export interface IContactProperties {
  * @hidden
  */
 export class Contact implements IContactProperties {
-    // private _objectInstance: any;
+    // private _objectInstance;
     id: string;
     displayName: string;
     name: IContactName;
@@ -51,7 +51,7 @@ export class Contact implements IContactProperties {
     categories: IContactField[];
     urls: IContactField[];
     [key: string]: any;
-    constructor() {};
+
     clone(): Contact { return new Contact(); };
     remove(): Promise<any> {
         return new Promise(resolve => {
@@ -64,7 +64,6 @@ export class Contact implements IContactProperties {
         });
     }
 }
-
 
 /**
  * @hidden
@@ -105,14 +104,14 @@ export interface IContactName {
 /**
  * @hidden
  */
-export declare class ContactName implements IContactName {
+export class ContactName implements IContactName {
     formatted: string;
     familyName: string;
     givenName: string;
     middleName: string;
     honorificPrefix: string;
     honorificSuffix: string;
-    constructor(formatted?: string, familyName?: string, givenName?: string, middleName?: string, honorificPrefix?: string, honorificSuffix?: string);
+    constructor(formatted?: string, familyName?: string, givenName?: string, middleName?: string, honorificPrefix?: string, honorificSuffix?: string) {};
 }
 export interface IContactField {
     /** A string that indicates what type of field this is, home for example. */
@@ -125,11 +124,11 @@ export interface IContactField {
 /**
  * @hidden
  */
-export declare class ContactField implements IContactField {
+export class ContactField implements IContactField {
     type: string;
     value: string;
     pref: boolean;
-    constructor(type?: string, value?: string, pref?: boolean);
+    constructor(type?: string, value?: string, pref?: boolean) {};
 }
 export interface IContactAddress {
     /** Set to true if this ContactAddress contains the user's preferred value. */
@@ -152,7 +151,7 @@ export interface IContactAddress {
 /**
  * @hidden
  */
-export declare class ContactAddress implements IContactAddress {
+export class ContactAddress implements IContactAddress {
     pref: boolean;
     type: string;
     formatted: string;
@@ -161,7 +160,7 @@ export declare class ContactAddress implements IContactAddress {
     region: string;
     postalCode: string;
     country: string;
-    constructor(pref?: boolean, type?: string, formatted?: string, streetAddress?: string, locality?: string, region?: string, postalCode?: string, country?: string);
+    constructor(pref?: boolean, type?: string, formatted?: string, streetAddress?: string, locality?: string, region?: string, postalCode?: string, country?: string) {};
 }
 export interface IContactOrganization {
     /** Set to true if this ContactOrganization contains the user's preferred value. */
@@ -178,13 +177,13 @@ export interface IContactOrganization {
 /**
  * @hidden
  */
-export declare class ContactOrganization implements IContactOrganization {
+export  class ContactOrganization implements IContactOrganization {
     type: string;
     name: string;
     department: string;
     title: string;
     pref: boolean;
-    constructor(type?: string, name?: string, department?: string, title?: string, pref?: boolean);
+    constructor(type?: string, name?: string, department?: string, title?: string, pref?: boolean) {};
 }
 /** Search options to filter navigator.contacts.  */
 export interface IContactFindOptions {
@@ -217,7 +216,6 @@ export class ContactsMock extends Contacts {
      */
     create(): any {
         let newContact: Contact = new Contact();
-        console.log(newContact);
         return (newContact);
     };
     /**
@@ -227,13 +225,12 @@ export class ContactsMock extends Contacts {
      * @returns {Promise<Contact[]>} Returns a Promise that resolves with the search results (an array of Contact objects)
      */
     find(fields: ContactFieldType[], options?: IContactFindOptions): Promise<any[]> {
-
         let theContact: Contact = new Contact();
-
         theContact.displayName = 'Max Lynch';
+        let response: Array<Contact> = [];
 
         return new Promise((resolve, reject) => {
-            resolve([theContact]);
+            resolve(response);
         });
     }
     /**

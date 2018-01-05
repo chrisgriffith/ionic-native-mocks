@@ -141,7 +141,7 @@ export interface NativeKeyboardUpdateMessengerOptions {
     showKeyboard: boolean;
 }
 
-export class NativeKeyboardMock extends NativeKeyboard {
+export class NativeKeyboarMock extends NativeKeyboard {
     /**
      * Show messenger
      * @param options {NativeKeyboardOptions}

@@ -60,14 +60,14 @@ export class WheelSelectorMock extends WheelSelector {
     show(options: WheelSelectorOptions): Promise<WheelSelectorData> {
         let response: WheelSelectorData;
          return new Promise((resolve, reject) => {
-            resolve( response );
+            resolve(response );
         });
     };
     /**
      * Hide the selector
      * @returns {Promise<void>}
      */
-    hideSelector(): Promise<any> {
+    hideSelector(): Promise<void> {
         return new Promise((resolve, reject) => {
             resolve();
         });

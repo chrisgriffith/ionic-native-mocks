@@ -1,4 +1,6 @@
 import { FTP } from '@ionic-native/ftp';
+import { Observable } from 'rxjs/Observable';
+import { Observer } from 'rxjs/Observer';
 
 export class FTPMock extends FTP {
     /**
@@ -78,9 +80,10 @@ export class FTPMock extends FTP {
      *                        It will be triggered many times according the file's size.
      *                        The arg `0`, `0.1xx`, `0.2xx` ... `1` means the upload percent. When it reach `1`, means success.
      */
-    upload(localFile: string, remoteFile: string): Promise<any> {
-        return new Promise((resolve, reject) => {
-            resolve();
+    upload(localFile: string, remoteFile: string): Observable<any> {
+        return Observable.create((observer: Observer<any>) => {
+            observer.next('');
+            observer.complete();
         });
     };
     /**
@@ -92,9 +95,10 @@ export class FTPMock extends FTP {
      *                        It will be triggered many times according the file's size.
      *                        The arg `0`, `0.1xx`, `0.2xx` ... `1` means the upload percent. When it reach `1`, means success.
      */
-    download(localFile: string, remoteFile: string): Promise<any> {
-        return new Promise((resolve, reject) => {
-            resolve();
+    download(localFile: string, remoteFile: string): Observable<any> {
+        return Observable.create((observer: Observer<any>) => {
+            observer.next('');
+            observer.complete();
         });
     };
     /**

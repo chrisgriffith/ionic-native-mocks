@@ -1,82 +1,5 @@
 import { Stripe } from '@ionic-native/stripe';
 
-export interface StripeCardTokenParams {
-    /**
-     * Card number
-     */
-    number: string;
-    /**
-     * Expiry month
-     */
-    expMonth: number;
-    /**
-     * Expiry year
-     */
-    expYear: number;
-    /**
-     * CVC / CVV
-     */
-    cvc?: string;
-    /**
-     * Cardholder name
-     */
-    name?: string;
-    /**
-     * Address line 1
-     */
-    address_line1?: string;
-    /**
-     * Address line 2
-     */
-    address_line2?: string;
-    /**
-     * City
-     */
-    address_city?: string;
-    /**
-     * State / Province
-     */
-    address_state?: string;
-    /**
-     * Country
-     */
-    address_country?: string;
-    /**
-     * Postal code / ZIP Code
-     */
-    postal_code?: string;
-    /**
-     * 3-letter ISO code for currency
-     */
-    currency?: string;
-}
-export interface StripeBankAccountParams {
-    /**
-     * Routing number.
-     */
-    routing_number: string;
-    /**
-     * Account number.
-     */
-    account_number: string;
-    /**
-     * Currency code. Example: `USD`.
-     */
-    currency: string;
-    /**
-     * Country code. Example: `US`.
-     */
-    country: string;
-    /**
-     * Account holder name.
-     */
-    account_holder_name?: string;
-    /**
-     * Account holder type. This can be `individual` or `company`.
-     */
-    account_holder_type?: string;
-}
-
 export class StripeMock extends Stripe {
     /**
      * Set publishable key
@@ -93,8 +16,19 @@ export class StripeMock extends Stripe {
      * @param params {StripeCardTokenParams} Credit card information
      * @return {Promise<string>} returns a promise that resolves with the token, or rejects with an error
      */
-    createCardToken(params: StripeCardTokenParams): Promise<string> {
-        let response: string = '';
+    createCardToken(params: StripeCardTokenParams): Promise<StripeCardTokenRes> {
+        let response: StripeCardTokenRes = { card: {
+                brand: '',
+                exp_month: 0,
+                exp_year: 0,
+                funding: '',
+                last4: ''
+            },
+            created: '',
+            id: '',
+            type: ''
+        };
+
         return new Promise((resolve, reject) => {
             resolve(response);
         });
@@ -152,4 +86,106 @@ export class StripeMock extends Stripe {
             resolve(response);
         });
     };
+}
+
+export interface StripeCardTokenParams {
+    /**
+     * Card number
+     */
+    number: string;
+    /**
+     * Expiry month
+     */
+    expMonth: number;
+    /**
+     * Expiry year
+     */
+    expYear: number;
+    /**
+     * CVC / CVV
+     */
+    cvc?: string;
+    /**
+     * Cardholder name
+     */
+    name?: string;
+    /**
+     * Address line 1
+     */
+    address_line1?: string;
+    /**
+     * Address line 2
+     */
+    address_line2?: string;
+    /**
+     * City
+     */
+    address_city?: string;
+    /**
+     * State / Province
+     */
+    address_state?: string;
+    /**
+     * Country
+     */
+    address_country?: string;
+    /**
+     * Postal code / ZIP Code
+     */
+    postal_code?: string;
+    /**
+     * 3-letter ISO code for currency
+     */
+    currency?: string;
+}
+
+export interface StripeBankAccountParams {
+    /**
+     * Routing number.
+     */
+    routing_number: string;
+    /**
+     * Account number.
+     */
+    account_number: string;
+    /**
+     * Currency code. Example: `USD`.
+     */
+    currency: string;
+    /**
+     * Country code. Example: `US`.
+     */
+    country: string;
+    /**
+     * Account holder name.
+     */
+    account_holder_name?: string;
+    /**
+     * Account holder type. This can be `individual` or `company`.
+     */
+    account_holder_type?: string;
+}
+export interface StripeCardTokenRes {
+    /**
+     * Card Object.
+     */
+    card: {
+        brand: string;
+        exp_month: number;
+        exp_year: number;
+        funding: string;
+        last4: string;
+    };
+    /**
+     * Token Request Date Time.
+     */
+    created: string;
+    /**
+     * Card Token.
+     */
+    id: string;
+    /**
+     * Source Type (card or account).
+     */
+    type: string;
 }

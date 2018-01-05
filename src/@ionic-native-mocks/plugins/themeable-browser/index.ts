@@ -115,7 +115,7 @@ export class ThemeableBrowserObjectMock extends ThemeableBrowserObject {
      * @returns {Observable<any>} Returns back an observable that will listen to the event on subscribe, and will stop listening to the event on unsubscribe.
      */
     on(event: string): Observable<any> {
-         return Observable.create((observer: Observer<any>) => {
+        return Observable.create((observer: Observer<any>) => {
             observer.next('');
             observer.complete();
         });

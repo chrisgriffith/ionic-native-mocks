@@ -30,33 +30,41 @@ export class NativeGeocoderMock extends NativeGeocoder {
  */
 export interface NativeGeocoderReverseResult {
     /**
-     * The street.
+     * The country code.
      */
-    street: string;
-    /**
-     * The house number.
-     */
-    houseNumber: string;
-    /**
-     * The postal code.
-     */
-    postalCode: string;
-    /**
-     * The city.
-     */
-    city: string;
-    /**
-     * The district.
-     */
-    district: string;
+    countryCode: string;
     /**
      * The country name.
      */
     countryName: string;
     /**
-     * The country code.
+     * The postal code.
      */
-    countryCode: string;
+    postalCode: string;
+    /**
+     * The administrativeArea.
+     */
+    administrativeArea: string;
+    /**
+     * The subAdministrativeArea.
+     */
+    subAdministrativeArea: string;
+    /**
+     * The locality.
+     */
+    locality: string;
+    /**
+     * The subLocality.
+     */
+    subLocality: string;
+    /**
+     * The thoroughfare.
+     */
+    thoroughfare: string;
+    /**
+     * The subThoroughfare.
+     */
+    subThoroughfare: string;
 }
 /**
  * Encapsulates format information about a forward geocoding result.

@@ -237,7 +237,7 @@ export class BLEMock extends BLE {
   /**
        * Report if bluetooth is enabled.
        *
-       * @returns {Promise<any>} Returns a Promise that resolves if Bluetooth is enabled, and rejects if disabled.
+       * @returns {Promise<void>} Returns a Promise that resolves if Bluetooth is enabled, and rejects if disabled.
        */
   isEnabled(): Promise<any> {
     return new Promise((resolve, reject) => {

@@ -180,7 +180,7 @@ export class PushMock extends Push {
      * @return {Promise<{isEnabled: boolean}>} Returns a Promise that resolves with an object with one property: isEnabled, a boolean that indicates if permission has been granted.
      */
     hasPermission(): Promise<{ isEnabled: boolean; }> {
-        let response: Boolean;
+        let response: { isEnabled: boolean } = { isEnabled: true };
         return new Promise((resolve, reject) => {
             resolve(response);
         });

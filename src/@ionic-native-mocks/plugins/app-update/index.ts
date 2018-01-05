@@ -1,3 +1,4 @@
+
 import { AppUpdate } from '@ionic-native/app-update';
 
 export class AppUpdateMock extends AppUpdate {

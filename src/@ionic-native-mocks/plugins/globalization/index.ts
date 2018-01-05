@@ -6,7 +6,7 @@ export class GlobalizationMock extends Globalization {
         * @returns {Promise<{value: string}>}
         */
     getPreferredLanguage(): Promise<{ value: string; }> {
-        let theResult = { value: '' };
+        let theResult: { value: string } = { value: '' };
         return new Promise((resolve, reject) => {
             resolve(theResult);
         });
@@ -16,7 +16,7 @@ export class GlobalizationMock extends Globalization {
      * @returns {Promise<{value: string}>}
      */
     getLocaleName(): Promise<{ value: string; }> {
-        let theResult = { value: '' };
+        let theResult: { value: string } = { value: '' };
         return new Promise((resolve, reject) => {
             resolve(theResult);
         });
@@ -28,7 +28,7 @@ export class GlobalizationMock extends Globalization {
      * @returns {Promise<{value: string}>} Returns a promise when the date has been converted.
      */
     dateToString(date: Date, options: { formatLength: string; selector: string; }): Promise<{ value: string; }> {
-        let theResult = { value: '' };
+        let theResult: { value: string } = { value: '' };
         return new Promise((resolve, reject) => {
             resolve(theResult);
         });
@@ -51,7 +51,7 @@ export class GlobalizationMock extends Globalization {
         second: number;
         millisecond: number;
     }> {
-        let theResult = { year: 0, month: 0, day: 0, hour: 0, minute: 0, second: 0, millisecond: 0 };
+        let theResult: { year: number, month: number, day: number, hour: number, minute: number, second: number, millisecond: number } = { year: 0, month: 0, day: 0, hour: 0, minute: 0, second: 0, millisecond: 0 };
         return new Promise((resolve, reject) => {
             resolve(theResult);
         });
@@ -70,7 +70,7 @@ export class GlobalizationMock extends Globalization {
         utf_offset: number;
         dst_offset: number;
     }> {
-        let theResult = { pattern: '', timezone: '', utf_offset: 0, dst_offset: 0 };
+        let theResult: { pattern: string, timezone: string, utf_offset: number, dst_offset: number } = { pattern: '', timezone: '', utf_offset: 0, dst_offset: 0 };
         return new Promise((resolve, reject) => {
             resolve(theResult);
         });
@@ -86,9 +86,8 @@ export class GlobalizationMock extends Globalization {
     }): Promise<{
         value: Array<string>;
     }> {
-        let theResult = { value: [''] };
         return new Promise((resolve, reject) => {
-            resolve(theResult);
+            resolve({ value: [''] });
         });
     };
     /**
@@ -99,7 +98,7 @@ export class GlobalizationMock extends Globalization {
     isDayLightSavingsTime(date: Date): Promise<{
         dst: string;
     }> {
-        let theResult = { dst: '' };
+        let theResult: {dst: string} = { dst: '' };
         return new Promise((resolve, reject) => {
             resolve(theResult);
         });
@@ -111,7 +110,7 @@ export class GlobalizationMock extends Globalization {
     getFirstDayOfWeek(): Promise<{
         value: string;
     }> {
-        let theResult = { value: '' };
+        let theResult: { value: string } = { value: '' };
         return new Promise((resolve, reject) => {
             resolve(theResult);
         });
@@ -126,7 +125,7 @@ export class GlobalizationMock extends Globalization {
     }): Promise<{
         value: string;
     }> {
-        let theResult = { value: '' };
+        let theResult: { value: string } = { value: '' };
         return new Promise((resolve, reject) => {
             resolve(theResult);
         });
@@ -142,7 +141,7 @@ export class GlobalizationMock extends Globalization {
     }): Promise<{
         value: number | string;
     }> {
-        let theResult = { value: '' };
+        let theResult: { value: string } = { value: '' };
         return new Promise((resolve, reject) => {
             resolve(theResult);
         });
@@ -164,7 +163,7 @@ export class GlobalizationMock extends Globalization {
         decimal: string;
         grouping: string;
     }> {
-        let theResult = { pattern: '', symbol: '', fraction: 0, rounding: 0, positive: '', negative: '', decimal: '', grouping: '' };
+        let theResult: { pattern: string, symbol: string, fraction: number, rounding: number, positive: string, negative: string, decimal: string, grouping: string } = { pattern: '', symbol: '', fraction: 0, rounding: 0, positive: '', negative: '', decimal: '', grouping: '' };
         return new Promise((resolve, reject) => {
             resolve(theResult);
         });
@@ -182,7 +181,7 @@ export class GlobalizationMock extends Globalization {
         decimal: number;
         grouping: string;
     }> {
-        let theResult = { pattern: '', code: '', fraction: 0, rounding: 0, decimal: 0, grouping: '' };
+        let theResult: { pattern: string, code: string, fraction: number, rounding: number, decimal: number, grouping: string } = { pattern: '', code: '', fraction: 0, rounding: 0, decimal: 0, grouping: '' };
         return new Promise((resolve, reject) => {
             resolve(theResult);
         });

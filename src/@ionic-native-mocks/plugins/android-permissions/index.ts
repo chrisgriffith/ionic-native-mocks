@@ -1,3 +1,4 @@
+
 import { AndroidPermissions } from '@ionic-native/android-permissions';
 
 export class AndroidPermissionsMock extends AndroidPermissions {

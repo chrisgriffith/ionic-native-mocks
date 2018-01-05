@@ -131,7 +131,7 @@ export class AndroidFingerprintAuthMock extends AndroidFingerprintAuth {
         isHardwareDetected: boolean;
         hasEnrolledFingerprints: boolean;
     }> {
-        let reponse: { isAvailable: boolean, isHardwareDetected: boolean, hasEnrolledFingerprints: boolean} = { isAvailable: true, isHardwareDetected: true, hasEnrolledFingerprints: true };
+        let reponse: { isAvailable: boolean, isHardwareDetected: boolean, hasEnrolledFingerprints: boolean} = {isAvailable: true, isHardwareDetected: true, hasEnrolledFingerprints: true};
         return new Promise((resolve, reject) => {
             resolve(reponse);
         });
@@ -146,8 +146,9 @@ export class AndroidFingerprintAuthMock extends AndroidFingerprintAuth {
     }): Promise<{
         deleted: boolean;
     }> {
+        let reponse: { deleted: boolean};
         return new Promise((resolve, reject) => {
-            resolve({deleted: true});
+            resolve(reponse);
         });
     };
 }
