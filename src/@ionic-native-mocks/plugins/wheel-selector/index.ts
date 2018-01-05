@@ -67,7 +67,7 @@ export class WheelSelectorMock extends WheelSelector {
      * Hide the selector
      * @returns {Promise<void>}
      */
-    hideSelector(): Promise<void> {
+    hideSelector(): Promise<any> {
         return new Promise((resolve, reject) => {
             resolve();
         });

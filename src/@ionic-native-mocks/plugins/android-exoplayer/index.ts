@@ -141,7 +141,7 @@ export class AndroidExoplayerMock extends AndroidExoplayer {
      * @param controller {AndroidExoPlayerControllerConfig} Configuration of the controller.
      * @return {Promise<void>}
      */
-    setStream(url: string, controller: AndroidExoPlayerControllerConfig): Promise<void> {
+    setStream(url: string, controller: AndroidExoPlayerControllerConfig): Promise<any> {
         return new Promise((resolve, reject) => {
             resolve();
         });
@@ -150,7 +150,7 @@ export class AndroidExoplayerMock extends AndroidExoplayer {
      * Will pause if playing and play if paused
      * @return {Promise<void>}
      */
-    playPause(): Promise<void> {
+    playPause(): Promise<any> {
         return new Promise((resolve, reject) => {
             resolve();
         });
@@ -159,7 +159,7 @@ export class AndroidExoplayerMock extends AndroidExoplayer {
      * Stop playing.
      * @return {Promise<void>}
      */
-    stop(): Promise<void> {
+    stop(): Promise<any> {
         return new Promise((resolve, reject) => {
             resolve();
         });
@@ -169,7 +169,7 @@ export class AndroidExoplayerMock extends AndroidExoplayer {
      * @param milliseconds {number} Position in stream in milliseconds
      * @return {Promise<void>}
      */
-    seekTo(milliseconds: number): Promise<void> {
+    seekTo(milliseconds: number): Promise<any> {
         return new Promise((resolve, reject) => {
             resolve();
         });
@@ -179,7 +179,7 @@ export class AndroidExoplayerMock extends AndroidExoplayer {
      * @param milliseconds {number} Time in milliseconds
      * @return {Promise<void>}
      */
-    seekBy(milliseconds: number): Promise<void> {
+    seekBy(milliseconds: number): Promise<any> {
         return new Promise((resolve, reject) => {
             resolve();
         });
@@ -198,7 +198,7 @@ export class AndroidExoplayerMock extends AndroidExoplayer {
      * Show the controller.
      * @return {Promise<void>}
      */
-    showController(): Promise<void> {
+    showController(): Promise<any> {
         return new Promise((resolve, reject) => {
             resolve();
         });
@@ -207,7 +207,7 @@ export class AndroidExoplayerMock extends AndroidExoplayer {
      * Hide the controller.
      * @return {Promise<void>}
      */
-    hideController(): Promise<void> {
+    hideController(): Promise<any> {
         return new Promise((resolve, reject) => {
             resolve();
         });
@@ -217,7 +217,7 @@ export class AndroidExoplayerMock extends AndroidExoplayer {
      * @param controller {AndroidExoPlayerControllerConfig} Configuration of the controller.
      * @return {Promise<void>}
      */
-    setController(controller: AndroidExoPlayerControllerConfig): Promise<void> {
+    setController(controller: AndroidExoPlayerControllerConfig): Promise<any> {
         return new Promise((resolve, reject) => {
             resolve();
         });
@@ -226,7 +226,7 @@ export class AndroidExoplayerMock extends AndroidExoplayer {
      * Close and dispose of player, call before destroy.
      * @return {Promise<void>}
      */
-    close(): Promise<void> {
+    close(): Promise<any> {
         return new Promise((resolve, reject) => {
             resolve();
         });

@@ -185,18 +185,20 @@ export class InAppPurchase2Mock extends InAppPurchase2 {
      * @param callback {Function}
      */
     off(callback: Function): void { };
-    order(product: string | IAPProduct, additionalData?: any): Promise<any> {
-        return new Promise((resolve, reject) => {
-            resolve();
-        });
-    //     then: Function;
-    //     error: Function;
-    };
+    // order(product: string | IAPProduct, additionalData?: any): Promise<any> {
+    //     return new Promise((resolve, reject) => {
+    //         resolve().error();
+    //     }).then();
+    //     //  then: Function;
+    //     //  error: Function;
+    // };
+    order(product: string | IAPProduct, additionalData?: any): { then: Function; error: Function; } { return; }
+
     /**
      *
      * @return {Promise<any>} returns a promise that resolves when the store is ready
      */
-    ready(): Promise<void> {
+    ready(): Promise<any> {
         return new Promise((resolve, reject) => {
             resolve();
         });

@@ -92,7 +92,7 @@ export class ZeroconfMock extends Zeroconf {
      * Closes the service browser and stops watching.
      * @return {Promise<void>}
      */
-    close(): Promise<void> {
+    close(): Promise<any> {
         return new Promise((resolve, reject) => {
             resolve();
         });
