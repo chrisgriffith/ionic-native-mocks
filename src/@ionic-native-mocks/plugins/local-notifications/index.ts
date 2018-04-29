@@ -1,5 +1,158 @@
 import { LocalNotifications } from '@ionic-native/local-notifications';
+import { Observable } from 'rxjs/Observable';
+import { Observer } from 'rxjs/Observer';
 
+export declare enum ELocalNotificationTriggerUnit {
+    SECOND = "second",
+    MINUTE = "minute",
+    HOUR = "hour",
+    DAY = "day",
+    WEEK = "week",
+    MONTH = "month",
+    QUARTER = "quarter",
+    YEAR = "year",
+    WEEKDAY = "weekday",
+    WEEKDAY_ORDINAL = "weekdayOrdinal",
+    WEEK_OF_MONTH = "weekOfMonth",
+}
+export interface ILocalNotificationTrigger {
+    /** ***** FIX ***** */
+    /**
+     * The date and time when the system should deliver the local notification. If the specified value is nil or is a date in the past, the local notification is delivered immediately.
+     * Default: now ~ new Date()
+     */
+    at?: Date;
+    /** ***** TIMESPAN ***** */
+    /**
+     * Amount of units
+     */
+    in?: number;
+    /**
+     * Unit
+     */
+    unit?: ELocalNotificationTriggerUnit;
+    /** ***** REPEAT/MATCH ***** */
+    /**
+     * Amount of units
+     */
+    count?: number;
+    /**
+     * The unit
+     */
+    every?: ELocalNotificationTriggerUnit;
+    /**
+     * The end of the repeating notification
+     */
+    before?: Date;
+    /**
+     * The date and time when the system should deliver the local notification. If the specified value is nil or is a date in the past, the local notification is delivered immediately.
+     * Only for "repeat"
+     * Default: now ~ new Date()
+     */
+    firstAt?: Date;
+    /**
+     * Only for "match"
+     */
+    after?: Date;
+    /** ***** LOCATION ***** */
+    /**
+     * IOS ONLY
+     * Center of the location
+     * Latitude and Longitude values
+     */
+    center?: number[];
+    /**
+     * IOS ONLY
+     * Radius in meters
+     */
+    radius?: number;
+    /**
+     * IOS ONLY
+     * Trigger on entry of the location
+     */
+    notifyOnEntry?: boolean;
+    /**
+     * IOS ONLY
+     * Trigger on exit of the location
+     */
+    notifyOnExit?: boolean;
+    /**
+     * IOS ONLY
+     * Trigger only once?
+     */
+    single?: boolean;
+}
+export declare enum ILocalNotificationActionType {
+    INPUT = "input",
+    BUTTON = "button",
+}
+export interface ILocalNotificationAction {
+    /**
+     * The id of the action is used as the event name in the listener function
+     */
+    id?: string;
+    /**
+     * The title of the notification message
+     */
+    title?: string;
+    /**
+     * Specifies whether the action causes the app to launch in the foreground
+     */
+    launch?: boolean;
+    /**
+     * If the value is 'decline' the action is displayed with special highlighting to indicate that it performs a destructive task
+     */
+    ui?: string;
+    /**
+     * Specifies whether the action requires that the user’s device be unlocked.
+     * When the user selects an action with this option, the system prompts
+     * the user to unlock the device
+     */
+    needsAuth?: boolean;
+    /**
+     * The resource path of the action icon
+     */
+    icon?: string;
+    /**
+     * The type of the action. If omitted 'button' is used.
+     */
+    type?: ILocalNotificationActionType;
+}
+export interface ILocalNotificationProgressBar {
+    /**
+     * Is the progress bar enabled?
+     */
+    enabled?: boolean;
+    /**
+     * The current value
+     */
+    value?: number;
+    /**
+     * ANDROID ONLY
+     * The maximum value (default is 100)
+     */
+    maxValue?: number;
+    /**
+     * ANDROID ONLY
+     * Show an indeterminate progress bar
+     */
+    indeterminate?: boolean;
+    /**
+     * WINDOWS ONLY
+     * Gets or sets an optional string to be displayed instead of the
+     * default percentage string. If this isn't provided, something
+     * like "70%" will be displayed.
+     */
+    description?: string;
+    /**
+     * WINDOWS ONLY
+     * Sets the status (required), which is displayed underneath the progress bar
+     * on the left.
+     * This string should reflect the status of the operation,
+     * like "Downloading..." or "Installing..."
+     */
+    status?: string;
+}
 export interface ILocalNotification {
     /**
      * A unique identifier required to clear, cancel, update or retrieve the local notification in the future
@@ -15,18 +168,7 @@ export interface ILocalNotification {
      * Second row of the notification
      * Default: Empty string
      */
-    text?: string;
-    /**
-     * The interval at which to reschedule the local notification. That can be a value of second, minute, hour, day, week, month or year
-     * Default: 0 (which means that the system triggers the local notification once)
-     */
-    every?: string;
-    /**
-     * The date and time when the system should deliver the local notification. If the specified value is nil or is a date in the past, the local notification is delivered immediately.
-     * Default: now ~ new Date()
-     */
-    at?: any;
-    firstAt?: any;
+    text?: string | string[];
     /**
      * The number currently set as the badge of the app icon in Springboard (iOS) or at the right-hand side of the local notification (Android)
      * Default: 0 (which means don't show a number)
@@ -55,29 +197,141 @@ export interface ILocalNotification {
      */
     smallIcon?: string;
     /**
-    * ANDROID ONLY
-    * RGB value for the background color of the smallIcon.
-    * Default: Androids COLOR_DEFAULT, which will vary based on Android version.
-    */
+     * ANDROID ONLY
+     * RGB value for the background color of the smallIcon.
+     * Default: Androids COLOR_DEFAULT, which will vary based on Android version.
+     */
     color?: string;
     /**
      * ANDROID ONLY
-     * Ongoing notifications differ from regular notifications in the following ways:
-     * - They are sorted above the regular notifications in the notification panel
-     * - They do not have an 'X' close button, and are not affected by the "Clear all" button
-     * Default: false
+     * Use the default notification vibrate.
      */
-    ongoing?: boolean;
+    vibrate?: boolean;
     /**
      * ANDROID ONLY
-     * ARGB value that you would like the LED on the device to blink
-     * Default: FFFFFF
+     * Define the blinking of the LED on the device.
+     * If set to true, the LED will blink in the default color with
+     * timings for on and off set to 1000 ms.
+     * If set to a string, the LED will blink in this ARGB value with
+     * timings for on and off set to 1000 ms.
+     * If set to an array, the value of the key 0 will be used as the color,
+     * the value of the key 1 will be used as the 'on' timing, the value of
+     * the key 2 will be used as the 'off' timing
      */
-    led?: string;
+    led?: {
+        color: string;
+        on: number;
+        off: number;
+    } | any[] | boolean | string;
     /**
-    * Notification priority.
-    */
+     * Notification priority.
+     * Integers between -2 and 2, whereas -2 is minimum and 2 is maximum priority
+     */
     priority?: number;
+    /**
+     * Is a silent notification
+     */
+    silent?: boolean;
+    /**
+     * Specifies whether the a click on the notification causes the app
+     * to launch in the foreground
+     */
+    launch?: boolean;
+    /**
+     * ANDROID ONLY
+     * Wakeup the device. (default is true)
+     */
+    wakeup?: boolean;
+    /**
+     * ANDROID ONLY
+     * Specifies a duration in milliseconds after which this notification should be canceled, if it is not already canceled.
+     */
+    timeoutAfter?: number | false;
+    /**
+     * Actions id or actions
+     */
+    actions?: string | ILocalNotificationAction[];
+    /**
+     * When to trigger the notification
+     */
+    trigger?: ILocalNotificationTrigger;
+    /**
+     * A list of image attachments
+     */
+    attachments?: string[];
+    /**
+     * ANDROID ONLY
+     * If and how the notification shall show the when date.
+     * Possbile values:
+     *                  boolean: true equals 'clock', false disable a watch/counter
+     *                  'clock': Show the when date in the content view
+     *                  'chronometer': Show a stopwatch
+     *
+     */
+    clock?: boolean | string;
+    /**
+     * Shows a progress bar
+     * Setting a boolean is a shortcut for {enabled: true/false} respectively
+     */
+    progressBar?: ILocalNotificationProgressBar | boolean;
+    /**
+     * ANDROID ONLY
+     * If multiple notifications have the same group your app can present
+     * them as a single group.
+     */
+    group?: string;
+    /**
+     * ANDROID ONLY
+     * If set to 'true' this notification could use 'summary' to summarize
+     * the contents of the whole group
+     */
+    groupSummary?: boolean;
+    /**
+     * ANDROID ONLY
+     * Summary of the whole notification group. Should be used in conjuntion
+     * with 'groupSummary' set to true
+     */
+    summary?: string;
+    /**
+     * ANDROID ONLY
+     * Sets the number of items this notification represents.
+     */
+    number?: number;
+    /**
+     * ANDROID ONLY
+     * Set whether this is an "ongoing" notification.
+     * Ongoing notifications cannot be dismissed by the user,
+     * so your application or service must take care of canceling them.
+     */
+    sticky?: boolean;
+    /**
+     * ANDROID ONLY
+     * Make this notification automatically dismissed when the user touches it.
+     */
+    autoClear?: boolean;
+    /**
+     * ANDROID ONLY
+     * If set to true the notification will be show in its entirety on all lockscreens.
+     * If set to false it will not be revealed on a secure lockscreen.
+     */
+    lockscreen?: boolean;
+    /**
+     * ANDROID ONLY
+     * Set the default notification options that will be used.
+     * The value should be one or more of the following fields combined with
+     * bitwise-or: DEFAULT_SOUND, DEFAULT_VIBRATE, DEFAULT_LIGHTS.
+     */
+    defaults?: number;
+    /**
+     * ANDROID ONLY
+     * Specifies the channel the notification should be delivered on.
+     */
+    channel?: string;
+    /**
+     * ANDROID ONLY
+     * Set the token for the media session
+     */
+    mediaSession?: string;
 }
 
 export class LocalNotificationsMocks extends LocalNotifications {
@@ -166,7 +420,7 @@ export class LocalNotificationsMocks extends LocalNotifications {
      * Get all the notification ids
      * @returns {Promise<Array<number>>}
      */
-    getAllIds(): Promise<Array<number>> {
+    getIds(): Promise<Array<number>> {
         let response: Array<number> = [];
         return new Promise((resolve, reject) => {
             resolve(response);
@@ -274,11 +528,85 @@ export class LocalNotificationsMocks extends LocalNotifications {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
+    };/**
+    * Adds a group of actions
+    * @param groupId The id of the action group
+    * @param actions The actions of this group
+    * @returns {Promise<any>}
+    */
+   addActions(groupId: any, actions: Array<ILocalNotificationAction>): Promise<any> {
+    let response: Array<ILocalNotificationAction>;
+    return new Promise((resolve, reject) => {
+        resolve(response);
+    });
+   };
+   /**
+    * Removes a group of actions
+    * @param groupId The id of the action group
+    * @returns {Promise<any>}
+    */
+   removeActions(groupId: any): Promise<any> {
+    let response: any;
+    return new Promise((resolve, reject) => {
+        resolve(response);
+    });
+   };
+   /**
+    * Checks if a group of actions is defined
+    * @param groupId The id of the action group
+    * @returns {Promise<boolean>} Whether the group is defined
+    */
+   hasActions(groupId: any): Promise<boolean> {
+    let response: boolean;
+    return new Promise((resolve, reject) => {
+        resolve(response);
+    });
+   };
+   /**
+    * Gets the (platform specific) default settings.
+    * @returns {Promise<any>} An object with all default settings
+    */
+   getDefaults(): Promise<any> {
+    let response: any;
+    return new Promise((resolve, reject) => {
+        resolve(response);
+    });
+   };
+   /**
+    * Overwrites the (platform specific) default settings.
+    * @returns {Promise<any>}
+    */
+   setDefaults(defaults: any): Promise<any> {
+    let response: any;
+    return new Promise((resolve, reject) => {
+        resolve(response);
+    });
+   };
+   /**
+    * Sets a callback for a specific event
+    * @param eventName {string} The name of the event. Available events: schedule, trigger, click, update, clear, clearall, cancel, cancelall. Custom event names are possible for actions
+    * @return {Observable}
+    */
+    on(eventName: string): Observable<any> { 
+        return Observable.create((observer: Observer<any>) => {
+            observer.next('');
+            observer.complete();
+        });
     };
     /**
-     * Sets a callback for a specific event
-     * @param eventName The name of the event. Available events: schedule, trigger, click, update, clear, clearall, cancel, cancelall
-     * @param callback Call back function. All events return notification and state parameter. clear and clearall return state parameter only.
+     * Not an official interface, however its possible to manually fire events.
+     ** @param eventName The name of the event. Available events: schedule, trigger, click, update, clear, clearall, cancel, cancelall. Custom event names are possible for actions
+     * @param args Optional arguments
      */
-    on(eventName: string, callback: any): void { };
+    fireEvent(eventName: string, args: any): void {};
+    /**
+     * Fire queued events once the device is ready and all listeners are registered.
+     * @returns {Promise<any>}
+     */
+    fireQueuedEvents(): Promise<any> {
+        let response: any;
+        return new Promise((resolve, reject) => {
+            resolve(response);
+        });
+    };
 }

@@ -1,6 +1,6 @@
 {
   "name": "ionic-native-mocks",
-  "version": "2.0.7",
+  "version": "2.0.9",
   "description":
     "Mocks for Ionic Native for Cordova and Ionic with TypeScript, ES6+, Promise and Observable support",
   "author":
