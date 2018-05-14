@@ -30,12 +30,12 @@ export  class IntelSecurityMock extends IntelSecurity {
      * returns an IntelSecurityStorage object
      * @type {IntelSecurityStorage}
      */
-    storage: IntelSecurityStorageMock;
+    storage: IntelSecurityStorageMock = new IntelSecurityStorageMock();
     /**
      * Returns an IntelSecurityData object
      * @type {IntelSecurityData}
      */
-    data: IntelSecurityDataMock;
+    data: IntelSecurityDataMock = new IntelSecurityDataMock();
 }
 /**
  * @hidden
