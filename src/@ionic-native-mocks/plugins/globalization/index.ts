@@ -1,5 +1,10 @@
 import { Globalization } from '@ionic-native/globalization';
 
+export interface GlobalizationOptions {
+    formatLength: string;
+    selector: string;
+}
+
 export class GlobalizationMock extends Globalization {
     /**
         * Returns the BCP-47 compliant language identifier tag to the successCallback with a properties object as a parameter. That object should have a value property with a String value.
@@ -59,22 +64,21 @@ export class GlobalizationMock extends Globalization {
     /**
      * Returns a pattern string to format and parse dates according to the client's user preferences.
      * @param options Object with the format length and selector
-     * @returns {Promise<{ pattern: string, timezone: string, utf_offset: number, dst_offset: number }>} Returns a promise.
+     * @returns {Promise<{ pattern: string, timezone: string, iana_timezone: string, utc_offset: number, dst_offset: number }>} Returns a promise.
      */
-    getDatePattern(options: {
-        formatLength: string;
-        selector: string;
-    }): Promise<{
+    getDatePattern(options: GlobalizationOptions): Promise<{
         pattern: string;
         timezone: string;
-        utf_offset: number;
+        iana_timezone: string;
+        utc_offset: number;
         dst_offset: number;
     }> {
-        let theResult: { pattern: string, timezone: string, utf_offset: number, dst_offset: number } = { pattern: '', timezone: '', utf_offset: 0, dst_offset: 0 };
+        let theResult: { pattern: string, timezone: string, iana_timezone: string, utc_offset: number, dst_offset: number } = { pattern: '', timezone: '', iana_timezone: '', utc_offset: 0, dst_offset: 0 };
         return new Promise((resolve, reject) => {
             resolve(theResult);
         });
     };
+
     /**
      * Returns an array of the names of the months or days of the week, depending on the client's user preferences and calendar.
      * @param options Object with type (narrow or wide) and item (month or days).
