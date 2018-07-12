@@ -1,6 +1,6 @@
 import { Contacts } from '@ionic-native/contacts';
 
-export declare type ContactFieldType = '*' | 'addresses' | 'birthday' | 'categories' | 'country' | 'department' | 'displayName' | 'emails' | 'familyName' | 'formatted' | 'givenName' | 'honorificPrefix' | 'honorificSuffix' | 'id' | 'ims' | 'locality' | 'middleName' | 'name' | 'nickname' | 'note' | 'organizations' | 'phoneNumbers' | 'photos' | 'postalCode' | 'region' | 'streetAddress' | 'title' | 'urls';
+export declare type ContactFieldType = '*' | 'addresses' | 'birthday' | 'categories' | 'country' | 'department' | 'displayName' | 'emails' | 'name.familyName' | 'name.formatted' | 'name.givenName' | 'name.honorificPrefix' | 'name.honorificSuffix' | 'id' | 'ims' | 'locality' | 'name.middleName' | 'name' | 'nickname' | 'note' | 'organizations' | 'phoneNumbers' | 'photos' | 'postalCode' | 'region' | 'streetAddress' | 'title' | 'urls';
 export interface IContactProperties {
     /** A globally unique identifier. */
     id?: string;
@@ -36,6 +36,7 @@ export interface IContactProperties {
  */
 export class Contact implements IContactProperties {
     // private _objectInstance;
+    _objectInstance: any;
     id: string;
     displayName: string;
     name: IContactName;
@@ -64,7 +65,6 @@ export class Contact implements IContactProperties {
         });
     }
 }
-
 /**
  * @hidden
  */
@@ -78,7 +78,7 @@ export interface IContactError {
  * @hidden
  */
 export declare const ContactError: {
-    new (code: number): IContactError;
+    new(code: number): IContactError;
     UNKNOWN_ERROR: number;
     INVALID_ARGUMENT_ERROR: number;
     TIMEOUT_ERROR: number;
@@ -104,14 +104,14 @@ export interface IContactName {
 /**
  * @hidden
  */
-export class ContactName implements IContactName {
+export declare class ContactName implements IContactName {
     formatted: string;
     familyName: string;
     givenName: string;
     middleName: string;
     honorificPrefix: string;
     honorificSuffix: string;
-    constructor(formatted?: string, familyName?: string, givenName?: string, middleName?: string, honorificPrefix?: string, honorificSuffix?: string) {};
+    constructor(formatted?: string, familyName?: string, givenName?: string, middleName?: string, honorificPrefix?: string, honorificSuffix?: string);
 }
 export interface IContactField {
     /** A string that indicates what type of field this is, home for example. */
@@ -124,11 +124,11 @@ export interface IContactField {
 /**
  * @hidden
  */
-export class ContactField implements IContactField {
+export declare class ContactField implements IContactField {
     type: string;
     value: string;
     pref: boolean;
-    constructor(type?: string, value?: string, pref?: boolean) {};
+    constructor(type?: string, value?: string, pref?: boolean);
 }
 export interface IContactAddress {
     /** Set to true if this ContactAddress contains the user's preferred value. */
@@ -151,7 +151,7 @@ export interface IContactAddress {
 /**
  * @hidden
  */
-export class ContactAddress implements IContactAddress {
+export declare class ContactAddress implements IContactAddress {
     pref: boolean;
     type: string;
     formatted: string;
@@ -160,7 +160,7 @@ export class ContactAddress implements IContactAddress {
     region: string;
     postalCode: string;
     country: string;
-    constructor(pref?: boolean, type?: string, formatted?: string, streetAddress?: string, locality?: string, region?: string, postalCode?: string, country?: string) {};
+    constructor(pref?: boolean, type?: string, formatted?: string, streetAddress?: string, locality?: string, region?: string, postalCode?: string, country?: string);
 }
 export interface IContactOrganization {
     /** Set to true if this ContactOrganization contains the user's preferred value. */
@@ -177,13 +177,13 @@ export interface IContactOrganization {
 /**
  * @hidden
  */
-export  class ContactOrganization implements IContactOrganization {
+export declare class ContactOrganization implements IContactOrganization {
     type: string;
     name: string;
     department: string;
     title: string;
     pref: boolean;
-    constructor(type?: string, name?: string, department?: string, title?: string, pref?: boolean) {};
+    constructor(type?: string, name?: string, department?: string, title?: string, pref?: boolean);
 }
 /** Search options to filter navigator.contacts.  */
 export interface IContactFindOptions {
@@ -208,8 +208,40 @@ export declare class ContactFindOptions implements IContactFindOptions {
     hasPhoneNumber: boolean;
     constructor(filter?: string, multiple?: boolean, desiredFields?: string[], hasPhoneNumber?: boolean);
 }
-
-export class ContactsMock extends Contacts {
+/**
+ * @name Contacts
+ * @description
+ * Access and manage Contacts on the device.
+ *
+ * @usage
+ *
+ * ```typescript
+ * import { Contacts, Contact, ContactField, ContactName } from '@ionic-native/contacts';
+ *
+ * constructor(private contacts: Contacts) { }
+ *
+ * let contact: Contact = this.contacts.create();
+ *
+ * contact.name = new ContactName(null, 'Smith', 'John');
+ * contact.phoneNumbers = [new ContactField('mobile', '6471234567')];
+ * contact.save().then(
+ *   () => console.log('Contact saved!', contact),
+ *   (error: any) => console.error('Error saving contact.', error)
+ * );
+ *
+ * ```
+ * @classes
+ * Contact
+ * @interfaces
+ * IContactProperties
+ * IContactError
+ * IContactName
+ * IContactField
+ * IContactAddress
+ * IContactOrganization
+ * IContactFindOptions
+ */
+export class ContactsMocks extends Contacts {
     /**
      * Create a single contact.
      * @returns {Contact} Returns a Contact object
@@ -220,8 +252,8 @@ export class ContactsMock extends Contacts {
     };
     /**
      * Search for contacts in the Contacts list.
-     * @param fields {ContactFieldType[]}  Contact fields to be used as a search qualifier
-     * @param options {IContactFindOptions} Optional options for the query
+     * @param {ContactFieldType[]} fields Contact fields to be used as a search qualifier
+     * @param {IContactFindOptions} [options] Optional options for the query
      * @returns {Promise<Contact[]>} Returns a Promise that resolves with the search results (an array of Contact objects)
      */
     find(fields: ContactFieldType[], options?: IContactFindOptions): Promise<any[]> {
@@ -232,7 +264,7 @@ export class ContactsMock extends Contacts {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    }
+    };
     /**
      * Select a single Contact.
      * @returns {Promise<Contact>} Returns a Promise that resolves with the selected Contact
@@ -244,5 +276,5 @@ export class ContactsMock extends Contacts {
         return new Promise((resolve, reject) => {
             resolve(theContact);
         });
-    }
+    };
 }
