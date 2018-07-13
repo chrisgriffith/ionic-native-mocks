@@ -140,7 +140,13 @@ export class WebIntentMock extends WebIntent {
      * Registers a broadcast receiver for the specified filters
      * @param filters {any}
      */
-    registerBroadcastReceiver(filters: any): void { };
+    registerBroadcastReceiver(filters: any): Observable<any> {
+        let response: string = '';
+        return Observable.create((observer: Observer<any>) => {
+            observer.next(response);
+            observer.complete();
+        });
+    };
     /**
      * Unregisters a broadcast receiver
      */
@@ -148,7 +154,13 @@ export class WebIntentMock extends WebIntent {
     /**
     * Returns the content of the intent used whenever the application activity is launched
     */
-    onIntent(): void { };
+    onIntent(): Observable<string> {
+        let response: string = '';
+        return Observable.create((observer: Observer<any>) => {
+            observer.next(response);
+            observer.complete();
+        });
+    };
     /**
     *
     */

@@ -403,9 +403,11 @@ export class BackgroundGeolocatioMock extends BackgroundGeolocation {
      * In case or error (SettingNotFoundException) fail callback will be executed.
      * @returns {Promise<boolean>}
      */
-    watchLocationMode(): Promise<boolean> {
-        return new Promise((resolve, reject) => {
-            resolve();
+    watchLocationMode(): Observable<number> {
+        return Observable.create((observer: Observer<any>) => {
+            let response: number;
+            observer.next( response  );
+            observer.complete();
         });
     };
     /**

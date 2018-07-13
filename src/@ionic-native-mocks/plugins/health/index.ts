@@ -228,8 +228,8 @@ export class HealthMock extends Health {
      * @param queryOptions {HealthQueryOptions}
      * @return {Promise<HealthData>}
      */
-    query(queryOptions: HealthQueryOptions): Promise<HealthData> {
-        let response: HealthData;
+    query(queryOptions: HealthQueryOptions): Promise<HealthData[]> {
+        let response: HealthData[];
         return new Promise((resolve, reject) => {
             resolve(response);
         });

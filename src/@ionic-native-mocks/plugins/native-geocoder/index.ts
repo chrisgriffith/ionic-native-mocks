@@ -7,8 +7,8 @@ export class NativeGeocoderMock extends NativeGeocoder {
      * @param longitude {number} The longitude
      * @return {Promise<any>}
      */
-    reverseGeocode(latitude: number, longitude: number): Promise<NativeGeocoderReverseResult> {
-        let response: NativeGeocoderReverseResult;
+    reverseGeocode(latitude: number, longitude: number, options?: NativeGeocoderOptions): Promise<NativeGeocoderReverseResult[]> {
+        let response: NativeGeocoderReverseResult[];
         return new Promise((resolve, reject) => {
             resolve(response);
         });
@@ -18,8 +18,8 @@ export class NativeGeocoderMock extends NativeGeocoder {
      * @param addressString {string} The address to be geocoded
      * @return {Promise<any>}
      */
-    forwardGeocode(addressString: string): Promise<NativeGeocoderForwardResult> {
-        let response: NativeGeocoderForwardResult;
+    orwardGeocode(addressString: string, options?: NativeGeocoderOptions): Promise<NativeGeocoderForwardResult[]> {
+        let response: NativeGeocoderForwardResult[];
         return new Promise((resolve, reject) => {
             resolve(response);
         });
@@ -78,4 +78,23 @@ export interface NativeGeocoderForwardResult {
      * The longitude.
      */
     longitude: string;
+}
+
+export interface NativeGeocoderOptions {
+    /**
+     * The locale to use when returning the address information.
+     * If set to 'false' the locale will always be 'en_US'.
+     * Default is 'true'
+     */
+    useLocale: boolean;
+    /**
+     * The default locale to use when returning the address information.
+     * e.g.: 'fa-IR' or 'de_DE'.
+     */
+    defaultLocale?: string;
+    /**
+     * The maximum number of result to return (max is 5).
+     * Default is 1
+     */
+    maxResults: number;
 }

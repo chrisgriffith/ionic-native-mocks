@@ -1,3 +1,5 @@
+import { _throw } from 'rxjs/observable/throw';
+
 import { Observable } from 'rxjs/Observable';
 
 import {
@@ -158,7 +160,7 @@ export function CordovaCheck(opts: CordovaCheckOptions = {}) {
           if (opts.sync) {
             return null;
           } else if (opts.observable) {
-            return Observable.throw(new Error(check && check.error));
+            return _throw(new Error(check && check.error));
           }
           return Promise.reject(check && check.error);
         }

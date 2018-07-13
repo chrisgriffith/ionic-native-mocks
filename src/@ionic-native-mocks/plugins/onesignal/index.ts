@@ -227,6 +227,10 @@ export interface OSPermissionState {
      * Permissions Status
      */
     status: any;
+    /**
+     * Permissions State (Android Only)
+     */
+    state: any;
 }
 /**
  * OSSubscriptionState

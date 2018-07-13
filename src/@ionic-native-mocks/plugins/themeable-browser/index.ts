@@ -43,9 +43,9 @@ export interface ThemeableBrowserOptions {
     backButtonCanClose?: boolean;
     disableAnimation?: boolean;
     location?: string;
-    hidden?: string;
-    clearcache?: string;
-    clearsessioncache?: string;
+    hidden?: boolean;
+    clearcache?: boolean;
+    clearsessioncache?: boolean;
     zoom?: string;
     hardwareback?: string;
     mediaPlaybackRequiresUserAction?: string;
@@ -59,7 +59,6 @@ export interface ThemeableBrowserOptions {
     presentationstyle?: string;
     transitionstyle?: string;
     toolbarposition?: string;
-    fullscreen?: string;
 }
 /**
  * @hidden

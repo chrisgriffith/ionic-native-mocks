@@ -1,4 +1,5 @@
 import { Observable } from 'rxjs/Observable';
+import { fromEvent } from 'rxjs/observable/fromEvent';
 
 import { checkReady } from './bootstrap';
 import { CordovaOptions } from './decorators';
@@ -233,7 +234,7 @@ function wrapObservable(
   args: any[],
   opts: any = {}
 ) {
-  return new Observable((observer: any) => {
+  return new Observable(observer => {
     let pluginResult;
 
     if (opts.destruct) {
@@ -316,7 +317,7 @@ export function wrapEventObservable(
   event: string,
   element: any = window
 ): Observable<any> {
-  return Observable.fromEvent(element, event);
+  return fromEvent(element, event);
 }
 
 /**
@@ -333,7 +334,7 @@ export function overrideFunction(
   args: any[],
   opts: any = {}
 ): Observable<any> {
-  return new Observable((observer: any) => {
+  return new Observable(observer => {
     const availabilityCheck = checkAvailability(
       pluginObj,
       null,
@@ -387,7 +388,7 @@ export function wrapInstance(
     if (opts.sync) {
       return callInstance(pluginObj, methodName, args, opts);
     } else if (opts.observable) {
-      return new Observable((observer: any) => {
+      return new Observable(observer => {
         let pluginResult;
 
         if (opts.destruct) {
