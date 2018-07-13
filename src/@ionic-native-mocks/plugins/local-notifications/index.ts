@@ -3,17 +3,17 @@ import { Observable } from 'rxjs/Observable';
 import { Observer } from 'rxjs/Observer';
 
 export declare enum ELocalNotificationTriggerUnit {
-    SECOND = "second",
-    MINUTE = "minute",
-    HOUR = "hour",
-    DAY = "day",
-    WEEK = "week",
-    MONTH = "month",
-    QUARTER = "quarter",
-    YEAR = "year",
-    WEEKDAY = "weekday",
-    WEEKDAY_ORDINAL = "weekdayOrdinal",
-    WEEK_OF_MONTH = "weekOfMonth",
+    SECOND = 'second',
+    MINUTE = 'minute',
+    HOUR = 'hour',
+    DAY = 'day',
+    WEEK = 'week',
+    MONTH = 'month',
+    QUARTER = 'quarter',
+    YEAR = 'year',
+    WEEKDAY = 'weekday',
+    WEEKDAY_ORDINAL = 'weekdayOrdinal',
+    WEEK_OF_MONTH = 'weekOfMonth',
 }
 export interface ILocalNotificationTrigger {
     /** ***** FIX ***** */
@@ -46,12 +46,12 @@ export interface ILocalNotificationTrigger {
     before?: Date;
     /**
      * The date and time when the system should deliver the local notification. If the specified value is nil or is a date in the past, the local notification is delivered immediately.
-     * Only for "repeat"
+     * Only for 'repeat'
      * Default: now ~ new Date()
      */
     firstAt?: Date;
     /**
-     * Only for "match"
+     * Only for 'match'
      */
     after?: Date;
     /** ***** LOCATION ***** */
@@ -83,8 +83,8 @@ export interface ILocalNotificationTrigger {
     single?: boolean;
 }
 export declare enum ILocalNotificationActionType {
-    INPUT = "input",
-    BUTTON = "button",
+    INPUT = 'input',
+    BUTTON = 'button',
 }
 export interface ILocalNotificationAction {
     /**
@@ -141,7 +141,7 @@ export interface ILocalNotificationProgressBar {
      * WINDOWS ONLY
      * Gets or sets an optional string to be displayed instead of the
      * default percentage string. If this isn't provided, something
-     * like "70%" will be displayed.
+     * like '70%' will be displayed.
      */
     description?: string;
     /**
@@ -149,7 +149,7 @@ export interface ILocalNotificationProgressBar {
      * Sets the status (required), which is displayed underneath the progress bar
      * on the left.
      * This string should reflect the status of the operation,
-     * like "Downloading..." or "Installing..."
+     * like 'Downloading...' or 'Installing...'
      */
     status?: string;
 }
@@ -299,7 +299,7 @@ export interface ILocalNotification {
     number?: number;
     /**
      * ANDROID ONLY
-     * Set whether this is an "ongoing" notification.
+     * Set whether this is an 'ongoing' notification.
      * Ongoing notifications cannot be dismissed by the user,
      * so your application or service must take care of canceling them.
      */
@@ -528,7 +528,8 @@ export class LocalNotificationsMocks extends LocalNotifications {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };/**
+    };
+    /**
     * Adds a group of actions
     * @param groupId The id of the action group
     * @param actions The actions of this group
@@ -587,7 +588,7 @@ export class LocalNotificationsMocks extends LocalNotifications {
     * @param eventName {string} The name of the event. Available events: schedule, trigger, click, update, clear, clearall, cancel, cancelall. Custom event names are possible for actions
     * @return {Observable}
     */
-    on(eventName: string): Observable<any> { 
+    on(eventName: string): Observable<any> {
         return Observable.create((observer: Observer<any>) => {
             observer.next('');
             observer.complete();
