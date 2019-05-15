@@ -154,7 +154,7 @@ export class WebIntentMock extends WebIntent {
     /**
     * Returns the content of the intent used whenever the application activity is launched
     */
-    onIntent(): Observable<string> {
+    onIntent(): Observable<any> {
         let response: string = '';
         return Observable.create((observer: Observer<any>) => {
             observer.next(response);
