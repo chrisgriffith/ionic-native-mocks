@@ -1,4 +1,4 @@
-import { SecureStorage, SecureStorageObject } from '@ionic-native/secure-storage';
+import { SecureStorage, SecureStorageObject } from '@ionic-native/secure-storage/ngx';
 
 export class SecureStorageObjectMock extends SecureStorageObject {
     constructor(_objectInstance: any) { super(_objectInstance); };

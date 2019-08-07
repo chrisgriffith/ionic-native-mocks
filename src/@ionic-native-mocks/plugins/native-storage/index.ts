@@ -1,4 +1,4 @@
-import { NativeStorage } from '@ionic-native/native-storage';
+import { NativeStorage } from '@ionic-native/native-storage/ngx';
 
 export class NativeStorageMock extends NativeStorage {
     /**
