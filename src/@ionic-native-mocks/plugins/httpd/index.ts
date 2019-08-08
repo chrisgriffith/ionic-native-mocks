@@ -1,6 +1,6 @@
-import { Httpd } from '@ionic-native/httpd';
-import { Observable } from 'rxjs/Observable';
-import { Observer } from 'rxjs/Observer';
+import { Httpd } from '@ionic-native/httpd/ngx';
+import { Observable } from 'rxjs/internal/Observable';
+import { Observer } from 'rxjs/internal/types';
 
 export interface HttpdOptions {
     /**
@@ -32,7 +32,7 @@ export class HttpdMock extends Httpd {
             observer.next(response);
             observer.complete();
         });
-    };
+    }
     /**
      * Gets the URL of the running server
      * @returns {Promise<string>} Returns a promise that resolves with the URL of the web server.
@@ -41,7 +41,7 @@ export class HttpdMock extends Httpd {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Get the local path of the running webserver
      * @returns {Promise<string>} Returns a promise that resolves with the local path of the web server.
@@ -50,5 +50,5 @@ export class HttpdMock extends Httpd {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

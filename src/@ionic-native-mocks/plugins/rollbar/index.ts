@@ -1,4 +1,4 @@
-import { Rollbar } from '@ionic-native/rollbar';
+import { Rollbar } from '@ionic-native/rollbar/ngx';
 
 export class RollbarMock extends Rollbar {
     /**
@@ -9,5 +9,5 @@ export class RollbarMock extends Rollbar {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

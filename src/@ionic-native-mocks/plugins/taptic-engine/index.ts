@@ -1,4 +1,4 @@
-import { TapticEngine } from '@ionic-native/taptic-engine';
+import { TapticEngine } from '@ionic-native/taptic-engine/ngx';
 
 export class TapticEngineMock extends TapticEngine {
     /**
@@ -9,7 +9,7 @@ export class TapticEngineMock extends TapticEngine {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Use this to indicate success/failure/warning to the user.
      * @param options {Object} should be of the type { type: 'success' } (or 'warning'/'error')
@@ -22,7 +22,7 @@ export class TapticEngineMock extends TapticEngine {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Use this to indicate success/failure/warning to the user.
      * @param options {Object} should be of the type { style: 'light' } (or 'medium'/'heavy')
@@ -35,5 +35,5 @@ export class TapticEngineMock extends TapticEngine {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

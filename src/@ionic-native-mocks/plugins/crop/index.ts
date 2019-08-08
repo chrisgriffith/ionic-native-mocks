@@ -1,5 +1,5 @@
 
-import { Crop } from '@ionic-native/crop';
+import { Crop } from '@ionic-native/crop/ngx';
 
 export class CropMock extends Crop {
     /**
@@ -14,5 +14,5 @@ export class CropMock extends Crop {
         return new Promise((resolve, reject) => {
             resolve('');
         });
-    };
+    }
 }

@@ -1,4 +1,4 @@
-import { PinCheck } from '@ionic-native/pin-check';
+import { PinCheck } from '@ionic-native/pin-check/ngx';
 
 export class PinCheckMock extends PinCheck {
     /**
@@ -9,5 +9,5 @@ export class PinCheckMock extends PinCheck {
         return new Promise((resolve, reject) => {
             resolve(true);
         });
-    };
+    }
 }

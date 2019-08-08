@@ -1,4 +1,4 @@
-import { DNS } from '@ionic-native/dns';
+import { DNS } from '@ionic-native/dns/ngx';
 
 export class DNSMock extends DNS {
     /**
@@ -11,5 +11,5 @@ export class DNSMock extends DNS {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
 }

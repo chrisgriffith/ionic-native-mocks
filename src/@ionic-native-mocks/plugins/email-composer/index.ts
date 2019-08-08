@@ -1,4 +1,4 @@
-import { EmailComposer } from '@ionic-native/email-composer';
+import { EmailComposer } from '@ionic-native/email-composer/ngx';
 
 export interface EmailComposerOptions {
     app?: string;
@@ -22,14 +22,14 @@ export class EmailComposerMock extends EmailComposer {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Adds a new mail app alias.
      *
      * @param alias {string} The alias name
      * @param packageName {string} The package name
      */
-    addAlias(alias: string, packageName: string): void {};
+    addAlias(alias: string, packageName: string): void {}
     /**
      * Displays the email composer pre-filled with data.
      *
@@ -41,5 +41,5 @@ export class EmailComposerMock extends EmailComposer {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

@@ -1,6 +1,6 @@
-import { SafariViewController } from '@ionic-native/safari-view-controller';
-import { Observable } from 'rxjs/Observable';
-import { Observer } from 'rxjs/Observer';
+import { SafariViewController } from '@ionic-native/safari-view-controller/ngx';
+import { Observable } from 'rxjs/internal/Observable';
+import { Observer } from 'rxjs/internal/types';
 
 export interface SafariViewControllerOptions {
     animated?: boolean;
@@ -25,7 +25,7 @@ export class SafariViewControllerMock extends SafariViewController {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Shows Safari View Controller
      * @param options {SafariViewControllerOptions} optional
@@ -36,7 +36,7 @@ export class SafariViewControllerMock extends SafariViewController {
             observer.next('');
             observer.complete();
         });
-    };
+    }
     /**
      * Hides Safari View Controller
      */
@@ -44,7 +44,7 @@ export class SafariViewControllerMock extends SafariViewController {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Tries to connect to the  Chrome's custom tabs service. you must call this method before calling any of the other methods listed below.
      * @returns {Promise<any>}
@@ -53,7 +53,7 @@ export class SafariViewControllerMock extends SafariViewController {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Call this method whenever there's a chance the user will open an external url.
      * @returns {Promise<any>}
@@ -62,7 +62,7 @@ export class SafariViewControllerMock extends SafariViewController {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * For even better performance optimization, call this methods if there's more than a 50% chance the user will open a certain URL.
      * @param url{string}
@@ -72,5 +72,5 @@ export class SafariViewControllerMock extends SafariViewController {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

@@ -1,6 +1,6 @@
-import { Toast } from '@ionic-native/toast';
-import { Observable } from 'rxjs/Observable';
-import { Observer } from 'rxjs/Observer';
+import { Toast } from '@ionic-native/toast/ngx';
+import { Observable } from 'rxjs/internal/Observable';
+import { Observer } from 'rxjs/internal/types';
 
 export interface ToastOptions {
     /**
@@ -51,7 +51,7 @@ export class ToastMock extends Toast {
             observer.next('');
             observer.complete();
         });
-    };
+    }
     /**
      * Manually hide any currently visible toast.
      * @returns {Promise<any>} Returns a Promise that resolves on success.
@@ -60,7 +60,7 @@ export class ToastMock extends Toast {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Show a native toast with the given options.
      *
@@ -77,7 +77,7 @@ export class ToastMock extends Toast {
             observer.next('');
             observer.complete();
         });
-    };
+    }
     /**
      * Shorthand for `show(message, 'short', 'top')`.
      * @param message {string}
@@ -88,7 +88,7 @@ export class ToastMock extends Toast {
             observer.next('');
             observer.complete();
         });
-    };
+    }
     /**
      * Shorthand for `show(message, 'short', 'center')`.
      * @param message {string}
@@ -99,7 +99,7 @@ export class ToastMock extends Toast {
             observer.next('');
             observer.complete();
         });
-    };
+    }
     /**
      * Shorthand for `show(message, 'short', 'bottom')`.
      * @param message {string}
@@ -110,7 +110,7 @@ export class ToastMock extends Toast {
             observer.next('');
             observer.complete();
         });
-    };
+    }
     /**
      * Shorthand for `show(message, 'long', 'top')`.
      * @param message {string}
@@ -121,7 +121,7 @@ export class ToastMock extends Toast {
             observer.next('');
             observer.complete();
         });
-    };
+    }
     /**
      * Shorthand for `show(message, 'long', 'center')`.
      * @param message {string}
@@ -132,7 +132,7 @@ export class ToastMock extends Toast {
             observer.next('');
             observer.complete();
         });
-    };
+    }
     /**
      * Shorthand for `show(message, 'long', 'bottom')`.
      * @param message {string}
@@ -143,5 +143,5 @@ export class ToastMock extends Toast {
             observer.next('');
             observer.complete();
         });
-    };
+    }
 }

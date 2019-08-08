@@ -1,5 +1,5 @@
 import { IonicNativePlugin } from '@ionic-native/core';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs/internal/Observable';
 /**
  * @name Photo Library
  * @description
@@ -9,7 +9,7 @@ import { Observable } from 'rxjs/Observable';
  *
  * @usage
  * ```typescript
- * import { PhotoLibrary } from '@ionic-native/photo-library';
+ * import { PhotoLibrary } from '@ionic-native/photo-library/ngx';
  *
  * constructor(private photoLibrary: PhotoLibrary) { }
  *

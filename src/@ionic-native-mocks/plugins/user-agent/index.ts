@@ -1,4 +1,4 @@
-import { UserAgent } from '@ionic-native/user-agent';
+import { UserAgent } from '@ionic-native/user-agent/ngx';
 
 export class UserAgentMock extends UserAgent {
     /**
@@ -10,7 +10,7 @@ export class UserAgentMock extends UserAgent {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Returns the current user-agent string.
      * @return {Promise<any>} Returns a promise that resolves when the user-agent is returned
@@ -19,7 +19,7 @@ export class UserAgentMock extends UserAgent {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Sets the user-agent back to default
      * @return {Promise<any>} Returns a promise that resolves when the user-agent resets
@@ -28,5 +28,5 @@ export class UserAgentMock extends UserAgent {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

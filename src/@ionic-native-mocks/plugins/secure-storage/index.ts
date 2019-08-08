@@ -1,7 +1,7 @@
-import { SecureStorage, SecureStorageObject } from '@ionic-native/secure-storage';
+import { SecureStorage, SecureStorageObject } from '@ionic-native/secure-storage/ngx';
 
 export class SecureStorageObjectMock extends SecureStorageObject {
-    constructor(_objectInstance: any) { super(_objectInstance); };
+    constructor(_objectInstance: any) { super(_objectInstance); }
     /**
      * Gets a stored item
      * @param key {string}
@@ -11,7 +11,7 @@ export class SecureStorageObjectMock extends SecureStorageObject {
         return new Promise((resolve, reject) => {
             resolve('');
         });
-    };
+    }
     /**
      * Stores a value
      * @param key {string}
@@ -22,7 +22,7 @@ export class SecureStorageObjectMock extends SecureStorageObject {
         return new Promise((resolve, reject) => {
             resolve('');
         });
-    };
+    }
     /**
      * Removes a single stored item
      * @param key {string}
@@ -32,7 +32,7 @@ export class SecureStorageObjectMock extends SecureStorageObject {
         return new Promise((resolve, reject) => {
             resolve('');
         });
-    };
+    }
     /**
      * Get all references from the storage.
      * @returns {Promise<string[]>} returns a promise that resolves with array of keys storage
@@ -42,7 +42,7 @@ export class SecureStorageObjectMock extends SecureStorageObject {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Clear all references from the storage.
      * @returns {Promise<any>}
@@ -51,7 +51,7 @@ export class SecureStorageObjectMock extends SecureStorageObject {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Brings up the screen-lock settings
      * @returns {Promise<any>}
@@ -60,7 +60,7 @@ export class SecureStorageObjectMock extends SecureStorageObject {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }
 
 export class SecureStorageMock extends SecureStorage {
@@ -74,5 +74,5 @@ export class SecureStorageMock extends SecureStorage {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
 }

@@ -1,4 +1,4 @@
-import { NativeAudio } from '@ionic-native/native-audio';
+import { NativeAudio } from '@ionic-native/native-audio/ngx';
 
 export class NativeAudioMock extends NativeAudio {
     /**
@@ -11,7 +11,7 @@ export class NativeAudioMock extends NativeAudio {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Loads an audio file into memory. Optimized for background music / ambient sound. Uses highlevel native APIs with a larger footprint. (iOS: AVAudioPlayer). Can be stopped / looped and used with multiple voices. Can be faded in and out using the delay parameter.
      * @param id {string} unique ID for the audio file
@@ -25,7 +25,7 @@ export class NativeAudioMock extends NativeAudio {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Plays an audio asset
      * @param id {string} unique ID for the audio file
@@ -36,7 +36,7 @@ export class NativeAudioMock extends NativeAudio {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Stops playing an audio
      * @param id {string} unique ID for the audio file
@@ -46,7 +46,7 @@ export class NativeAudioMock extends NativeAudio {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Loops an audio asset infinitely, this only works for complex assets
      * @param id {string} unique ID for the audio file
@@ -56,7 +56,7 @@ export class NativeAudioMock extends NativeAudio {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Unloads an audio file from memory
      * @param id {string} unique ID for the audio file
@@ -66,7 +66,7 @@ export class NativeAudioMock extends NativeAudio {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Changes the volume for preloaded complex assets.
      * @param id {string} unique ID for the audio file
@@ -77,5 +77,5 @@ export class NativeAudioMock extends NativeAudio {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

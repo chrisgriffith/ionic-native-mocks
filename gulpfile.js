@@ -29,6 +29,16 @@ gulp.task('lint', () => {
     .pipe(tslint.report());
 });
 
+gulp.task('lint:fix', () => {
+  return gulp.src('src/**/*.ts')
+    .pipe(tslint({
+      fix: true,
+      formatter: "verbose",
+      configuration: 'tslint.json'
+    }))
+    .pipe(tslint.report());
+});
+
 gulp.task('plugin:create', () => {
   if (flags.n && flags.n !== ''){
 

@@ -1,4 +1,4 @@
-import { HTTP } from '@ionic-native/http';
+import { HTTP } from '@ionic-native/http/ngx';
 
 export interface HTTPResponse {
     /**
@@ -34,19 +34,19 @@ export class HTTPMock extends HTTP {
         Authorization: string;
     } {
         return { Authorization: '' };
-    };
+    }
     /**
      * This sets up all future requests to use Basic HTTP authentication with the given username and password.
      * @param username {string} Username
      * @param password {string} Password
      */
-    useBasicAuth(username: string, password: string): void {};
+    useBasicAuth(username: string, password: string): void {}
     /**
      * Set a header for all future requests. Takes a header and a value.
      * @param header {string} The name of the header
      * @param value {string} The value of the header
      */
-    setHeader(header: string, value: string): void {};
+    setHeader(header: string, value: string): void {}
     /**
      * Enable or disable SSL Pinning. This defaults to false.
      *
@@ -60,7 +60,7 @@ export class HTTPMock extends HTTP {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Accept all SSL certificates. Or disabled accepting all certificates. Defaults to false.
      * @param accept {boolean} Set to true to accept
@@ -70,7 +70,7 @@ export class HTTPMock extends HTTP {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Whether or not to validate the domain name in the certificate. This defaults to true.
      * @param validate {boolean} Set to true to validate
@@ -80,7 +80,7 @@ export class HTTPMock extends HTTP {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Make a POST request
      * @param url {string} The url to send the request to
@@ -93,7 +93,7 @@ export class HTTPMock extends HTTP {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      *
      * @param url {string} The url to send the request to
@@ -106,7 +106,7 @@ export class HTTPMock extends HTTP {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      *
      * @param url {string} The url to send the request to
@@ -121,7 +121,7 @@ export class HTTPMock extends HTTP {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      *
      * @param url {string} The url to send the request to
@@ -135,5 +135,5 @@ export class HTTPMock extends HTTP {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
 }

@@ -1,6 +1,6 @@
-import { EstimoteBeacons } from '@ionic-native/estimote-beacons';
-import { Observable } from 'rxjs/Observable';
-import { Observer } from 'rxjs/Observer';
+import { EstimoteBeacons } from '@ionic-native/estimote-beacons/ngx';
+import { Observable } from 'rxjs/internal/Observable';
+import { Observer } from 'rxjs/internal/types';
 
 export interface EstimoteBeaconRegion {
     state?: string;
@@ -71,7 +71,7 @@ export class EstimoteBeaconsMock extends EstimoteBeacons {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Ask the user for permission to use location services
      * whenever the app is running.
@@ -94,7 +94,7 @@ export class EstimoteBeaconsMock extends EstimoteBeacons {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Get the current location authorization status.
      * Implemented on iOS 8+.
@@ -115,7 +115,7 @@ export class EstimoteBeaconsMock extends EstimoteBeacons {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Start advertising as a beacon.
      *
@@ -137,7 +137,7 @@ export class EstimoteBeaconsMock extends EstimoteBeacons {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Stop advertising as a beacon.
      *
@@ -155,7 +155,7 @@ export class EstimoteBeaconsMock extends EstimoteBeacons {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Enable analytics.
      *
@@ -172,7 +172,7 @@ export class EstimoteBeaconsMock extends EstimoteBeacons {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
     * Test if analytics is enabled.
     *
@@ -188,7 +188,7 @@ export class EstimoteBeaconsMock extends EstimoteBeacons {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
     * Test if App ID and App Token is set.
     *
@@ -204,7 +204,7 @@ export class EstimoteBeaconsMock extends EstimoteBeacons {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
     * Set App ID and App Token.
     *
@@ -222,7 +222,7 @@ export class EstimoteBeaconsMock extends EstimoteBeacons {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Start scanning for all nearby beacons using CoreBluetooth (no region object is used).
      * Available on iOS.
@@ -243,7 +243,7 @@ export class EstimoteBeaconsMock extends EstimoteBeacons {
             observer.next('');
             observer.complete();
         });
-    };
+    }
     /**
      * Stop CoreBluetooth scan. Available on iOS.
      *
@@ -262,7 +262,7 @@ export class EstimoteBeaconsMock extends EstimoteBeacons {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Start ranging beacons. Available on iOS and Android.
      *
@@ -284,7 +284,7 @@ export class EstimoteBeaconsMock extends EstimoteBeacons {
             observer.next('');
             observer.complete();
         });
-    };
+    }
     /**
      * Stop ranging beacons. Available on iOS and Android.
      *
@@ -305,7 +305,7 @@ export class EstimoteBeaconsMock extends EstimoteBeacons {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Start ranging secure beacons. Available on iOS.
      * This function has the same parameters/behaviour as
@@ -319,7 +319,7 @@ export class EstimoteBeaconsMock extends EstimoteBeacons {
             observer.next('');
             observer.complete();
         });
-    };
+    }
     /**
      * Stop ranging secure beacons. Available on iOS.
      * This function has the same parameters/behaviour as
@@ -330,7 +330,7 @@ export class EstimoteBeaconsMock extends EstimoteBeacons {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Start monitoring beacons. Available on iOS and Android.
      *
@@ -353,7 +353,7 @@ export class EstimoteBeaconsMock extends EstimoteBeacons {
             observer.next('');
             observer.complete();
         });
-    };
+    }
     /**
      * Stop monitoring beacons. Available on iOS and Android.
      *
@@ -369,7 +369,7 @@ export class EstimoteBeaconsMock extends EstimoteBeacons {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Start monitoring secure beacons. Available on iOS.
      * This function has the same parameters/behaviour as
@@ -386,7 +386,7 @@ export class EstimoteBeaconsMock extends EstimoteBeacons {
             observer.next('');
             observer.complete();
         });
-    };
+    }
     /**
     * Stop monitoring secure beacons. Available on iOS.
     * This function has the same parameters/behaviour as
@@ -398,7 +398,7 @@ export class EstimoteBeaconsMock extends EstimoteBeacons {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Connect to Estimote Beacon. Available on Android.
      *
@@ -420,7 +420,7 @@ export class EstimoteBeaconsMock extends EstimoteBeacons {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Disconnect from connected Estimote Beacon. Available on Android.
      *
@@ -434,7 +434,7 @@ export class EstimoteBeaconsMock extends EstimoteBeacons {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Write proximity UUID to connected Estimote Beacon. Available on Android.
      *
@@ -450,7 +450,7 @@ export class EstimoteBeaconsMock extends EstimoteBeacons {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Write major to connected Estimote Beacon. Available on Android.
      *
@@ -466,7 +466,7 @@ export class EstimoteBeaconsMock extends EstimoteBeacons {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Write minor to connected Estimote Beacon. Available on Android.
      *
@@ -482,5 +482,5 @@ export class EstimoteBeaconsMock extends EstimoteBeacons {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

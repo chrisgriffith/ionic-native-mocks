@@ -1,4 +1,4 @@
-import { Zip } from '@ionic-native/zip';
+import { Zip } from '@ionic-native/zip/ngx';
 
 export class ZipMock extends Zip {
     /**
@@ -13,5 +13,5 @@ export class ZipMock extends Zip {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
 }

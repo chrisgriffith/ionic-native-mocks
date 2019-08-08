@@ -1,6 +1,6 @@
-import { MusicControls } from '@ionic-native/music-controls';
-import { Observable } from 'rxjs/Observable';
-import { Observer } from 'rxjs/Observer';
+import { MusicControls } from '@ionic-native/music-controls/ngx';
+import { Observable } from 'rxjs/internal/Observable';
+import { Observer } from 'rxjs/internal/types';
 
 export interface MusicControlsOptions {
     track: string;
@@ -27,7 +27,7 @@ export class MusicControlsMocks extends MusicControls {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Destroy the media controller
      * @returns {Promise<any>}
@@ -36,7 +36,7 @@ export class MusicControlsMocks extends MusicControls {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Subscribe to the events of the media controller
      * @returns {Observable<any>}
@@ -47,27 +47,27 @@ export class MusicControlsMocks extends MusicControls {
             observer.next(response);
             observer.complete();
         });
-    };
+    }
     /**
      * Start listening for events, this enables the Observable from the subscribe method
      */
-    listen(): void { };
+    listen(): void { }
     /**
      * Toggle play/pause:
      * @param isPlaying {boolean}
      */
-    updateIsPlaying(isPlaying: boolean): void { };
+    updateIsPlaying(isPlaying: boolean): void { }
     /**
     * Update elapsed time, optionally toggle play/pause:
     * @param args {Object}
     */
     updateElapsed(args: {
-        elapsed: string;
+        elapsed: number;
         isPlaying: boolean;
-    }): void { };
+    }): void { }
     /**
      * Toggle dismissable:
      * @param dismissable {boolean}
      */
-    updateDismissable(dismissable: boolean): void { };
+    updateDismissable(dismissable: boolean): void { }
 }

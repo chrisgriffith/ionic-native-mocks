@@ -1,5 +1,5 @@
 
-import { Health } from '@ionic-native/health';
+import { Health } from '@ionic-native/health/ngx';
 /**
  * @hidden
  */
@@ -140,7 +140,7 @@ export class HealthMock extends Health {
         return new Promise((resolve, reject) => {
             resolve(true);
         });
-    };
+    }
     /**
      * Checks if recent Google Play Services and Google Fit are installed. If the play services are not installed,
      * or are obsolete, it will show a pop-up suggesting to download them. If Google Fit is not installed,
@@ -156,7 +156,7 @@ export class HealthMock extends Health {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Requests read and/or write access to a set of data types. It is recommendable to always explain why the app
      * needs access to the data before asking the user to authorize it.
@@ -164,7 +164,7 @@ export class HealthMock extends Health {
      * been given at some point in the past.
      *
      * Quirks of requestAuthorization()
-  
+
      * In Android, it will try to get authorization from the Google Fit APIs.
      * It is necessary that the app's package name and the signing key are registered in the Google API console.
      * In Android, be aware that if the activity is destroyed (e.g. after a rotation) or is put in background,
@@ -180,7 +180,7 @@ export class HealthMock extends Health {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Check if the app has authorization to read/write a set of datatypes.
      *
@@ -196,7 +196,7 @@ export class HealthMock extends Health {
         return new Promise((resolve, reject) => {
             resolve(true);
         });
-    };
+    }
     /**
      * Gets all the data points of a certain data type within a certain time window.
      * Warning: if the time span is big, it can generate long arrays!
@@ -233,7 +233,7 @@ export class HealthMock extends Health {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Gets aggregated data in a certain time window. Usually the sum is returned for the given quantity.
      *
@@ -260,7 +260,7 @@ export class HealthMock extends Health {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Stores a data point.
      *
@@ -279,5 +279,5 @@ export class HealthMock extends Health {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

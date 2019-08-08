@@ -1,4 +1,4 @@
-import { Clipboard } from '@ionic-native/clipboard';
+import { Clipboard } from '@ionic-native/clipboard/ngx';
 
 export class ClipboardMock extends Clipboard {
     /**
@@ -10,7 +10,7 @@ export class ClipboardMock extends Clipboard {
          return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Pastes the text stored in clipboard
      * @returns {Promise<any>} Returns a promise after the text has been pasted
@@ -19,5 +19,5 @@ export class ClipboardMock extends Clipboard {
          return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

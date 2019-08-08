@@ -1,4 +1,4 @@
-import { Facebook } from '@ionic-native/facebook';
+import { Facebook } from '@ionic-native/facebook/ngx';
 
 export interface FacebookLoginResponse {
     status: string;
@@ -57,7 +57,7 @@ export class FacebookMock extends Facebook {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Login to Facebook to authenticate this app.
      *
@@ -84,7 +84,7 @@ export class FacebookMock extends Facebook {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Logout of Facebook.
      *
@@ -95,7 +95,7 @@ export class FacebookMock extends Facebook {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Determine if a user is logged in to Facebook and has authenticated your app.  There are three possible states for a user:
      *
@@ -126,7 +126,7 @@ export class FacebookMock extends Facebook {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Get a Facebook access token for using Facebook services.
      *
@@ -136,7 +136,7 @@ export class FacebookMock extends Facebook {
         return new Promise((resolve, reject) => {
             resolve('');
         });
-    };
+    }
     /**
      * Show one of various Facebook dialogs. Example of options for a Share dialog:
      *
@@ -158,7 +158,7 @@ export class FacebookMock extends Facebook {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Make a call to Facebook Graph API. Can take additional permissions beyond those granted on login.
      *
@@ -176,7 +176,7 @@ export class FacebookMock extends Facebook {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Log an event.  For more information see the Events section above.
      *
@@ -189,7 +189,7 @@ export class FacebookMock extends Facebook {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Log a purchase. For more information see the Events section above.
      *
@@ -201,7 +201,7 @@ export class FacebookMock extends Facebook {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Open App Invite dialog. Does not require login.
      *
@@ -223,5 +223,5 @@ export class FacebookMock extends Facebook {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

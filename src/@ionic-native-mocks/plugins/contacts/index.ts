@@ -1,4 +1,4 @@
-import { Contacts } from '@ionic-native/contacts';
+import { Contacts } from '@ionic-native/contacts/ngx';
 
 export declare type ContactFieldType = '*' | 'addresses' | 'birthday' | 'categories' | 'country' | 'department' | 'displayName' | 'emails' | 'name.familyName' | 'name.formatted' | 'name.givenName' | 'name.honorificPrefix' | 'name.honorificSuffix' | 'id' | 'ims' | 'locality' | 'name.middleName' | 'name' | 'nickname' | 'note' | 'organizations' | 'phoneNumbers' | 'photos' | 'postalCode' | 'region' | 'streetAddress' | 'title' | 'urls';
 export interface IContactProperties {
@@ -53,12 +53,12 @@ export class Contact implements IContactProperties {
     urls: IContactField[];
     [key: string]: any;
 
-    clone(): Contact { return new Contact(); };
+    clone(): Contact { return new Contact(); }
     remove(): Promise<any> {
         return new Promise(resolve => {
             resolve();
         });
-    };
+    }
     save(): Promise<any> {
         return new Promise(resolve => {
             resolve();
@@ -216,7 +216,7 @@ export declare class ContactFindOptions implements IContactFindOptions {
  * @usage
  *
  * ```typescript
- * import { Contacts, Contact, ContactField, ContactName } from '@ionic-native/contacts';
+ * import { Contacts, Contact, ContactField, ContactName } from '@ionic-native/contacts/ngx';
  *
  * constructor(private contacts: Contacts) { }
  *
@@ -249,7 +249,7 @@ export class ContactsMocks extends Contacts {
     create(): any {
         let newContact: Contact = new Contact();
         return (newContact);
-    };
+    }
     /**
      * Search for contacts in the Contacts list.
      * @param {ContactFieldType[]} fields Contact fields to be used as a search qualifier
@@ -264,7 +264,7 @@ export class ContactsMocks extends Contacts {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Select a single Contact.
      * @returns {Promise<Contact>} Returns a Promise that resolves with the selected Contact
@@ -276,5 +276,5 @@ export class ContactsMocks extends Contacts {
         return new Promise((resolve, reject) => {
             resolve(theContact);
         });
-    };
+    }
 }

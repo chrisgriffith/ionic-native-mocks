@@ -1,6 +1,6 @@
-import { WebIntent } from '@ionic-native/web-intent';
-import { Observable } from 'rxjs/Observable';
-import { Observer } from 'rxjs/Observer';
+import { Intent, WebIntent } from '@ionic-native/web-intent/ngx';
+import { Observable } from 'rxjs/internal/Observable';
+import { Observer } from 'rxjs/internal/types';
 
 export class WebIntentMock extends WebIntent {
     /**
@@ -66,7 +66,7 @@ export class WebIntentMock extends WebIntent {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Starts a new activity and return the result to the application
      * @param options {Object} { action: any, url: string, type?: string }
@@ -80,7 +80,7 @@ export class WebIntentMock extends WebIntent {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Checks if this app was invoked with specified extra
      * @param extra {string}
@@ -90,7 +90,7 @@ export class WebIntentMock extends WebIntent {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Gets the extra that this app was invoked with
      * @param extra {string}
@@ -100,7 +100,7 @@ export class WebIntentMock extends WebIntent {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Gets the Uri the app was invoked with
      * @returns {Promise<any>}
@@ -110,7 +110,7 @@ export class WebIntentMock extends WebIntent {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * @returns {Observable<string>}
      */
@@ -120,7 +120,7 @@ export class WebIntentMock extends WebIntent {
             observer.next(response);
             observer.complete();
         });
-    };
+    }
     /**
      * Sends a custom intent passing optional extras
      * @param options {Object} { action: string, extras?: { option: boolean } }
@@ -135,7 +135,7 @@ export class WebIntentMock extends WebIntent {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Registers a broadcast receiver for the specified filters
      * @param filters {any}
@@ -146,25 +146,25 @@ export class WebIntentMock extends WebIntent {
             observer.next(response);
             observer.complete();
         });
-    };
+    }
     /**
      * Unregisters a broadcast receiver
      */
-    unregisterBroadcastReceiver(): void { };
+    unregisterBroadcastReceiver(): void { }
     /**
     * Returns the content of the intent used whenever the application activity is launched
     */
-    onIntent(): Observable<string> {
+    onIntent(): Observable<Intent> {
         let response: string = '';
         return Observable.create((observer: Observer<any>) => {
             observer.next(response);
             observer.complete();
         });
-    };
+    }
     /**
     *
     */
-    onActivityResult(): void { };
+    onActivityResult(): void { }
     /**
      * @returns {Promise<any>}
      */
@@ -172,5 +172,5 @@ export class WebIntentMock extends WebIntent {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

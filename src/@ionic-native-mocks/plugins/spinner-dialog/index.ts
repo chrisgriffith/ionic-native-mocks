@@ -1,4 +1,4 @@
-import { SpinnerDialog } from '@ionic-native/spinner-dialog';
+import { SpinnerDialog } from '@ionic-native/spinner-dialog/ngx';
 export interface SpinnerDialogIOSOptions {
     overlayOpacity?: number;
     textColorRed?: number;
@@ -14,9 +14,9 @@ export class SpinnerDialogMock extends SpinnerDialog {
      * @param cancelCallback {boolean|function} Set to true to set spinner not cancelable. Or provide a function to call when the user cancels the spinner.
      * @param iOSOptions {object} Options for iOS only
      */
-    show(title?: string, message?: string, cancelCallback?: any, iOSOptions?: SpinnerDialogIOSOptions): void {};
+    show(title?: string, message?: string, cancelCallback?: any, iOSOptions?: SpinnerDialogIOSOptions): void {}
     /**
      * Hides the spinner dialog if visible
      */
-    hide(): void {};
+    hide(): void {}
 }

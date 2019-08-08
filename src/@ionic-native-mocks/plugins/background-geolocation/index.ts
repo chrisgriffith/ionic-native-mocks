@@ -1,6 +1,6 @@
-import { BackgroundGeolocation } from '@ionic-native/background-geolocation';
-import { Observable } from 'rxjs/Observable';
-import { Observer } from 'rxjs/Observer';
+import { BackgroundGeolocation } from '@ionic-native/background-geolocation/ngx';
+import { Observable } from 'rxjs/internal/Observable';
+import { Observer } from 'rxjs/internal/types';
 
 export interface BackgroundGeolocationResponse {
     /**
@@ -63,7 +63,7 @@ export interface BackgroundGeolocationConfig {
      * accuracy readings. 1000 results in lowest power drain and least accurate
      * readings. @see Apple docs (https://developer.apple.com/library/ios/documentation/CoreLocation/Reference/CLLocationManager_Class/index.html#//apple_ref/occ/instp/CLLocationManager/desiredAccuracy)
      */
-    desiredAccuracy: number;
+    desiredAccuracy?: number;
     /**
      * Stationary radius in meters. When stopped, the minimum distance the device
      * must move beyond the stationary location for aggressive background-tracking
@@ -89,24 +89,24 @@ export interface BackgroundGeolocationConfig {
      */
     stopOnTerminate?: boolean;
     /**
-  
+
      * ANDROID ONLY
-  
+
      * Start background service on device boot.
-  
+
      *
      * Defaults to false
-  
+
      */
     startOnBoot?: boolean;
     /**
-  
+
      * ANDROID ONLY
-  
+
      * If false location service will not be started in foreground and no notification will be shown.
      *
      * Defaults to true
-  
+
      */
     startForeground?: boolean;
     /**
@@ -137,23 +137,23 @@ export interface BackgroundGeolocationConfig {
      */
     notificationIconColor?: string;
     /**
-  
+
      * ANDROID ONLY
-  
+
      * The filename of a custom notification icon. See android quirks.
-  
+
      * NOTE: Only available for API Level >=21.
-  
+
      */
     notificationIconLarge?: string;
     /**
-  
+
      * ANDROID ONLY
-  
+
      * The filename of a custom notification icon. See android quirks.
-  
+
      * NOTE: Only available for API Level >=21.
-  
+
      */
     notificationIconSmall?: string;
     /**
@@ -169,62 +169,62 @@ export interface BackgroundGeolocationConfig {
      */
     activityType?: string;
     /**
-  
+
      * IOS ONLY
-  
+
      * Pauses location updates when app is paused
-  
+
      *
      * Defaults to true
-  
+
      */
     pauseLocationUpdates?: boolean;
     /**
-  
+
      * Server url where to send HTTP POST with recorded locations
-  
+
      * @see https://github.com/mauron85/cordova-plugin-background-geolocation#http-locations-posting
-  
+
      */
     url?: string;
     /**
-  
+
      * Server url where to send fail to post locations
-  
+
      * @see https://github.com/mauron85/cordova-plugin-background-geolocation#http-locations-posting
-  
+
      */
     syncUrl?: string;
     /**
      * Specifies how many previously failed locations will be sent to server at once
-  
+
      *
      * Defaults to 100
-  
+
      */
     syncThreshold?: number;
     /**
-  
+
      * Optional HTTP headers sent along in HTTP request
-  
+
      */
     httpHeaders?: any;
     /**
      * IOS ONLY
-  
+
      * Switch to less accurate significant changes and region monitory when in background (default)
      *
      * Defaults to 100
-  
+
      */
     saveBatteryOnBackground?: boolean;
     /**
-  
+
      * Limit maximum number of locations stored into db
-  
+
      *
      * Defaults to 10000
-  
+
      */
     maxLocations?: number;
     /**
@@ -248,70 +248,70 @@ export interface BackgroundGeolocationConfig {
     stopOnStillActivity?: boolean;
 }
 
-export class BackgroundGeolocatioMock extends BackgroundGeolocation {
+export class BackgroundGeolocationMock extends BackgroundGeolocation {
     /**
-  
+
      * Set location service provider @see https://github.com/mauron85/cordova-plugin-background-geolocation/wiki/Android-providers
-  
+
      *
      * Possible values:
      *  ANDROID_DISTANCE_FILTER_PROVIDER: 0,
-  
+
      *  ANDROID_ACTIVITY_PROVIDER: 1
-  
+
      *
      * @enum {number}
-  
+
      */
     LocationProvider: any;
     /**
      * Desired accuracy in meters. Possible values [0, 10, 100, 1000].
-  
+
      * The lower the number, the more power devoted to GeoLocation resulting in higher accuracy readings.
-  
+
      * 1000 results in lowest power drain and least accurate readings.
-  
+
      *
      * Possible values:
      *  HIGH: 0
-  
+
      *  MEDIUM: 10
-  
+
      *  LOW: 100
-  
+
      *  PASSIVE: 1000
      *
      * enum {number}
-  
+
      */
     Accuracy: any;
     /**
-  
+
      * Used in the switchMode function
-  
+
      *
      * Possible values:
      *  BACKGROUND: 0
      *  FOREGROUND: 1
-  
+
      *
      * @enum {number}
-  
+
      */
     Mode: any;
     /**
      * Configure the plugin.
      *
      * @param options {BackgroundGeolocationConfig} options An object of type Config
-     * @return {Observable<BackgroundGeolocationResponse>}
+     * @return {Promise<any>}
      */
-    configure(options: BackgroundGeolocationConfig): Observable<BackgroundGeolocationResponse> {
+    configure(options: BackgroundGeolocationConfig): Promise<any> {
         return Observable.create((observer: Observer<any>) => {
             let response: BackgroundGeolocationResponse;
             observer.next( response  );
             observer.complete();
         });
-    };
+    }
     /**
      * Turn ON the background-geolocation system.
      * The user will be tracked whenever they suspend the app.
@@ -321,7 +321,7 @@ export class BackgroundGeolocatioMock extends BackgroundGeolocation {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Turn OFF background-tracking
      * @returns {Promise<any>}
@@ -330,7 +330,7 @@ export class BackgroundGeolocatioMock extends BackgroundGeolocation {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Inform the native plugin that you're finished, the background-task may be completed
      * @returns {Promise<any>}
@@ -339,7 +339,7 @@ export class BackgroundGeolocatioMock extends BackgroundGeolocation {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Force the plugin to enter "moving" or "stationary" state
      * @param isMoving {boolean}
@@ -349,7 +349,7 @@ export class BackgroundGeolocatioMock extends BackgroundGeolocation {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Setup configuration
      * @param options {BackgroundGeolocationConfig}
@@ -359,7 +359,7 @@ export class BackgroundGeolocatioMock extends BackgroundGeolocation {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Returns current stationaryLocation if available. null if not
      * @returns {Promise<Location>}
@@ -369,7 +369,7 @@ export class BackgroundGeolocatioMock extends BackgroundGeolocation {
         return new Promise((resolve, reject) => {
             resolve( response ) ;
         });
-    };
+    }
     /**
      * Add a stationary-region listener. Whenever the devices enters "stationary-mode",
      * your #success callback will be executed with #location param containing #radius of region
@@ -379,7 +379,7 @@ export class BackgroundGeolocatioMock extends BackgroundGeolocation {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Check if location is enabled on the device
      * @returns {Promise<number>} Returns a promise with int argument that takes values 0, 1 (true).
@@ -388,15 +388,15 @@ export class BackgroundGeolocatioMock extends BackgroundGeolocation {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Display app settings to change permissions
      */
-    showAppSettings(): void { };
+    showAppSettings(): void { }
     /**
      * Display device location settings
      */
-    showLocationSettings(): void { };
+    showLocationSettings(): void { }
     /**
      * Method can be used to detect user changes in location services settings.
      * If user enable or disable location services then success callback will be executed.
@@ -409,7 +409,7 @@ export class BackgroundGeolocatioMock extends BackgroundGeolocation {
             observer.next( response  );
             observer.complete();
         });
-    };
+    }
     /**
      * Stop watching for location mode changes.
      * @returns {Promise<any>}
@@ -418,7 +418,7 @@ export class BackgroundGeolocatioMock extends BackgroundGeolocation {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Method will return all stored locations.
      * Locations are stored when:
@@ -432,18 +432,18 @@ export class BackgroundGeolocatioMock extends BackgroundGeolocation {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
-  
+
      * Method will return locations, which has not been yet posted to server. NOTE: Locations does contain locationId.
-  
+
      * @returns {Promise<any>}
      */
     getValidLocations(): Promise<any> {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Delete stored location by given locationId.
      * @param locationId {number}
@@ -453,7 +453,7 @@ export class BackgroundGeolocatioMock extends BackgroundGeolocation {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Delete all stored locations.
      * @returns {Promise<any>}
@@ -462,18 +462,18 @@ export class BackgroundGeolocatioMock extends BackgroundGeolocation {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Normally plugin will handle switching between BACKGROUND and FOREGROUND mode itself.
      * Calling switchMode you can override plugin behavior and force plugin to switch into other mode.
      *
      * In FOREGROUND mode plugin uses iOS local manager to receive locations and behavior is affected by option.desiredAccuracy and option.distanceFilter.
      * In BACKGROUND mode plugin uses significant changes and region monitoring to receive locations and uses option.stationaryRadius only.
-  
+
      *
      * BackgroundGeolocation.Mode.FOREGROUND
      * BackgroundGeolocation.Mode.BACKGROUND
-  
+
      **
      * @param modeId {number}
      * @returns {Promise<any>}
@@ -482,21 +482,21 @@ export class BackgroundGeolocatioMock extends BackgroundGeolocation {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
-  
+
      * Return all logged events. Useful for plugin debugging. Parameter limit limits number of returned entries.
-  
+
      * @see https://github.com/mauron85/cordova-plugin-background-geolocation/tree/v2.2.1#debugging for more information.
-  
+
      *
      * @param limit {number} Limits the number of entries
-  
+
      * @returns {Promise<any>}
      */
     getLogEntries(limit: number): Promise<any> {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

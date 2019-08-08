@@ -1,11 +1,11 @@
-import { RegulaDocumentReader } from '@ionic-native/regula-document-reader';
+import { RegulaDocumentReader } from '@ionic-native/regula-document-reader/ngx';
 
 export  class RegulaDocumentReaderMock extends RegulaDocumentReader {
     /**
      * Initialize the scanner
      * @param license {any} License data
      */
-    initReader(license: any): void {};
+    initReader(license: any): void {}
     /**
      * Run the scanner
      * @return {Promise<string[]>} Returns a promise that resolves when results was got, and fails when not
@@ -15,5 +15,5 @@ export  class RegulaDocumentReaderMock extends RegulaDocumentReader {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
 }

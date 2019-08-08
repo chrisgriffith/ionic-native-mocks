@@ -1,4 +1,4 @@
-import { FilePath } from '@ionic-native/file-path';
+import { FilePath } from '@ionic-native/file-path/ngx';
 
 export class FilePathMock extends FilePath {
     /**
@@ -10,5 +10,5 @@ export class FilePathMock extends FilePath {
         return new Promise((resolve, reject) => {
             resolve('');
         });
-    };
+    }
 }

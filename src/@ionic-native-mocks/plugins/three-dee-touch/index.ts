@@ -1,6 +1,6 @@
-import { ThreeDeeTouch } from '@ionic-native/three-dee-touch';
-import { Observable } from 'rxjs/Observable';
-import { Observer } from 'rxjs/Observer';
+import { ThreeDeeTouch } from '@ionic-native/three-dee-touch/ngx';
+import { Observable } from 'rxjs/internal/Observable';
+import { Observer } from 'rxjs/internal/types';
 
 export interface ThreeDeeTouchQuickAction {
     /**
@@ -53,7 +53,7 @@ export class ThreeDeeTouchMock extends ThreeDeeTouch {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * You can get a notification when the user force touches the webview. The plugin defines a Force Touch when at least 75% of the maximum force is applied to the screen. Your app will receive the x and y coordinates, so you have to figure out which UI element was touched.
      * @returns {Observable<ThreeDeeTouchForceTouch>} Returns an observable that sends a `ThreeDeeTouchForceTouch` object
@@ -64,7 +64,7 @@ export class ThreeDeeTouchMock extends ThreeDeeTouch {
             observer.next(response);
             observer.complete();
         });
-    };
+    }
     /**
      * setup the 3D-touch actions, takes an array of objects with the following
      * @param {string} type (optional) A type that can be used `onHomeIconPressed` callback
@@ -73,7 +73,7 @@ export class ThreeDeeTouchMock extends ThreeDeeTouch {
      * @param {string} iconType (optional) Choose between Prohibit, Contact, Home, MarkLocation, Favorite, Love, Cloud, Invitation, Confirmation, Mail, Message, Date, Time, CapturePhoto, CaptureVideo, Task, TaskCompleted, Alarm, Bookmark, Shuffle, Audio, Update
      * @param {string} iconTemplate (optional) Can be used to provide your own icon
      */
-    configureQuickActions(quickActions: Array<ThreeDeeTouchQuickAction>): void { };
+    configureQuickActions(quickActions: Array<ThreeDeeTouchQuickAction>): void { }
     /**
      * When a home icon is pressed, your app launches and this JS callback is invoked.
      * @returns {Observable<any>} returns an observable that notifies you when he user presses on the home screen icon
@@ -83,14 +83,14 @@ export class ThreeDeeTouchMock extends ThreeDeeTouch {
             observer.next('');
             observer.complete();
         });
-    };
+    }
     /**
      * Enable Link Preview.
      * UIWebView and WKWebView (the webviews powering Cordova apps) don't allow the fancy new link preview feature of iOS9.
      */
-    enableLinkPreview(): void { };
+    enableLinkPreview(): void { }
     /**
      * Disabled the link preview feature, if enabled.
      */
-    disableLinkPreview(): void { };
+    disableLinkPreview(): void { }
 }

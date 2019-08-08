@@ -1,4 +1,4 @@
-import { Intercom } from '@ionic-native/intercom';
+import { Intercom } from '@ionic-native/intercom/ngx';
 
 export class IntercomMock extends Intercom {
     /**
@@ -10,7 +10,7 @@ export class IntercomMock extends Intercom {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Register a unidentified user
      * @param options {any} Options
@@ -20,7 +20,7 @@ export class IntercomMock extends Intercom {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * This resets the Intercom integration's cache of your user's identity and wipes the slate clean.
      * @return {Promise<any>} Returns a promise
@@ -29,7 +29,7 @@ export class IntercomMock extends Intercom {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      *
      * @param secureHash {string}
@@ -40,7 +40,7 @@ export class IntercomMock extends Intercom {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      *
      * @param secureHash {string}
@@ -50,7 +50,7 @@ export class IntercomMock extends Intercom {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      *
      * @param attributes {any}
@@ -60,7 +60,7 @@ export class IntercomMock extends Intercom {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      *
      * @param eventName {string}
@@ -71,7 +71,7 @@ export class IntercomMock extends Intercom {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      *
      * @return {Promise<any>} Returns a promise
@@ -80,7 +80,7 @@ export class IntercomMock extends Intercom {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      *
      * @return {Promise<any>} Returns a promise
@@ -89,7 +89,7 @@ export class IntercomMock extends Intercom {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      *
      * @param initialMessage {string}
@@ -99,7 +99,7 @@ export class IntercomMock extends Intercom {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      *
      * @return {Promise<any>} Returns a promise
@@ -108,7 +108,7 @@ export class IntercomMock extends Intercom {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      *
      * @return {Promise<any>} Returns a promise
@@ -117,7 +117,7 @@ export class IntercomMock extends Intercom {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      *
      * @param visibility {string}
@@ -127,7 +127,7 @@ export class IntercomMock extends Intercom {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      *
      * @param visibility {string}
@@ -137,7 +137,7 @@ export class IntercomMock extends Intercom {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      *
      * @return {Promise<any>} Returns a promise
@@ -146,7 +146,7 @@ export class IntercomMock extends Intercom {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      *
      * @return {Promise<any>} Returns a promise
@@ -155,5 +155,5 @@ export class IntercomMock extends Intercom {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

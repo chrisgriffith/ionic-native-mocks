@@ -1,6 +1,6 @@
-import { OneSignal } from '@ionic-native/onesignal';
-import { Observable } from 'rxjs/Observable';
-import { Observer } from 'rxjs/Observer';
+import { OneSignal } from '@ionic-native/onesignal/ngx';
+import { Observable } from 'rxjs/internal/Observable';
+import { Observer } from 'rxjs/internal/types';
 
 export interface OSNotification {
     /**
@@ -310,7 +310,7 @@ export class OneSignalMock extends OneSignal {
      */
     startInit(appId: string, googleProjectNumber?: string): any {
         return;
-    };
+    }
     /**
      * Callback to run when a notification is received, whether it was displayed or not.
      *
@@ -322,7 +322,7 @@ export class OneSignalMock extends OneSignal {
             observer.next(response);
             observer.complete();
         });
-    };
+    }
     /**
      * Callback to run when a notification is tapped on from the notification shade (**ANDROID**) or notification
      * center (**iOS**), or when closing an Alert notification shown in the app (if InAppAlert is enabled in
@@ -336,7 +336,7 @@ export class OneSignalMock extends OneSignal {
             observer.next(response);
             observer.complete();
         });
-    };
+    }
     /**
      * **iOS** - Settings for iOS apps
      *
@@ -353,7 +353,7 @@ export class OneSignalMock extends OneSignal {
         kOSSettingsKeyInAppLaunchURL: boolean;
     }): any {
         return;
-    };
+    }
     /**
      * Must be called after `startInit` to complete initialization of OneSignal.
      *
@@ -361,7 +361,7 @@ export class OneSignalMock extends OneSignal {
      */
     endInit(): any {
         return;
-    };
+    }
     /**
      * Prompt the user for notification permissions. Callback fires as soon as the user accepts or declines notifications.
      * @returns {Promise<boolean>}
@@ -371,7 +371,7 @@ export class OneSignalMock extends OneSignal {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Retrieve a list of tags that have been set on the user from the OneSignal server.
      *
@@ -383,7 +383,7 @@ export class OneSignalMock extends OneSignal {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Lets you retrieve the OneSignal user id and device token.
      * Your handler is called after the device is successfully registered with OneSignal.
@@ -402,7 +402,7 @@ export class OneSignalMock extends OneSignal {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Tag a user based on an app event of your choosing so later you can create segments on [onesignal.com](https://onesignal.com/) to target these users.
      * Recommend using sendTags over sendTag if you need to set more than one tag on a user at a time.
@@ -410,31 +410,31 @@ export class OneSignalMock extends OneSignal {
      * @param {string} Key of your choosing to create or update.
      * @param {string} Value to set on the key. NOTE: Passing in a blank String deletes the key, you can also call deleteTag.
      */
-    sendTag(key: string, value: string): void { };
+    sendTag(key: string, value: string): void { }
     /**
      * Tag a user based on an app event of your choosing so later you can create segments on [onesignal.com](https://onesignal.com/) to target these users.
      * Recommend using sendTags over sendTag if you need to set more than one tag on a user at a time.
      *
      * @param {string} Pass a json object with key/value pairs like: {key: "value", key2: "value2"}
      */
-    sendTags(json: any): void { };
+    sendTags(json: any): void { }
     /**
      * Deletes a tag that was previously set on a user with `sendTag` or `sendTags`. Use `deleteTags` if you need to delete more than one.
      *
      * @param {string} Key to remove.
      */
-    deleteTag(key: string): void { };
+    deleteTag(key: string): void { }
     /**
      * Deletes tags that were previously set on a user with `sendTag` or `sendTags`.
      *
      * @param {Array<string>} Keys to remove.
      */
-    deleteTags(keys: string[]): void { };
+    deleteTags(keys: string[]): void { }
     /**
      * Call this when you would like to prompt an iOS user to accept push notifications with the default system prompt.
      * Only works if you set `kOSSettingsAutoPrompt` to `false` in `iOSSettings`
      */
-    registerForPushNotifications(): void { };
+    registerForPushNotifications(): void { }
     /**
      * Warning:
      * Only applies to Android and Amazon. You can call this from your UI from a button press for example to give your user's options for your notifications.
@@ -444,7 +444,7 @@ export class OneSignalMock extends OneSignal {
      *
      * @param {boolean} false to disable vibrate, true to re-enable it.
      */
-    enableVibrate(enable: boolean): void { };
+    enableVibrate(enable: boolean): void { }
     /**
      * Warning:
      * Only applies to Android and Amazon. You can call this from your UI from a button press for example to give your user's options for your notifications.
@@ -454,7 +454,7 @@ export class OneSignalMock extends OneSignal {
      *
      * @param {boolean} false to disable sound, true to re-enable it.
      */
-    enableSound(enable: boolean): void { };
+    enableSound(enable: boolean): void { }
     /**
      *
      * Setting to control how OneSignal notifications will be shown when one is received while your app is in focus. By default this is set to inAppAlert, which can be helpful during development.
@@ -464,14 +464,14 @@ export class OneSignalMock extends OneSignal {
      */
     inFocusDisplaying(displayOption: OSDisplayType): any {
         return;
-    };
+    }
     /**
      * You can call this method with false to opt users out of receiving all notifications through OneSignal.
      * You can pass true later to opt users back into notifications.
      *
      * @param {boolean} enable
      */
-    setSubscription(enable: boolean): void { };
+    setSubscription(enable: boolean): void { }
     /**
      * Get the current notification and permission state. Returns a OSPermissionSubscriptionState type described below.
      *
@@ -482,7 +482,7 @@ export class OneSignalMock extends OneSignal {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      *
      * @param {notificationObj} Parameters see POST [documentation](https://documentation.onesignal.com/v2.0/docs/notifications-create-notification)
@@ -492,25 +492,25 @@ export class OneSignalMock extends OneSignal {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Cancels a single OneSignal notification based on its Android notification integer id. Use instead of NotificationManager.cancel(id); otherwise the notification will be restored when your app is restarted.
      * @param notificationId {string}
      */
-    cancelNotification(notificationId: string): void { };
+    cancelNotification(notificationId: string): void { }
     /**
      * Prompts the user for location permission to allow geotagging based on the "Location radius" filter on the OneSignal dashboard.
      */
-    promptLocation(): void { };
+    promptLocation(): void { }
     /**
      *
      * @param email {string}
      */
-    syncHashedEmail(email: string): void { };
+    syncHashedEmail(email: string): void { }
     /**
      * Enable logging to help debug if you run into an issue setting up OneSignal.
      * The logging levels are as follows: 0 = None, 1= Fatal, 2 = Errors, 3 = Warnings, 4 = Info, 5 = Debug, 6 = Verbose
-  
+
      * The higher the value the more information is shown.
      *
      * @param {loglevel} contains two properties: logLevel (for console logging) and visualLevel (for dialog messages)
@@ -518,7 +518,7 @@ export class OneSignalMock extends OneSignal {
     setLogLevel(logLevel: {
         logLevel: number;
         visualLevel: number;
-    }): void { };
+    }): void { }
     /**
      * The passed in function will be fired when a notification permission setting changes.
      * This includes the following events:
@@ -532,7 +532,7 @@ export class OneSignalMock extends OneSignal {
             observer.next('');
             observer.complete();
         });
-    };
+    }
     /**
      * The passed in function will be fired when a notification subscription property changes.
      * This includes the following events:
@@ -547,5 +547,5 @@ export class OneSignalMock extends OneSignal {
             observer.next('');
             observer.complete();
         });
-    };
+    }
 }

@@ -1,5 +1,5 @@
 
-import { AppAvailability } from '@ionic-native/app-availability';
+import { AppAvailability } from '@ionic-native/app-availability/ngx';
 
 export class AppAvailabilityMock extends AppAvailability {
     /**
@@ -12,5 +12,5 @@ export class AppAvailabilityMock extends AppAvailability {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
 }

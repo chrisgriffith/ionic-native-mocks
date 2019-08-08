@@ -1,4 +1,4 @@
-import { Printer } from '@ionic-native/printer';
+import { Printer } from '@ionic-native/printer/ngx';
 export interface PrintOptions {
     /**
      * The name of the print job and the document
@@ -42,7 +42,7 @@ export class PrinterMock extends Printer {
          return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Checks if the printer service is available (iOS) or if printer services are installed and enabled (Android).
      * @return {Promise<any>} returns a promise that resolve with an object indicating whether printing is available, and providing the number of printers available
@@ -51,7 +51,7 @@ export class PrinterMock extends Printer {
          return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Displays a system interface allowing the user to select an available printer. To speak with a printer directly you need to know the network address by picking them before via `printer.pick`.
      * @returns {Promise<any>}
@@ -60,7 +60,7 @@ export class PrinterMock extends Printer {
          return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Sends content to the printer.
      * @param content {string | HTMLElement} The content to print. Can be a URL or an HTML string. If a HTML DOM Object is provided, its innerHtml property value will be used.
@@ -71,5 +71,5 @@ export class PrinterMock extends Printer {
          return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

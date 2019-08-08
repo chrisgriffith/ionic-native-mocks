@@ -1,4 +1,4 @@
-import { VideoEditor } from '@ionic-native/video-editor';
+import { VideoEditor } from '@ionic-native/video-editor/ngx';
 
 export interface TranscodeOptions {
     /** The path to the video on the device. */
@@ -98,7 +98,7 @@ export class VideoEditorMock extends VideoEditor {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Trim a video
      * @param options {TrimOptions} Options
@@ -109,7 +109,7 @@ export class VideoEditorMock extends VideoEditor {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Create a JPEG thumbnail from a video
      * @param options {CreateThumbnailOptions} Options
@@ -120,7 +120,7 @@ export class VideoEditorMock extends VideoEditor {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Get info on a video (width, height, orientation, duration, size, & bitrate)
      * @param options {GetVideoInfoOptions} Options
@@ -131,5 +131,5 @@ export class VideoEditorMock extends VideoEditor {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
 }

@@ -1,4 +1,4 @@
-import { Device } from '@ionic-native/device';
+import { Device } from '@ionic-native/device/ngx';
 
 export class DeviceMock extends Device {
     cordova: string;

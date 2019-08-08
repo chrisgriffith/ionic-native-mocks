@@ -1,4 +1,4 @@
-import { Globalization } from '@ionic-native/globalization';
+import { Globalization } from '@ionic-native/globalization/ngx';
 
 export interface GlobalizationOptions {
     formatLength: string;
@@ -15,7 +15,7 @@ export class GlobalizationMock extends Globalization {
         return new Promise((resolve, reject) => {
             resolve(theResult);
         });
-    };
+    }
     /**
      * Returns the BCP 47 compliant locale identifier string to the successCallback with a properties object as a parameter.
      * @returns {Promise<{value: string}>}
@@ -25,7 +25,7 @@ export class GlobalizationMock extends Globalization {
         return new Promise((resolve, reject) => {
             resolve(theResult);
         });
-    };
+    }
     /**
      * Converts date to string
      * @param {Date} date Date you wish to convert
@@ -37,7 +37,7 @@ export class GlobalizationMock extends Globalization {
         return new Promise((resolve, reject) => {
             resolve(theResult);
         });
-    };
+    }
     /**
      * Parses a date formatted as a string, according to the client's user preferences and calendar using the time zone of the client, and returns the corresponding date object.
      * @param {string} dateString Date as a string to be converted
@@ -60,7 +60,7 @@ export class GlobalizationMock extends Globalization {
         return new Promise((resolve, reject) => {
             resolve(theResult);
         });
-    };
+    }
     /**
      * Returns a pattern string to format and parse dates according to the client's user preferences.
      * @param options Object with the format length and selector
@@ -77,7 +77,7 @@ export class GlobalizationMock extends Globalization {
         return new Promise((resolve, reject) => {
             resolve(theResult);
         });
-    };
+    }
 
     /**
      * Returns an array of the names of the months or days of the week, depending on the client's user preferences and calendar.
@@ -93,7 +93,7 @@ export class GlobalizationMock extends Globalization {
         return new Promise((resolve, reject) => {
             resolve({ value: [''] });
         });
-    };
+    }
     /**
      * Indicates whether daylight savings time is in effect for a given date using the client's time zone and calendar.
      * @param {data} date Date to process
@@ -106,7 +106,7 @@ export class GlobalizationMock extends Globalization {
         return new Promise((resolve, reject) => {
             resolve(theResult);
         });
-    };
+    }
     /**
      * Returns the first day of the week according to the client's user preferences and calendar.
      * @returns {Promise<{value: string}>} returns a promise with the value
@@ -118,7 +118,7 @@ export class GlobalizationMock extends Globalization {
         return new Promise((resolve, reject) => {
             resolve(theResult);
         });
-    };
+    }
     /**
      * Returns a number formatted as a string according to the client's user preferences.
      * @param numberToConvert {Number} The number to convert
@@ -133,7 +133,7 @@ export class GlobalizationMock extends Globalization {
         return new Promise((resolve, reject) => {
             resolve(theResult);
         });
-    };
+    }
     /**
      *
      * @param {string} stringToConvert String you want to conver to a number
@@ -149,7 +149,7 @@ export class GlobalizationMock extends Globalization {
         return new Promise((resolve, reject) => {
             resolve(theResult);
         });
-    };
+    }
     /**
      * Returns a pattern string to format and parse numbers according to the client's user preferences.
      * @param options Can be decimal, percent, or currency.
@@ -171,7 +171,7 @@ export class GlobalizationMock extends Globalization {
         return new Promise((resolve, reject) => {
             resolve(theResult);
         });
-    };
+    }
     /**
      * Returns a pattern string to format and parse currency values according to the client's user preferences and ISO 4217 currency code.
      * @param {string} currencyCode Currency Code.A
@@ -189,5 +189,5 @@ export class GlobalizationMock extends Globalization {
         return new Promise((resolve, reject) => {
             resolve(theResult);
         });
-    };
+    }
 }

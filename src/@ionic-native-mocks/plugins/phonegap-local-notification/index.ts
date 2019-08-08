@@ -1,4 +1,4 @@
-import { PhonegapLocalNotification, PLNObject } from '@ionic-native/phonegap-local-notification';
+import { PhonegapLocalNotification, PLNObject } from '@ionic-native/phonegap-local-notification/ngx';
 
 export interface LocalNotificationOptions {
     /**
@@ -33,7 +33,7 @@ export class PhonegapLocalNotificationMock extends PhonegapLocalNotification {
     create(title: string, options: LocalNotificationOptions): PLNObject {
         let response: PLNObject = new PLNObject(title, options);
         return response;
-    };
+    }
     /**
     * requests permission from the user to show a local notification.
     * @returns {Promise<any>}
@@ -42,5 +42,5 @@ export class PhonegapLocalNotificationMock extends PhonegapLocalNotification {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

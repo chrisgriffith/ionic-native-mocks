@@ -1,4 +1,4 @@
-import { ZBar } from '@ionic-native/zbar';
+import { ZBar } from '@ionic-native/zbar/ngx';
 
 export interface ZBarOptions {
     /**
@@ -40,5 +40,5 @@ export class ZBarMock extends ZBar {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

@@ -1,4 +1,4 @@
-import { FirebaseAnalytics } from '@ionic-native/firebase-analytics';
+import { FirebaseAnalytics } from '@ionic-native/firebase-analytics/ngx';
 
 export class FirebaseAnalyticsMocks extends FirebaseAnalytics {
     /**
@@ -12,7 +12,7 @@ export class FirebaseAnalyticsMocks extends FirebaseAnalytics {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Sets the user ID property.
      * This feature must be used in accordance with Google's Privacy Policy.
@@ -23,7 +23,7 @@ export class FirebaseAnalyticsMocks extends FirebaseAnalytics {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * This feature must be used in accordance with Google's Privacy Policy.
      * Be aware of automatically collected user properties.
@@ -35,7 +35,7 @@ export class FirebaseAnalyticsMocks extends FirebaseAnalytics {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Sets whether analytics collection is enabled for this app on this device.
      * @param enabled {boolean}
@@ -45,7 +45,7 @@ export class FirebaseAnalyticsMocks extends FirebaseAnalytics {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Sets the current screen name, which specifies the current visual context in your app.
      * This helps identify the areas in your app where users spend their time and how they interact with your app.
@@ -56,5 +56,5 @@ export class FirebaseAnalyticsMocks extends FirebaseAnalytics {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

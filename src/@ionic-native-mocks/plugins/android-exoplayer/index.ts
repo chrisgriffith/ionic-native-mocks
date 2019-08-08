@@ -1,6 +1,6 @@
-import { AndroidExoplayer } from '@ionic-native/android-exoplayer';
-import { Observable } from 'rxjs/Observable';
-import { Observer } from 'rxjs/Observer';
+import { AndroidExoplayer } from '@ionic-native/android-exoplayer/ngx';
+import { Observable } from 'rxjs/internal/Observable';
+import { Observer } from 'rxjs/internal/types';
 
 export declare type AndroidExoPlayerAspectRatio = 'FILL_SCREEN' | 'FIT_SCREEN';
 export interface AndroidExoPlayerParams {
@@ -134,7 +134,7 @@ export class AndroidExoplayerMock extends AndroidExoplayer {
             observer.next( response );
             observer.complete();
         });
-    };
+    }
     /**
      * Switch stream without disposing of the player.
      * @param url {string} The url of the new stream.
@@ -145,7 +145,7 @@ export class AndroidExoplayerMock extends AndroidExoplayer {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Will pause if playing and play if paused
      * @return {Promise<void>}
@@ -154,7 +154,7 @@ export class AndroidExoplayerMock extends AndroidExoplayer {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Stop playing.
      * @return {Promise<void>}
@@ -163,7 +163,7 @@ export class AndroidExoplayerMock extends AndroidExoplayer {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Jump to a particular position.
      * @param milliseconds {number} Position in stream in milliseconds
@@ -173,7 +173,7 @@ export class AndroidExoplayerMock extends AndroidExoplayer {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Jump to a particular time relative to the current position.
      * @param milliseconds {number} Time in milliseconds
@@ -183,7 +183,7 @@ export class AndroidExoplayerMock extends AndroidExoplayer {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Get the current player state.
      * @return {Promise<AndroidExoplayerState>}
@@ -193,7 +193,7 @@ export class AndroidExoplayerMock extends AndroidExoplayer {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Show the controller.
      * @return {Promise<void>}
@@ -202,7 +202,7 @@ export class AndroidExoplayerMock extends AndroidExoplayer {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Hide the controller.
      * @return {Promise<void>}
@@ -211,7 +211,7 @@ export class AndroidExoplayerMock extends AndroidExoplayer {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Update the controller configuration.
      * @param controller {AndroidExoPlayerControllerConfig} Configuration of the controller.
@@ -221,7 +221,7 @@ export class AndroidExoplayerMock extends AndroidExoplayer {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Close and dispose of player, call before destroy.
      * @return {Promise<void>}
@@ -230,5 +230,5 @@ export class AndroidExoplayerMock extends AndroidExoplayer {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

@@ -1,4 +1,4 @@
-import { Screenshot } from '@ionic-native/screenshot';
+import { Screenshot } from '@ionic-native/screenshot/ngx';
 
 export class ScreenshotMock extends Screenshot {
     /**
@@ -15,7 +15,7 @@ export class ScreenshotMock extends Screenshot {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      *  Takes screenshot and returns the image as an URI
      *
@@ -27,5 +27,5 @@ export class ScreenshotMock extends Screenshot {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

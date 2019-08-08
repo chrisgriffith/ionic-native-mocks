@@ -6,7 +6,7 @@ const config = require('../config.json'),
   Dgeni = require('dgeni');
 
 module.exports = gulp => {
-  gulp.task('docs', [], () => {
+  gulp.task('docs', () => {
 
     try {
 
@@ -21,7 +21,7 @@ module.exports = gulp => {
 
   });
 
-  gulp.task('readmes', [], function() {
+  gulp.task('readmes', () => {
 
     fs.copySync(path.resolve(__dirname, '..', '..', 'README.md'), path.resolve(__dirname, '..', '..', config.pluginDir, 'core', 'README.md'));
 

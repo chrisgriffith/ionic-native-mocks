@@ -1,6 +1,6 @@
-import { FTP } from '@ionic-native/ftp';
-import { Observable } from 'rxjs/Observable';
-import { Observer } from 'rxjs/Observer';
+import { FTP } from '@ionic-native/ftp/ngx';
+import { Observable } from 'rxjs/internal/Observable';
+import { Observer } from 'rxjs/internal/types';
 
 export class FTPMock extends FTP {
     /**
@@ -16,7 +16,7 @@ export class FTPMock extends FTP {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * List files (with info of `name`, `type`, `link`, `size`, `modifiedDate`) under one directory on the ftp server.
      * You can get one file's name using `fileList[x].name` (`x` is the location in array).
@@ -35,7 +35,7 @@ export class FTPMock extends FTP {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Create one directory on the ftp server.
      *
@@ -46,7 +46,7 @@ export class FTPMock extends FTP {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Delete one directory on the ftp server.
      *
@@ -59,7 +59,7 @@ export class FTPMock extends FTP {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Delete one file on the ftp server.
      *
@@ -70,7 +70,7 @@ export class FTPMock extends FTP {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Upload one local file to the ftp server.
      *
@@ -85,7 +85,7 @@ export class FTPMock extends FTP {
             observer.next('');
             observer.complete();
         });
-    };
+    }
     /**
      * Download one remote file on the ftp server to local path.
      *
@@ -100,7 +100,7 @@ export class FTPMock extends FTP {
             observer.next('');
             observer.complete();
         });
-    };
+    }
     /**
      * Cancel all requests. Always success.
      *
@@ -110,7 +110,7 @@ export class FTPMock extends FTP {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Disconnect from ftp server.
      *
@@ -120,5 +120,5 @@ export class FTPMock extends FTP {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

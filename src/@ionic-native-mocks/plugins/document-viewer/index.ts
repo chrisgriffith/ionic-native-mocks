@@ -1,4 +1,4 @@
-import { DocumentViewer } from '@ionic-native/document-viewer';
+import { DocumentViewer } from '@ionic-native/document-viewer/ngx';
 
 export interface DocumentViewerOptions {
     title?: string;
@@ -38,7 +38,7 @@ export class DocumentViewerMock extends DocumentViewer {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Check if the document can be shown
      *
@@ -50,7 +50,7 @@ export class DocumentViewerMock extends DocumentViewer {
      * @param [onImpossible] {Function}
      * @param [onError] {Function}
      */
-    canViewDocument(url: string, contentType: string, options: DocumentViewerOptions, onPossible?: Function, onMissingApp?: Function, onImpossible?: Function, onError?: Function): void { };
+    canViewDocument(url: string, contentType: string, options: DocumentViewerOptions, onPossible?: Function, onMissingApp?: Function, onImpossible?: Function, onError?: Function): void { }
     /**
      * Opens the file
      *
@@ -62,5 +62,5 @@ export class DocumentViewerMock extends DocumentViewer {
      * @param [onMissingApp] {Function}
      * @param [onError] {Function}
      */
-    viewDocument(url: string, contentType: string, options: DocumentViewerOptions, onShow?: Function, onClose?: Function, onMissingApp?: Function, onError?: Function): void { };
+    viewDocument(url: string, contentType: string, options: DocumentViewerOptions, onShow?: Function, onClose?: Function, onMissingApp?: Function, onError?: Function): void { }
 }

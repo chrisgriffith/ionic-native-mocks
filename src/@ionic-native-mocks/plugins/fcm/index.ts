@@ -1,6 +1,6 @@
-import { FCM } from '@ionic-native/fcm';
-import { Observable } from 'rxjs/Observable';
-import { Observer } from 'rxjs/Observer';
+import { FCM } from '@ionic-native/fcm/ngx';
+import { Observable } from 'rxjs/internal/Observable';
+import { Observer } from 'rxjs/internal/types';
 
 export interface NotificationData {
     /**
@@ -23,7 +23,7 @@ export class FCMMock extends FCM {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Event firing on the token refresh
      *
@@ -35,7 +35,7 @@ export class FCMMock extends FCM {
             observer.next(response);
             observer.complete();
         });
-    };
+    }
     /**
      * Subscribes you to a [topic](https://firebase.google.com/docs/notifications/android/console-topics)
      *
@@ -47,7 +47,7 @@ export class FCMMock extends FCM {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Unubscribes you from a [topic](https://firebase.google.com/docs/notifications/android/console-topics)
      *
@@ -59,7 +59,7 @@ export class FCMMock extends FCM {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Watch for incoming notifications
      *
@@ -71,5 +71,5 @@ export class FCMMock extends FCM {
             observer.next(response);
             observer.complete();
         });
-    };
+    }
 }

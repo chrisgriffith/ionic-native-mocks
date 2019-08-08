@@ -1,4 +1,4 @@
-import { CardIO } from '@ionic-native/card-io';
+import { CardIO } from '@ionic-native/card-io/ngx';
 
 export interface CardIOOptions {
     /**
@@ -112,7 +112,7 @@ export class CardIOMocks extends CardIO {
         return new Promise((resolve, reject) => {
             resolve(true);
         });
-    };
+    }
     /**
      * Scan a credit card with card.io.
      * @param {CardIOOptions} options Options for configuring the plugin
@@ -123,7 +123,7 @@ export class CardIOMocks extends CardIO {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Retrieve the version of the card.io library. Useful when contacting support.
      * @returns {Promise<string>}
@@ -132,5 +132,5 @@ export class CardIOMocks extends CardIO {
         return new Promise((resolve, reject) => {
             resolve('');
         });
-    };
+    }
 }

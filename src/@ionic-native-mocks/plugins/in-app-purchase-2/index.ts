@@ -1,4 +1,4 @@
-import { InAppPurchase2 } from '@ionic-native/in-app-purchase-2';
+import { InAppPurchase2 } from '@ionic-native/in-app-purchase-2/ngx';
 
 export interface IAPProductOptions {
     id: string;
@@ -147,17 +147,17 @@ export class InAppPurchase2Mock extends InAppPurchase2 {
     get(idOrAlias: string): IAPProduct {
         let response: IAPProduct;
         return response;
-    };
+    }
     /**
      * Register error handler
      * @param onError {Function} function to call on error
      */
-    error(onError: Function): void { };
+    error(onError: Function): void { }
     /**
      * Add or register a product
      * @param product {IAPProductOptions}
      */
-    register(product: IAPProductOptions): void { };
+    register(product: IAPProductOptions): void { }
     /**
      *
      * @param query
@@ -168,7 +168,7 @@ export class InAppPurchase2Mock extends InAppPurchase2 {
     when(query: string | IAPProduct, event?: string, callback?: IAPQueryCallback): IAPProductEvents {
         let response: IAPProductEvents;
         return response;
-    };
+    }
     /**
      * Identical to `when`, but the callback will be called only once. After being called, the callback will be unregistered.
      * @param query {string | IAPProduct}
@@ -179,12 +179,12 @@ export class InAppPurchase2Mock extends InAppPurchase2 {
     once(query: string | IAPProduct, event?: string, callback?: IAPQueryCallback): IAPProductEvents {
         let response: IAPProductEvents;
         return response;
-    };
+    }
     /**
      * Unregister a callback. Works for callbacks registered with ready, when, once and error.
      * @param callback {Function}
      */
-    off(callback: Function): void { };
+    off(callback: Function): void { }
     // order(product: string | IAPProduct, additionalData?: any): Promise<any> {
     //     return new Promise((resolve, reject) => {
     //         resolve().error();
@@ -202,6 +202,6 @@ export class InAppPurchase2Mock extends InAppPurchase2 {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
-    refresh(): void { };
+    }
+    refresh(): void { }
 }

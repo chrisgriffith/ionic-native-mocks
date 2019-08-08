@@ -8,7 +8,7 @@ However, once you integrate these plugins into your Ionic application, use of a 
 
 ## Installation
 
-This project allows developers to use Ionic Native Mocks in place of the actual Ionic Native modules. They can be installed in via to methods. 
+This project allows developers to use Ionic Native Mocks in place of the actual Ionic Native modules. They can be installed in via to methods.
 1) via npm: Installing these prebuilt mocks is easy but they are not easily customized.
 2) via GitHub and manually added to your Ionic project: Installing this way means the mocks can be customized to return specific data, like a specific parsing of a QR code.
 
@@ -36,7 +36,7 @@ To use a plugin, import and add the plugin provider to your `@NgModule`, and the
 
 ```typescript
 // app.module.ts
-import { Camera } from '@ionic-native/camera';
+import { Camera } from '@ionic-native/camera/ngx';
 import { CameraMock } from '@ionic-native-mocks/camera';
 ...
 
@@ -55,7 +55,7 @@ export class AppModule { }
 
 ```typescript
 import { Platform } from 'ionic-angular';
-import { Camera, CameraOptions } from '@ionic-native/camera';
+import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 
 @Component({ ... })
 export class MyComponent {
@@ -86,7 +86,7 @@ export class MyComponent {
 ### Customization
 To learn how to customize an Ionic Native Mock, see the guide at: https://chrisgriffith.wordpress.com/2017/08/21/customizing-ionic-native-mocks/ (https://chrisgriffith.wordpress.com/2017/08/21/customizing-ionic-native-mocks/)
 
-## Missing a mock? Found a problem?  
+## Missing a mock? Found a problem?
 Let us know or submit a PR!
 
 # Credits

@@ -1,4 +1,4 @@
-import { LinkedIn } from '@ionic-native/linkedin';
+import { LinkedIn } from '@ionic-native/linkedin/ngx';
 
 export declare type LinkedInLoginScopes = 'r_basicprofile' | 'r_emailaddress' | 'rw_company_admin' | 'w_share';
 
@@ -13,11 +13,11 @@ export class LinkedInMock extends LinkedIn {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Clears the current session
      */
-    logout(): void {};
+    logout(): void {}
     /**
      * Make a get request
      * @param path {string} request path
@@ -27,7 +27,7 @@ export class LinkedInMock extends LinkedIn {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Make a post request
      * @param path {string} request path
@@ -38,7 +38,7 @@ export class LinkedInMock extends LinkedIn {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Opens a member's profile
      * @param memberId {string} Member id
@@ -48,7 +48,7 @@ export class LinkedInMock extends LinkedIn {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Checks if there is already an existing active session. This should be used to avoid unnecessary login.
      * @return {Promise<boolean>} returns a promise that resolves with a boolean that indicates whether there is an active session
@@ -58,7 +58,7 @@ export class LinkedInMock extends LinkedIn {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Checks if there is an active session and returns the access token if it exists.
      * @return {Promise<any>} returns a promise that resolves with an object that contains an access token if there is an active session
@@ -67,5 +67,5 @@ export class LinkedInMock extends LinkedIn {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

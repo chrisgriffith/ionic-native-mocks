@@ -1,6 +1,6 @@
-import { Zeroconf } from '@ionic-native/zeroconf';
-import { Observable } from 'rxjs/Observable';
-import { Observer } from 'rxjs/Observer';
+import { Zeroconf } from '@ionic-native/zeroconf/ngx';
+import { Observable } from 'rxjs/internal/Observable';
+import { Observer } from 'rxjs/internal/types';
 
 export interface ZeroconfService {
     domain: string;
@@ -27,7 +27,7 @@ export class ZeroconfMock extends Zeroconf {
          return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Publishes a new service.
      * @param type {string} Service type name, e.g. "_http._tcp".
@@ -42,7 +42,7 @@ export class ZeroconfMock extends Zeroconf {
          return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Unregisters a service.
      * @param type {string} Service type name, e.g. "_http._tcp".
@@ -54,7 +54,7 @@ export class ZeroconfMock extends Zeroconf {
          return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Unregisters all published services.
      * @return {Promise<void>}
@@ -63,7 +63,7 @@ export class ZeroconfMock extends Zeroconf {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Starts watching for services of the specified type.
      * @param type {string} Service type name, e.g. "_http._tcp".
@@ -76,7 +76,7 @@ export class ZeroconfMock extends Zeroconf {
             observer.next(response);
             observer.complete();
         });
-    };
+    }
     /**
      * Stops watching for services of the specified type.
      * @param type {string} Service type name, e.g. "_http._tcp".
@@ -87,7 +87,7 @@ export class ZeroconfMock extends Zeroconf {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Closes the service browser and stops watching.
      * @return {Promise<void>}
@@ -96,5 +96,5 @@ export class ZeroconfMock extends Zeroconf {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

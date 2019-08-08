@@ -1,4 +1,4 @@
-import { Calendar } from '@ionic-native/calendar';
+import { Calendar } from '@ionic-native/calendar/ngx';
 
 export interface CalendarOptions {
     /**

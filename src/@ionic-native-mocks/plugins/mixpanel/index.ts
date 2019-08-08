@@ -1,4 +1,4 @@
-import { Mixpanel, MixpanelPeople } from '@ionic-native/mixpanel';
+import { Mixpanel, MixpanelPeople } from '@ionic-native/mixpanel/ngx';
 
 export class MixpanelMock extends Mixpanel {
     /**
@@ -11,7 +11,7 @@ export class MixpanelMock extends Mixpanel {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      *
      * @returns {Promise<any>}
@@ -20,7 +20,7 @@ export class MixpanelMock extends Mixpanel {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * @returns {Promise<any>}
      */
@@ -28,7 +28,7 @@ export class MixpanelMock extends Mixpanel {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      *
      * @param distinctId {string}
@@ -38,7 +38,7 @@ export class MixpanelMock extends Mixpanel {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      *
      * @param token {string}
@@ -48,7 +48,7 @@ export class MixpanelMock extends Mixpanel {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      *
      * @param superProperties {any}
@@ -58,7 +58,7 @@ export class MixpanelMock extends Mixpanel {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      *
      * @returns {Promise<any>}
@@ -67,7 +67,7 @@ export class MixpanelMock extends Mixpanel {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      *
      * @param eventName {string}
@@ -77,7 +77,7 @@ export class MixpanelMock extends Mixpanel {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      *
      * @param eventName {string}
@@ -88,7 +88,7 @@ export class MixpanelMock extends Mixpanel {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }
 /**
  * @hidden
@@ -103,7 +103,7 @@ export class MixpanelPeopleMock extends MixpanelPeople {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      *
      * @param peopleProperties {string}
@@ -113,7 +113,7 @@ export class MixpanelPeopleMock extends MixpanelPeople {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      *
      * @param pushId
@@ -123,7 +123,7 @@ export class MixpanelPeopleMock extends MixpanelPeople {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      *
      * @param peopleProperties
@@ -133,7 +133,7 @@ export class MixpanelPeopleMock extends MixpanelPeople {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      *
      * @param peopleProperties
@@ -143,5 +143,5 @@ export class MixpanelPeopleMock extends MixpanelPeople {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

@@ -1,4 +1,4 @@
-import { Keychain } from '@ionic-native/keychain';
+import { Keychain } from '@ionic-native/keychain/ngx';
 
 export class KeychainMock extends Keychain {
     /**
@@ -11,7 +11,7 @@ export class KeychainMock extends Keychain {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Sets a value for a key
      *
@@ -23,7 +23,7 @@ export class KeychainMock extends Keychain {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Gets a JSON value for a key
      *
@@ -34,7 +34,7 @@ export class KeychainMock extends Keychain {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Sets a JSON value for a key
      *
@@ -46,7 +46,7 @@ export class KeychainMock extends Keychain {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Removes a value for a key
      *
@@ -56,5 +56,5 @@ export class KeychainMock extends Keychain {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

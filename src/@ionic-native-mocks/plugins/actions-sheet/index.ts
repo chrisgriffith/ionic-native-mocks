@@ -1,4 +1,4 @@
-import { ActionSheet } from '@ionic-native/action-sheet';
+import { ActionSheet } from '@ionic-native/action-sheet/ngx';
 
 export interface ActionSheetOptions {
     /**
@@ -61,7 +61,7 @@ export class ActionSheetMock extends ActionSheet {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Progamtically hide the native ActionSheet
      * @returns {Promise<any>} Returns a Promise that resolves when the actionsheet is closed

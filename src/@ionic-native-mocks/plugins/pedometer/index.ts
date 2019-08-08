@@ -1,6 +1,6 @@
-import { Pedometer } from '@ionic-native/pedometer';
-import { Observable } from 'rxjs/Observable';
-import { Observer } from 'rxjs/Observer';
+import { Pedometer } from '@ionic-native/pedometer/ngx';
+import { Observable } from 'rxjs/internal/Observable';
+import { Observer } from 'rxjs/internal/types';
 
 export interface IPedometerData {
     startDate?: number;
@@ -21,7 +21,7 @@ export class PedometerMock extends Pedometer {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Distance estimation indicates the ability to use step information to supply the approximate distance travelled by the user.
      * This capability is not supported on all devices, even with iOS 8.
@@ -33,7 +33,7 @@ export class PedometerMock extends Pedometer {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Floor counting indicates the ability to count the number of floors the user walks up or down using stairs.
      * This capability is not supported on all devices, even with iOS 8.
@@ -45,7 +45,7 @@ export class PedometerMock extends Pedometer {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
     * Starts the delivery of recent pedestrian-related data to your Cordova app.
     *
@@ -59,7 +59,7 @@ export class PedometerMock extends Pedometer {
             observer.next(response);
             observer.complete();
         });
-    };
+    }
     /**
      * Stops the delivery of recent pedestrian data updates to your Cordova app.
      * @return {Promise<boolean>} Returns a promise that resolves when pedometer watching was stopped
@@ -69,7 +69,7 @@ export class PedometerMock extends Pedometer {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Retrieves the data between the specified start and end dates.
      * The startDate and endDate options are required and can be constructed in any valid JavaScript way
@@ -86,5 +86,5 @@ export class PedometerMock extends Pedometer {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
 }

@@ -1,4 +1,4 @@
-import { GoogleAnalytics } from '@ionic-native/google-analytics';
+import { GoogleAnalytics } from '@ionic-native/google-analytics/ngx';
 
 export class GoogleAnalyticsMock extends GoogleAnalytics {
     /**
@@ -12,7 +12,7 @@ export class GoogleAnalyticsMock extends GoogleAnalytics {
          return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Enabling Advertising Features in Google Analytics allows you to take advantage of Remarketing, Demographics & Interests reports, and more
      * @param allow {boolean}
@@ -22,7 +22,7 @@ export class GoogleAnalyticsMock extends GoogleAnalytics {
          return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Set a UserId
      * https://developers.google.com/analytics/devguides/collection/analyticsjs/user-id
@@ -33,7 +33,7 @@ export class GoogleAnalyticsMock extends GoogleAnalytics {
          return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Set a anonymize Ip address
      * @param anonymize {boolean} Set to true to anonymize the IP Address
@@ -43,7 +43,7 @@ export class GoogleAnalyticsMock extends GoogleAnalytics {
          return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Sets the app version
      * @param appVersion {string} App version
@@ -53,7 +53,7 @@ export class GoogleAnalyticsMock extends GoogleAnalytics {
          return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Set OptOut
      * @param optout {boolean}
@@ -63,7 +63,7 @@ export class GoogleAnalyticsMock extends GoogleAnalytics {
          return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Enable verbose logging
      * @returns {Promise<any>}
@@ -72,7 +72,7 @@ export class GoogleAnalyticsMock extends GoogleAnalytics {
          return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Track custom metric
      * @param key {number}
@@ -83,7 +83,7 @@ export class GoogleAnalyticsMock extends GoogleAnalytics {
          return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Track a screen
      * https://developers.google.com/analytics/devguides/collection/analyticsjs/screens
@@ -97,7 +97,7 @@ export class GoogleAnalyticsMock extends GoogleAnalytics {
          return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Add a Custom Dimension
      * https://developers.google.com/analytics/devguides/platform/customdimsmets
@@ -109,7 +109,7 @@ export class GoogleAnalyticsMock extends GoogleAnalytics {
          return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Track an event
      * https://developers.google.com/analytics/devguides/collection/analyticsjs/events
@@ -124,7 +124,7 @@ export class GoogleAnalyticsMock extends GoogleAnalytics {
          return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Track an exception
      * @param description {string}
@@ -135,7 +135,7 @@ export class GoogleAnalyticsMock extends GoogleAnalytics {
          return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Track User Timing (App Speed)
      * @param category {string}
@@ -148,7 +148,7 @@ export class GoogleAnalyticsMock extends GoogleAnalytics {
          return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Add a Transaction (Ecommerce)
      * https://developers.google.com/analytics/devguides/collection/analyticsjs/ecommerce#addTrans
@@ -164,7 +164,7 @@ export class GoogleAnalyticsMock extends GoogleAnalytics {
          return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Add a Transaction Item (Ecommerce)
      * https://developers.google.com/analytics/devguides/collection/analyticsjs/ecommerce#addItem
@@ -181,7 +181,7 @@ export class GoogleAnalyticsMock extends GoogleAnalytics {
          return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Enable/disable automatic reporting of uncaught exceptions
      * @param shouldEnable {boolean}
@@ -191,5 +191,5 @@ export class GoogleAnalyticsMock extends GoogleAnalytics {
          return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

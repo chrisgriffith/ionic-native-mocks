@@ -1,6 +1,6 @@
-import { Serial } from '@ionic-native/serial';
-import { Observable } from 'rxjs/Observable';
-import { Observer } from 'rxjs/Observer';
+import { Serial } from '@ionic-native/serial/ngx';
+import { Observable } from 'rxjs/internal/Observable';
+import { Observer } from 'rxjs/internal/types';
 
 export interface SerialPermissionOptions {
     vid: string;
@@ -22,7 +22,7 @@ export class SerialMock extends Serial {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Open connection to a serial device
      *
@@ -33,7 +33,7 @@ export class SerialMock extends Serial {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Write to a serial connection
      *
@@ -44,7 +44,7 @@ export class SerialMock extends Serial {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Write hex to a serial connection
      *
@@ -55,7 +55,7 @@ export class SerialMock extends Serial {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Read from a serial connection
      *
@@ -65,7 +65,7 @@ export class SerialMock extends Serial {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Watch the incoming data from the serial connection. Clear the watch by unsubscribing from the observable
      *
@@ -76,7 +76,7 @@ export class SerialMock extends Serial {
             observer.next('');
             observer.complete();
         });
-    };
+    }
     /**
      * Close the serial connection
      *
@@ -86,5 +86,5 @@ export class SerialMock extends Serial {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

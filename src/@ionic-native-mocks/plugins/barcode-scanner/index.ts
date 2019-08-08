@@ -1,4 +1,4 @@
-import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 
 export interface BarcodeScannerOptions {
     /**

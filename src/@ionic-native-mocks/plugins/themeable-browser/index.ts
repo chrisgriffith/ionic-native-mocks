@@ -1,6 +1,6 @@
-import { ThemeableBrowser, ThemeableBrowserObject } from '@ionic-native/themeable-browser';
-import { Observable } from 'rxjs/Observable';
-import { Observer } from 'rxjs/Observer';
+import { ThemeableBrowser, ThemeableBrowserObject } from '@ionic-native/themeable-browser/ngx';
+import { Observable } from 'rxjs/internal/Observable';
+import { Observer } from 'rxjs/internal/types';
 
 export interface ThemeableBrowserButton {
     wwwImage?: string;
@@ -67,20 +67,20 @@ export class ThemeableBrowserObjectMock extends ThemeableBrowserObject {
     // private _objectInstance;
     constructor(url: string, target: string, styleOptions: ThemeableBrowserOptions) {
         super(url, target, styleOptions);
-    };
+    }
     /**
      * Displays an browser window that was opened hidden. Calling this has no effect
      * if the browser was already visible.
      */
-    show(): void {};
+    show(): void {}
     /**
      * Closes the browser window.
      */
-    close(): void {};
+    close(): void {}
     /**
      * Reloads the current page
      */
-    reload(): void {} ;
+    reload(): void {}
     /**
      * Injects JavaScript code into the browser window.
      * @param script    Details of the script to run, specifying either a file or code key.
@@ -93,7 +93,7 @@ export class ThemeableBrowserObjectMock extends ThemeableBrowserObject {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Injects CSS into the browser window.
      * @param css       Details of the script to run, specifying either a file or code key.
@@ -106,7 +106,7 @@ export class ThemeableBrowserObjectMock extends ThemeableBrowserObject {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * A method that allows you to listen to events happening in the browser.
      * Available events are: `ThemeableBrowserError`, `ThemeableBrowserWarning`, `critical`, `loadfail`, `unexpected`, `undefined`
@@ -118,7 +118,7 @@ export class ThemeableBrowserObjectMock extends ThemeableBrowserObject {
             observer.next('');
             observer.complete();
         });
-    };
+    }
 }
 
 export class ThemeableBrowserMock extends ThemeableBrowser {
@@ -132,5 +132,5 @@ export class ThemeableBrowserMock extends ThemeableBrowser {
     create(url: string, target: string, styleOptions: ThemeableBrowserOptions): ThemeableBrowserObject {
         let response: ThemeableBrowserObject;
         return response;
-    };
+    }
 }

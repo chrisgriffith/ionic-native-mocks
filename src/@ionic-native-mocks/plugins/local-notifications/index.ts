@@ -1,19 +1,19 @@
-import { LocalNotifications } from "@ionic-native/local-notifications";
-import { Observable } from "rxjs/Observable";
-import { Observer } from "rxjs/Observer";
+import { LocalNotifications } from '@ionic-native/local-notifications';
+import { Observable } from 'rxjs/Observable';
+import { Observer } from 'rxjs/Observer';
 
 export declare enum ELocalNotificationTriggerUnit {
-  SECOND = "second",
-  MINUTE = "minute",
-  HOUR = "hour",
-  DAY = "day",
-  WEEK = "week",
-  MONTH = "month",
-  QUARTER = "quarter",
-  YEAR = "year",
-  WEEKDAY = "weekday",
-  WEEKDAY_ORDINAL = "weekdayOrdinal",
-  WEEK_OF_MONTH = "weekOfMonth"
+  SECOND = 'second',
+  MINUTE = 'minute',
+  HOUR = 'hour',
+  DAY = 'day',
+  WEEK = 'week',
+  MONTH = 'month',
+  QUARTER = 'quarter',
+  YEAR = 'year',
+  WEEKDAY = 'weekday',
+  WEEKDAY_ORDINAL = 'weekdayOrdinal',
+  WEEK_OF_MONTH = 'weekOfMonth'
 }
 export interface ILocalNotificationTrigger {
   /** ***** FIX ***** */
@@ -83,8 +83,8 @@ export interface ILocalNotificationTrigger {
   single?: boolean;
 }
 export declare enum ILocalNotificationActionType {
-  INPUT = "input",
-  BUTTON = "button"
+  INPUT = 'input',
+  BUTTON = 'button'
 }
 export interface ILocalNotificationAction {
   /**
@@ -575,7 +575,7 @@ export class LocalNotificationsMocks extends LocalNotifications {
    */
   on(eventName: string): Observable<any> {
     return Observable.create((observer: Observer<any>) => {
-      observer.next("");
+      observer.next('');
       observer.complete();
     });
   }

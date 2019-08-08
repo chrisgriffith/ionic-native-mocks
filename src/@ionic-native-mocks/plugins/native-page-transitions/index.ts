@@ -1,4 +1,4 @@
-import { NativePageTransitions } from '@ionic-native/native-page-transitions';
+import { NativePageTransitions } from '@ionic-native/native-page-transitions/ngx';
 
 export interface NativeTransitionOptions {
     direction?: string;
@@ -25,7 +25,7 @@ export class NativePageTransitionsMock extends NativePageTransitions {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Perform a flip animation
      * @param options {NativeTransitionOptions} Options for the transition
@@ -35,7 +35,7 @@ export class NativePageTransitionsMock extends NativePageTransitions {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Perform a fade animation
      * @param options {NativeTransitionOptions} Options for the transition
@@ -45,7 +45,7 @@ export class NativePageTransitionsMock extends NativePageTransitions {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Perform a slide animation
      * @param options {NativeTransitionOptions} Options for the transition
@@ -55,7 +55,7 @@ export class NativePageTransitionsMock extends NativePageTransitions {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Perform a slide animation
      * @param options {NativeTransitionOptions} Options for the transition
@@ -65,7 +65,7 @@ export class NativePageTransitionsMock extends NativePageTransitions {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Execute pending transition
      * @returns {Promise<any>}
@@ -74,7 +74,7 @@ export class NativePageTransitionsMock extends NativePageTransitions {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Cancel pending transition
      * @returns {Promise<any>}
@@ -83,5 +83,5 @@ export class NativePageTransitionsMock extends NativePageTransitions {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

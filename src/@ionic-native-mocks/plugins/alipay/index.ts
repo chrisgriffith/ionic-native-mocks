@@ -1,4 +1,4 @@
-import { Alipay } from '@ionic-native/alipay';
+import { Alipay } from '@ionic-native/alipay/ngx';
 
 export interface AlipayOrder {
     /**
@@ -55,9 +55,9 @@ export class AlipayMock extends Alipay {
      * @param order { AlipayOrder } alipay options
      * @returns {Promise<any>} Returns a Promise that resolves with the success return, or rejects with an error.
      */
-    pay(order: AlipayOrder): Promise<any> {
+    pay(order: string): Promise<any> {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

@@ -1,4 +1,4 @@
-import { NativeGeocoder } from '@ionic-native/native-geocoder';
+import { NativeGeocoder, NativeGeocoderResult } from '@ionic-native/native-geocoder/ngx';
 
 export class NativeGeocoderMock extends NativeGeocoder {
     /**
@@ -7,12 +7,12 @@ export class NativeGeocoderMock extends NativeGeocoder {
      * @param longitude {number} The longitude
      * @return {Promise<any>}
      */
-    reverseGeocode(latitude: number, longitude: number, options?: NativeGeocoderOptions): Promise<NativeGeocoderReverseResult[]> {
-        let response: NativeGeocoderReverseResult[];
+    reverseGeocode(latitude: number, longitude: number, options?: NativeGeocoderOptions): Promise<NativeGeocoderResult[]> {
+        let response: NativeGeocoderResult[];
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Forward geocode a given address to find coordinates
      * @param addressString {string} The address to be geocoded
@@ -23,7 +23,7 @@ export class NativeGeocoderMock extends NativeGeocoder {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
 }
 /**
  * Encapsulates format information about a reverse geocoding result.

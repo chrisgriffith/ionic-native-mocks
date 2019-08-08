@@ -1,4 +1,4 @@
-import { Hotspot } from '@ionic-native/hotspot';
+import { Hotspot } from '@ionic-native/hotspot/ngx';
 
 export interface HotspotConnectionInfo {
     /**
@@ -85,7 +85,7 @@ export class HotspotMock extends Hotspot {
         return new Promise((resolve, reject) => {
             resolve(true);
         });
-    };
+    }
     /**
      * @returns {Promise<boolean>}
      */
@@ -93,7 +93,7 @@ export class HotspotMock extends Hotspot {
         return new Promise((resolve, reject) => {
             resolve(true);
         });
-    };
+    }
     /**
      * Configures and starts hotspot with SSID and Password
      *
@@ -107,7 +107,7 @@ export class HotspotMock extends Hotspot {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Turns on Access Point
      *
@@ -117,7 +117,7 @@ export class HotspotMock extends Hotspot {
         return new Promise((resolve, reject) => {
             resolve(true);
         });
-    };
+    }
     /**
      * Configures hotspot with SSID and Password
      *
@@ -131,7 +131,7 @@ export class HotspotMock extends Hotspot {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Turns off Access Point
      *
@@ -141,7 +141,7 @@ export class HotspotMock extends Hotspot {
         return new Promise((resolve, reject) => {
             resolve(true);
         });
-    };
+    }
     /**
      * Checks if hotspot is enabled
      *
@@ -151,7 +151,7 @@ export class HotspotMock extends Hotspot {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * @returns {Promise<Array<HotspotDevice>>}
      */
@@ -159,7 +159,7 @@ export class HotspotMock extends Hotspot {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Connect to a WiFi network
      *
@@ -175,7 +175,7 @@ export class HotspotMock extends Hotspot {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Connect to a WiFi network
      *
@@ -195,7 +195,7 @@ export class HotspotMock extends Hotspot {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Add a WiFi network
      *
@@ -213,7 +213,7 @@ export class HotspotMock extends Hotspot {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Remove a WiFi network
      *
@@ -227,7 +227,7 @@ export class HotspotMock extends Hotspot {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * @returns {Promise<boolean>}
      */
@@ -235,7 +235,7 @@ export class HotspotMock extends Hotspot {
         return new Promise((resolve, reject) => {
             resolve(true);
         });
-    };
+    }
     /**
      * @returns {Promise<boolean>}
      */
@@ -243,7 +243,7 @@ export class HotspotMock extends Hotspot {
         return new Promise((resolve, reject) => {
             resolve(true);
         });
-    };
+    }
     /**
      * @returns {Promise<boolean>}
      */
@@ -251,7 +251,7 @@ export class HotspotMock extends Hotspot {
         return new Promise((resolve, reject) => {
             resolve(true);
         });
-    };
+    }
     /**
      * @returns {Promise<boolean>}
      */
@@ -259,7 +259,7 @@ export class HotspotMock extends Hotspot {
         return new Promise((resolve, reject) => {
             resolve(true);
         });
-    };
+    }
     /**
      * @returns {Promise<boolean>}
      */
@@ -267,7 +267,7 @@ export class HotspotMock extends Hotspot {
         return new Promise((resolve, reject) => {
             resolve(true);
         });
-    };
+    }
     /**
      * @returns {Promise<Array<HotspotNetwork>>}
      */
@@ -276,7 +276,7 @@ export class HotspotMock extends Hotspot {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * @returns {Promise<Array<HotspotNetwork>>}
      */
@@ -285,7 +285,7 @@ export class HotspotMock extends Hotspot {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * @returns {Promise<any>}
      */
@@ -293,7 +293,7 @@ export class HotspotMock extends Hotspot {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * @returns {Promise<any>}
      */
@@ -301,7 +301,7 @@ export class HotspotMock extends Hotspot {
        return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * @returns {Promise<HotspotNetworkConfig>}
      */
@@ -310,7 +310,7 @@ export class HotspotMock extends Hotspot {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * @returns {Promise<HotspotConnectionInfo>}
      */
@@ -319,7 +319,7 @@ export class HotspotMock extends Hotspot {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * @returns {Promise<string>}
      */
@@ -327,7 +327,7 @@ export class HotspotMock extends Hotspot {
         return new Promise((resolve, reject) => {
             resolve('');
         });
-    };
+    }
     /**
      * Gets MAC Address associated with IP Address from ARP File
      *
@@ -339,7 +339,7 @@ export class HotspotMock extends Hotspot {
         return new Promise((resolve, reject) => {
             resolve('');
         });
-    };
+    }
     /**
      * Checks if IP is live using DNS
      *
@@ -351,7 +351,7 @@ export class HotspotMock extends Hotspot {
         return new Promise((resolve, reject) => {
             resolve(true);
         });
-    };
+    }
     /**
      * Checks if IP is live using socket And PORT
      *
@@ -363,7 +363,7 @@ export class HotspotMock extends Hotspot {
         return new Promise((resolve, reject) => {
             resolve(true);
         });
-    };
+    }
     /**
      * Checks if device is rooted
      *
@@ -373,5 +373,5 @@ export class HotspotMock extends Hotspot {
         return new Promise((resolve, reject) => {
             resolve(true);
         });
-    };
+    }
 }

@@ -1,4 +1,4 @@
-import { WheelSelector } from '@ionic-native/wheel-selector';
+import { WheelSelector } from '@ionic-native/wheel-selector/ngx';
 
 export interface WheelSelectorItem {
     description?: string;
@@ -62,7 +62,7 @@ export class WheelSelectorMock extends WheelSelector {
          return new Promise((resolve, reject) => {
             resolve(response );
         });
-    };
+    }
     /**
      * Hide the selector
      * @returns {Promise<void>}
@@ -71,5 +71,5 @@ export class WheelSelectorMock extends WheelSelector {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

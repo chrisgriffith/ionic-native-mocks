@@ -1,6 +1,6 @@
-import { Geofence } from '@ionic-native/geofence';
-import { Observable } from 'rxjs/Observable';
-import { Observer } from 'rxjs/Observer';
+import { Geofence } from '@ionic-native/geofence/ngx';
+import { Observable } from 'rxjs/internal/Observable';
+import { Observer } from 'rxjs/internal/types';
 
 export class GeofenceMock extends Geofence {
     TransitionType: {
@@ -18,7 +18,7 @@ export class GeofenceMock extends Geofence {
             observer.next(response);
             observer.complete();
         });
-    };
+    }
     /**
      * Initializes the plugin. User will be prompted to allow the app to use location and notifications.
      *
@@ -28,7 +28,7 @@ export class GeofenceMock extends Geofence {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Adds a new geofence or array of geofences. For geofence object, see above.
      *
@@ -38,7 +38,7 @@ export class GeofenceMock extends Geofence {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Removes a geofence or array of geofences. `geofenceID` corresponds to one or more IDs specified when the
      * geofence was created.
@@ -49,7 +49,7 @@ export class GeofenceMock extends Geofence {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Removes all geofences.
      *
@@ -59,7 +59,7 @@ export class GeofenceMock extends Geofence {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Returns an array of geofences currently being monitored.
      *
@@ -69,7 +69,7 @@ export class GeofenceMock extends Geofence {
         return new Promise((resolve, reject) => {
             resolve('');
         });
-    };
+    }
     /**
      * Called when a geofence is crossed in the direction specified by `TransitType`.
      *
@@ -81,7 +81,7 @@ export class GeofenceMock extends Geofence {
             observer.next(response);
             observer.complete();
         });
-    };
+    }
     /**
      * Called when the user clicks a geofence notification. iOS and Android only.
      *
@@ -93,5 +93,5 @@ export class GeofenceMock extends Geofence {
             observer.next(response);
             observer.complete();
         });
-    };
+    }
 }

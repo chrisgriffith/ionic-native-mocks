@@ -1,4 +1,4 @@
-import { DatePicker } from '@ionic-native/date-picker';
+import { DatePicker } from '@ionic-native/date-picker/ngx';
 
 export interface DatePickerOptions {
   /**
@@ -109,6 +109,6 @@ export class DatePickerMock extends DatePicker {
     return new Promise((resolve, reject) => {
       resolve(new Date());
     });
-  };
+  }
 
 }

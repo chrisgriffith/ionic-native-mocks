@@ -1,5 +1,5 @@
 
-import { CallNumber } from '@ionic-native/call-number';
+import { CallNumber } from '@ionic-native/call-number/ngx';
 
 export class CallNumberMock extends CallNumber {
     /**
@@ -12,5 +12,5 @@ export class CallNumberMock extends CallNumber {
          return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }
