@@ -1,6 +1,6 @@
-import { Deeplinks } from '@ionic-native/deeplinks';
-import { Observable } from 'rxjs/Observable';
-import { Observer } from 'rxjs/Observer';
+import { Deeplinks } from '@ionic-native/deeplinks/ngx';
+import { Observable } from 'rxjs/internal/Observable';
+import { Observer } from 'rxjs/internal/types';
 
 export interface DeeplinkMatch {
     /**
@@ -36,7 +36,7 @@ export class DeeplinksMocks extends Deeplinks {
             observer.next(response);
             observer.complete();
         });
-    };
+    }
     /**
      *
      * This is a convenience version of `route` that takes a reference to a NavController
@@ -63,5 +63,5 @@ export class DeeplinksMocks extends Deeplinks {
             observer.next(response);
             observer.complete();
         });
-    };
+    }
 }

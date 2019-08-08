@@ -1,4 +1,4 @@
-import { ImagePicker } from '@ionic-native/image-picker';
+import { ImagePicker } from '@ionic-native/image-picker/ngx';
 
 export interface ImagePickerOptions {
     /**
@@ -33,7 +33,7 @@ export class ImagePickerMock extends ImagePicker {
     getPictures(options: ImagePickerOptions): Promise<any> {return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Check if we have permission to read images
      * @returns {Promise<boolean>} Returns a promise that resolves with a boolean that indicates whether we have permission
@@ -42,7 +42,7 @@ export class ImagePickerMock extends ImagePicker {
         return new Promise((resolve, reject) => {
             resolve(true);
         });
-    };
+    }
     /**
      * Request permission to read images
      * @returns {Promise<any>}
@@ -51,5 +51,5 @@ export class ImagePickerMock extends ImagePicker {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

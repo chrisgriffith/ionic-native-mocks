@@ -1,5 +1,5 @@
-import { Observable } from 'rxjs/Observable';
-import { fromEvent } from 'rxjs/observable/fromEvent';
+import { Observable } from 'rxjs/internal/Observable';
+import { fromEvent } from 'rxjs/internal/observable/fromEvent';
 
 import { checkReady } from './bootstrap';
 import { CordovaOptions } from './decorators';

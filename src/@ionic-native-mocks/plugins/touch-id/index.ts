@@ -1,4 +1,4 @@
-import { TouchID } from '@ionic-native/touch-id';
+import { TouchID } from '@ionic-native/touch-id/ngx';
 
 export class TouchIDMock extends TouchID {
     /**
@@ -10,7 +10,7 @@ export class TouchIDMock extends TouchID {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Show TouchID dialog and wait for a fingerprint scan. If user taps 'Enter Password' button, brings up standard system passcode screen.
      *
@@ -21,7 +21,7 @@ export class TouchIDMock extends TouchID {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Show TouchID dialog and wait for a fingerprint scan. If user taps 'Enter Password' button, rejects with code '-3' (see above).
      *
@@ -32,7 +32,7 @@ export class TouchIDMock extends TouchID {
         return new Promise((resolve, reject) => {
             resolve(true);
         });
-    };
+    }
     /**
      * Show TouchID dialog with custom 'Enter Password' message and wait for a fingerprint scan. If user taps 'Enter Password' button, rejects with code '-3' (see above).
      *
@@ -44,7 +44,7 @@ export class TouchIDMock extends TouchID {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Checks if the fingerprint database changed.
      *
@@ -54,5 +54,5 @@ export class TouchIDMock extends TouchID {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

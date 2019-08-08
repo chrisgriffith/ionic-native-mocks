@@ -1,4 +1,4 @@
-import { PayPal } from '@ionic-native/paypal';
+import { PayPal } from '@ionic-native/paypal/ngx';
 
 export class PayPalMock extends PayPal {
     /**
@@ -10,7 +10,7 @@ export class PayPalMock extends PayPal {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * You must preconnect to PayPal to prepare the device for processing payments.
      * This improves the user experience, by making the presentation of the
@@ -24,7 +24,7 @@ export class PayPalMock extends PayPal {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * You must preconnect to PayPal to prepare the device for processing payments.
      * This improves the user experience, by making the presentation of the UI faster.
@@ -38,7 +38,7 @@ export class PayPalMock extends PayPal {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Start PayPal UI to collect payment from the user.
      * See https://developer.paypal.com/webapps/developer/docs/integration/mobile/ios-integration-guide/
@@ -51,7 +51,7 @@ export class PayPalMock extends PayPal {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Once a user has consented to future payments, when the user subsequently initiates a PayPal payment
      * from their device to be completed by your server, PayPal uses a Correlation ID to verify that the
@@ -66,7 +66,7 @@ export class PayPalMock extends PayPal {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Please Read Docs on Future Payments at https://github.com/paypal/PayPal-iOS-SDK#future-payments
      * @returns {Promise<any>}
@@ -75,7 +75,7 @@ export class PayPalMock extends PayPal {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Please Read Docs on Profile Sharing at https://github.com/paypal/PayPal-iOS-SDK#profile-sharing
      *
@@ -87,7 +87,7 @@ export class PayPalMock extends PayPal {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }
 export interface PayPalEnvironment {
     PayPalEnvironmentProduction: string;

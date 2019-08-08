@@ -1,4 +1,4 @@
-import { Pinterest } from '@ionic-native/pinterest';
+import { Pinterest } from '@ionic-native/pinterest/ngx';
 
 export interface PinterestUser {
     /**
@@ -142,7 +142,7 @@ export class PinterestMock extends Pinterest {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Gets the authenticated user's profile
      * @param fields {string} Fields to retrieve, separated by commas. Defaults to all available fields.
@@ -153,7 +153,7 @@ export class PinterestMock extends Pinterest {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      *
      * @param fields {string} Optional fields separated by comma
@@ -165,7 +165,7 @@ export class PinterestMock extends Pinterest {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      *
      * @param fields {string} Optional fields separated by comma
@@ -177,7 +177,7 @@ export class PinterestMock extends Pinterest {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Get the authenticated user's likes.
      * @param fields {string} Optional fields separated by comma
@@ -189,7 +189,7 @@ export class PinterestMock extends Pinterest {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Get the authenticated user's followers.
      * @param fields {string} Optional fields separated by comma
@@ -201,7 +201,7 @@ export class PinterestMock extends Pinterest {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Get the authenticated user's followed boards.
      * @param fields {string} Optional fields separated by comma
@@ -213,7 +213,7 @@ export class PinterestMock extends Pinterest {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Get the authenticated user's followed interests.
      * @param fields {string} Optional fields separated by comma
@@ -224,7 +224,7 @@ export class PinterestMock extends Pinterest {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Get a user's profile.
      * @param username
@@ -236,7 +236,7 @@ export class PinterestMock extends Pinterest {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Get a board's data.
      * @param boardId
@@ -248,7 +248,7 @@ export class PinterestMock extends Pinterest {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Get Pins of a specific board.
      * @param boardId {string} The ID of the board
@@ -261,7 +261,7 @@ export class PinterestMock extends Pinterest {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Delete a board.
      * @param boardId {string} The ID of the board
@@ -271,7 +271,7 @@ export class PinterestMock extends Pinterest {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Create a new board for the authenticated user.
      * @param name {string} Name of the board
@@ -283,7 +283,7 @@ export class PinterestMock extends Pinterest {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Get a Pin by ID.
      * @param pinId {string} The ID of the Pin
@@ -295,7 +295,7 @@ export class PinterestMock extends Pinterest {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Deletes a pin
      * @param pinId {string} The ID of the pin
@@ -305,7 +305,7 @@ export class PinterestMock extends Pinterest {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Creates a Pin
      * @param note {string} Note/Description of the pin
@@ -319,5 +319,5 @@ export class PinterestMock extends Pinterest {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
 }

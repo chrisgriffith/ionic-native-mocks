@@ -1,5 +1,5 @@
 
-import { Brightness } from '@ionic-native/brightness';
+import { Brightness } from '@ionic-native/brightness/ngx';
 
 export class BrightnesMock extends Brightness {
     /**
@@ -12,7 +12,7 @@ export class BrightnesMock extends Brightness {
          return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Reads the current brightness of the device display.
      *
@@ -23,9 +23,9 @@ export class BrightnesMock extends Brightness {
          return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
     * Keeps the screen on. Prevents the device from setting the screen to sleep.
     */
-    setKeepScreenOn(value: boolean): void {};
+    setKeepScreenOn(value: boolean): void {}
 }

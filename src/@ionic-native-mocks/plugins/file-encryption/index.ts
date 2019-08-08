@@ -1,4 +1,4 @@
-import { FileEncryption } from '@ionic-native/file-encryption';
+import { FileEncryption } from '@ionic-native/file-encryption/ngx';
 
 export class FileEncryptionMock extends FileEncryption {
     /**
@@ -11,7 +11,7 @@ export class FileEncryptionMock extends FileEncryption {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Decrypt a file
      * @param file {string} A string representing a local URI
@@ -22,5 +22,5 @@ export class FileEncryptionMock extends FileEncryption {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

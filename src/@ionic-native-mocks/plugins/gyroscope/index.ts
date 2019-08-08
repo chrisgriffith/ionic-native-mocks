@@ -1,6 +1,6 @@
-import { Gyroscope } from '@ionic-native/gyroscope';
-import { Observable } from 'rxjs/Observable';
-import { Observer } from 'rxjs/Observer';
+import { Gyroscope } from '@ionic-native/gyroscope/ngx';
+import { Observable } from 'rxjs/internal/Observable';
+import { Observer } from 'rxjs/internal/types';
 /**
  *  @hidden
  */
@@ -44,7 +44,7 @@ export class GyroscopeMock extends Gyroscope {
             observer.next(response);
             observer.complete();
         });
-    };
+    }
     /**
      * Get current data from gyroscope sensor
      * @param {GyroscopeOptions} [options]
@@ -55,5 +55,5 @@ export class GyroscopeMock extends Gyroscope {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
 }

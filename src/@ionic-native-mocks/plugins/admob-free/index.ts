@@ -1,6 +1,6 @@
-import { AdMobFree } from '@ionic-native/admob-free';
-import { Observable } from 'rxjs/Observable';
-import { Observer } from 'rxjs/Observer';
+import { AdMobFree } from '@ionic-native/admob-free/ngx';
+import { Observable } from 'rxjs/internal/Observable';
+import { Observer } from 'rxjs/internal/types';
 import 'rxjs/add/observable/fromEvent';
 
 export interface AdMobFreeBannerConfig {
@@ -78,7 +78,7 @@ export class AdMobFreeMock extends AdMobFree {
             observer.next('');
             observer.complete();
         });
-    };
+    }
     /**
      * Returns the AdMobFreeBanner object
      * @type {AdMobFreeBanner}
@@ -107,7 +107,7 @@ export class AdMobFreeBanner {
     config(options: AdMobFreeBannerConfig): AdMobFreeBannerConfig {
         let config: AdMobFreeBannerConfig;
         return config;
-    };
+    }
     /**
      * Hide the banner.
      * @return {Promise<any>}
@@ -116,7 +116,7 @@ export class AdMobFreeBanner {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Create banner.
      * @return {Promise<any>}
@@ -125,7 +125,7 @@ export class AdMobFreeBanner {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Remove the banner.
      * @return {Promise<any>}
@@ -134,7 +134,7 @@ export class AdMobFreeBanner {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Show the banner.
      * @return {Promise<any>}
@@ -143,7 +143,7 @@ export class AdMobFreeBanner {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }
 /**
  * @hidden
@@ -157,7 +157,7 @@ export class AdMobFreeInterstitial {
     config(options: AdMobFreeInterstitialConfig): AdMobFreeInterstitialConfig {
         let config: AdMobFreeInterstitialConfig;
         return config;
-    };
+    }
     /**
      * Check if interstitial is ready
      * @return {Promise<any>}
@@ -166,7 +166,7 @@ export class AdMobFreeInterstitial {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Prepare interstitial
      * @return {Promise<any>}
@@ -175,7 +175,7 @@ export class AdMobFreeInterstitial {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Show the interstitial
      * @return {Promise<any>}
@@ -184,7 +184,7 @@ export class AdMobFreeInterstitial {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }
 /**
  * @hidden
@@ -198,7 +198,7 @@ export class AdMobFreeRewardVideo {
     config(options: AdMobFreeRewardVideoConfig): AdMobFreeRewardVideoConfig {
         let config: AdMobFreeRewardVideoConfig;
         return config;
-    };
+    }
     /**
      * Check if reward video is ready
      * @return {Promise<any>}
@@ -207,7 +207,7 @@ export class AdMobFreeRewardVideo {
          return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Prepare reward video
      * @return {Promise<any>}
@@ -216,7 +216,7 @@ export class AdMobFreeRewardVideo {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Show the reward video
      * @return {Promise<any>}
@@ -225,5 +225,5 @@ export class AdMobFreeRewardVideo {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

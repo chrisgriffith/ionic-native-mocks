@@ -1,4 +1,4 @@
-import { GooglePlayGamesServices } from '@ionic-native/google-play-games-services';
+import { GooglePlayGamesServices } from '@ionic-native/google-play-games-services/ngx';
 
 export interface ScoreData {
     /**
@@ -71,7 +71,7 @@ export class GooglePlayGamesServicesMock extends GooglePlayGamesServices {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Sign out of Google Play Games Services.
      *
@@ -82,7 +82,7 @@ export class GooglePlayGamesServicesMock extends GooglePlayGamesServices {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Check if the user is signed in.
      *
@@ -94,7 +94,7 @@ export class GooglePlayGamesServicesMock extends GooglePlayGamesServices {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Show the currently authenticated player.
      *
@@ -106,7 +106,7 @@ export class GooglePlayGamesServicesMock extends GooglePlayGamesServices {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Submit a score to a leaderboard. You should ensure that you have a
      * successful return from auth() before submitting a score.
@@ -119,7 +119,7 @@ export class GooglePlayGamesServicesMock extends GooglePlayGamesServices {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Launches the native Play Games leaderboard view controller to show all the
      * leaderboards.
@@ -131,7 +131,7 @@ export class GooglePlayGamesServicesMock extends GooglePlayGamesServices {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Launches the native Play Games leaderboard view controll to show the
      * specified leaderboard.
@@ -144,7 +144,7 @@ export class GooglePlayGamesServicesMock extends GooglePlayGamesServices {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Unlock an achievement.
      *
@@ -157,7 +157,7 @@ export class GooglePlayGamesServicesMock extends GooglePlayGamesServices {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Increment an achievement.
      *
@@ -169,7 +169,7 @@ export class GooglePlayGamesServicesMock extends GooglePlayGamesServices {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Lauches the native Play Games achievements view controller to show
      * achievements.
@@ -181,5 +181,5 @@ export class GooglePlayGamesServicesMock extends GooglePlayGamesServices {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

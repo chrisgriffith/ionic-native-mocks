@@ -1,6 +1,6 @@
-import { Geolocation } from '@ionic-native/geolocation';
-import { Observable } from 'rxjs/Observable';
-import { Observer } from 'rxjs/Observer';
+import { Geolocation } from '@ionic-native/geolocation/ngx';
+import { Observable } from 'rxjs/internal/Observable';
+import { Observer } from 'rxjs/internal/types';
 
 export interface Coordinates {
     /**
@@ -102,7 +102,7 @@ export class GeolocationMock extends Geolocation {
         return new Promise((resolve, reject) => {
             resolve(theResult);
         });
-    };
+    }
     /**
      * Watch the current device's position.  Clear the watch by unsubscribing from
      * Observable changes.
@@ -130,5 +130,5 @@ export class GeolocationMock extends Geolocation {
         });
 
 
-    };
+    }
 }

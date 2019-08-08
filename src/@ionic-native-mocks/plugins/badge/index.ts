@@ -1,4 +1,4 @@
-import { Badge } from '@ionic-native/badge';
+import { Badge } from '@ionic-native/badge/ngx';
 
 export class BadgeMOck extends Badge {
     /**
@@ -9,7 +9,7 @@ export class BadgeMOck extends Badge {
         return new Promise((resolve, reject) => {
             resolve(true);
         });
-    };
+    }
     /**
      * Set the badge of the app icon.
      * @param {number} badgeNumber  The new badge number.
@@ -19,7 +19,7 @@ export class BadgeMOck extends Badge {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Get the badge of the app icon.
      * @returns {Promise<any>}
@@ -28,7 +28,7 @@ export class BadgeMOck extends Badge {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Increase the badge number.
      * @param {number} increaseBy  Count to add to the current badge number
@@ -38,7 +38,7 @@ export class BadgeMOck extends Badge {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Decrease the badge number.
      * @param {number} decreaseBy  Count to subtract from the current badge number
@@ -48,7 +48,7 @@ export class BadgeMOck extends Badge {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Determine if the app has permission to show badges.
      * @returns {Promise<any>}
@@ -57,7 +57,7 @@ export class BadgeMOck extends Badge {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Register permission to set badge notifications
      * @returns {Promise<any>}
@@ -66,5 +66,5 @@ export class BadgeMOck extends Badge {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

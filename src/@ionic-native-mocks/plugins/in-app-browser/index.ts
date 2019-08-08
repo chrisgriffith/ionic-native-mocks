@@ -1,6 +1,6 @@
-import { InAppBrowser, InAppBrowserObject } from '@ionic-native/in-app-browser';
-import { Observable } from 'rxjs/Observable';
-import { Observer } from 'rxjs/Observer';
+import { InAppBrowser, InAppBrowserObject } from '@ionic-native/in-app-browser/ngx';
+import { Observable } from 'rxjs/internal/Observable';
+import { Observer } from 'rxjs/internal/types';
 
 export interface InAppBrowserOptions {
     /** Set to yes or no to turn the InAppBrowser's location bar on or off. */
@@ -77,21 +77,21 @@ export class InAppBrowserObjectMock extends InAppBrowserObject {
      */
     constructor(url: string, target?: string, options?: string | InAppBrowserOptions) {
         super( url, target, options );
-    };
+    }
     /**
      * Displays an InAppBrowser window that was opened hidden. Calling this has no effect
      * if the InAppBrowser was already visible.
      */
-    show(): void { };
+    show(): void { }
     /**
      * Closes the InAppBrowser window.
      */
-    close(): void { };
+    close(): void { }
     /**
      * Hides an InAppBrowser window that is currently shown. Calling this has no effect
      * if the InAppBrowser was already hidden.
      */
-    hide(): void { };
+    hide(): void { }
     /**
      * Injects JavaScript code into the InAppBrowser window.
      * @param script {Object} Details of the script to run, specifying either a file or code key.
@@ -101,7 +101,7 @@ export class InAppBrowserObjectMock extends InAppBrowserObject {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Injects CSS into the InAppBrowser window.
      * @param css {Object} Details of the script to run, specifying either a file or code key.
@@ -111,7 +111,7 @@ export class InAppBrowserObjectMock extends InAppBrowserObject {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * A method that allows you to listen to events happening in the browser.
      * @param event {string} Name of the event
@@ -123,7 +123,7 @@ export class InAppBrowserObjectMock extends InAppBrowserObject {
             observer.next(response);
             observer.complete();
         });
-    };
+    }
 }
 
 export class InAppBrowserMock extends InAppBrowser {
@@ -139,5 +139,5 @@ export class InAppBrowserMock extends InAppBrowser {
     create(url: string, target?: string, options?: string | InAppBrowserOptions): InAppBrowserObjectMock {
         let response = new InAppBrowserObjectMock(url);
         return response;
-    };
+    }
 }

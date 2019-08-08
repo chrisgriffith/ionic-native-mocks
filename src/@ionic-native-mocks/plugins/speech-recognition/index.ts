@@ -1,6 +1,6 @@
-import { SpeechRecognition } from '@ionic-native/speech-recognition';
-import { Observable } from 'rxjs/Observable';
-import { Observer } from 'rxjs/Observer';
+import { SpeechRecognition } from '@ionic-native/speech-recognition/ngx';
+import { Observable } from 'rxjs/internal/Observable';
+import { Observer } from 'rxjs/internal/types';
 
 export declare type SpeechRecognitionListeningOptions = SpeechRecognitionListeningOptionsIOS | SpeechRecognitionListeningOptionsAndroid;
 export interface SpeechRecognitionListeningOptionsIOS {
@@ -46,7 +46,7 @@ export class SpeechRecognitionMock extends SpeechRecognition {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Start the recognition process
      * @return {Promise< Array<string> >} list of recognized terms
@@ -57,7 +57,7 @@ export class SpeechRecognitionMock extends SpeechRecognition {
             observer.next(response);
             observer.complete();
         });
-    };
+    }
     /**
      * Stop the recognition process
      */
@@ -65,7 +65,7 @@ export class SpeechRecognitionMock extends SpeechRecognition {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Get the list of supported languages
      * @return {Promise< Array<string> >} list of languages
@@ -75,7 +75,7 @@ export class SpeechRecognitionMock extends SpeechRecognition {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Check permission
      * @return {Promise<boolean>} has permission
@@ -85,7 +85,7 @@ export class SpeechRecognitionMock extends SpeechRecognition {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Request permissions
      * @return {Promise<void>}
@@ -94,5 +94,5 @@ export class SpeechRecognitionMock extends SpeechRecognition {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

@@ -1,4 +1,4 @@
-import { ExtendedDeviceInformation } from '@ionic-native/extended-device-information';
+import { ExtendedDeviceInformation } from '@ionic-native/extended-device-information/ngx';
 
 export declare class ExtendedDeviceInformationMock extends ExtendedDeviceInformation {
     /**

@@ -1,6 +1,6 @@
-import { AdMobPro } from '@ionic-native/admob-pro';
-import { Observable } from 'rxjs/Observable';
-import { Observer } from 'rxjs/Observer';
+import { AdMobPro } from '@ionic-native/admob-pro/ngx';
+import { Observable } from 'rxjs/internal/Observable';
+import { Observer } from 'rxjs/internal/types';
 
 export declare type AdSize = 'SMART_BANNER' | 'BANNER' | 'MEDIUM_RECTANGLE' | 'FULL_BANNER' | 'LEADERBOARD' | 'SKYSCRAPER' | 'CUSTOM';
 export interface AdMobOptions {
@@ -89,26 +89,26 @@ export class AdMobProMock extends AdMobPro {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Destroy the banner, remove it from screen.
      */
-    removeBanner(): void { };
+    removeBanner(): void { }
     /**
      * Show banner at position
      * @param position {number} Position. Use `AdMob.AD_POSITION` to set values.
      */
-    showBanner(position: number): void { };
+    showBanner(position: number): void { }
     /**
      * Show banner at custom position
      * @param x {number} Offset from screen left.
      * @param y {number} Offset from screen top.
      */
-    showBannerAtXY(x: number, y: number): void { };
+    showBannerAtXY(x: number, y: number): void { }
     /**
      * Hide the banner, remove it from screen, but can show it later
      */
-    hideBanner(): void { };
+    hideBanner(): void { }
     /**
      * Prepare interstitial banner
      * @param adIdOrOptions {string | AdMobOptions} Ad ID or Options
@@ -118,11 +118,11 @@ export class AdMobProMock extends AdMobPro {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Show interstitial ad when it's ready
      */
-    showInterstitial(): void { };
+    showInterstitial(): void { }
     /**
      * Prepare a reward video ad
      * @param adIdOrOptions {string | AdMobOptions} Ad ID or Options
@@ -132,11 +132,11 @@ export class AdMobProMock extends AdMobPro {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Show a reward video ad
      */
-    showRewardVideoAd(): void { };
+    showRewardVideoAd(): void { }
     /**
      * Sets the values for configuration and targeting
      * @param options {AdMobOptions} Options
@@ -146,7 +146,7 @@ export class AdMobProMock extends AdMobPro {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Get user ad settings
      * @returns {Promise<any>} Returns a promise that resolves with the ad settings
@@ -155,7 +155,7 @@ export class AdMobProMock extends AdMobPro {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Triggered when failed to receive Ad
      * @returns {Observable<any>}
@@ -165,7 +165,7 @@ export class AdMobProMock extends AdMobPro {
             observer.next('');
             observer.complete();
         });
-    };
+    }
     /**
      * Triggered when Ad received
      * @returns {Observable<any>}
@@ -175,7 +175,7 @@ export class AdMobProMock extends AdMobPro {
             observer.next('');
             observer.complete();
         });
-    };
+    }
     /**
      * Triggered when Ad will be showed on screen
      * @returns {Observable<any>}
@@ -185,7 +185,7 @@ export class AdMobProMock extends AdMobPro {
             observer.next('');
             observer.complete();
         });
-    };
+    }
     /**
      * Triggered when user click the Ad, and will jump out of your App
      * @returns {Observable<any>}
@@ -195,7 +195,7 @@ export class AdMobProMock extends AdMobPro {
             observer.next('');
             observer.complete();
         });
-    };
+    }
     /**
      * Triggered when dismiss the Ad and back to your App
      * @returns {Observable<any>}
@@ -205,5 +205,5 @@ export class AdMobProMock extends AdMobPro {
             observer.next('');
             observer.complete();
         });
-    };
+    }
 }

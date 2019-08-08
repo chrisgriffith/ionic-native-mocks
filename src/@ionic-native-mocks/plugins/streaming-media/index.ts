@@ -1,4 +1,4 @@
-import { StreamingMedia } from '@ionic-native/streaming-media';
+import { StreamingMedia } from '@ionic-native/streaming-media/ngx';
 
 export interface StreamingVideoOptions {
     successCallback?: Function;
@@ -20,23 +20,23 @@ export class StreamingMediaMock extends StreamingMedia {
      * @param videoUrl {string} The URL of the video
      * @param options {StreamingVideoOptions} Options
      */
-    playVideo(videoUrl: string, options?: StreamingVideoOptions): void {};
+    playVideo(videoUrl: string, options?: StreamingVideoOptions): void {}
     /**
      * Streams an audio
      * @param audioUrl {string} The URL of the audio stream
      * @param options {StreamingAudioOptions} Options
      */
-    playAudio(audioUrl: string, options?: StreamingAudioOptions): void {};
+    playAudio(audioUrl: string, options?: StreamingAudioOptions): void {}
     /**
      * Stops streaming audio
      */
-    stopAudio(): void {};
+    stopAudio(): void {}
     /**
      * Pauses streaming audio
      */
-    pauseAudio(): void {};
+    pauseAudio(): void {}
     /**
      * Resumes streaming audio
      */
-    resumeAudio(): void {};
+    resumeAudio(): void {}
 }

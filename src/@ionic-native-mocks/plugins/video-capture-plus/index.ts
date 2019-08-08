@@ -1,4 +1,4 @@
-import { VideoCapturePlus } from '@ionic-native/video-capture-plus';
+import { VideoCapturePlus } from '@ionic-native/video-capture-plus/ngx';
 
 export interface MediaFile {
     /**
@@ -93,5 +93,5 @@ export class VideoCapturePlusMock extends VideoCapturePlus {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
 }

@@ -1,4 +1,4 @@
-import { PinDialog } from '@ionic-native/pin-dialog';
+import { PinDialog } from '@ionic-native/pin-dialog/ngx';
 
 export class PinDialogMock extends PinDialog {
     /**
@@ -16,5 +16,5 @@ export class PinDialogMock extends PinDialog {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
 }

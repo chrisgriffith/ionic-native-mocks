@@ -1,6 +1,6 @@
-import { ApplePay } from '@ionic-native/apple-pay';
-import { Observable } from 'rxjs/Observable';
-import { Observer } from 'rxjs/Observer';
+import { ApplePay } from '@ionic-native/apple-pay/ngx';
+import { Observable } from 'rxjs/internal/Observable';
+import { Observer } from 'rxjs/internal/types';
 
 export declare type IMakePayments = 'This device can make payments and has a supported card' | 'This device cannot make payments.' | 'This device can make payments but has no supported cards';
 export declare type IShippingType = 'shipping' | 'delivery' | 'store' | 'service';
@@ -88,7 +88,7 @@ export class ApplePayMock extends ApplePay {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Starts listening for shipping contact selection changes
      * Any time the user selects shipping contact, this callback will fire.
@@ -103,7 +103,7 @@ export class ApplePayMock extends ApplePay {
             observer.next( response );
             observer.complete();
         });
-    };
+    }
     /**
      * Stops listening for shipping contact selection changes
      * @return {Promise} whether stop listening was successful. This should
@@ -114,7 +114,7 @@ export class ApplePayMock extends ApplePay {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Update the list of pay sheet items and shipping methods in response to
      * a shipping contact selection event. This *must* be called in response to
@@ -155,7 +155,7 @@ export class ApplePayMock extends ApplePay {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Request a payment with Apple Pay
      * @return {Promise<IPaymentResponse>} Returns a promise that resolves when something happens
@@ -231,7 +231,7 @@ export class ApplePayMock extends ApplePay {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Once the makePaymentRequest has been resolved successfully, the device will be waiting for a completion event.
      * This means, that the application must proceed with the token authorisation and return a success, failure,
@@ -246,5 +246,5 @@ export class ApplePayMock extends ApplePay {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
 }

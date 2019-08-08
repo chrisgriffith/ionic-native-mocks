@@ -1,4 +1,4 @@
-import { Flashlight } from '@ionic-native/flashlight';
+import { Flashlight } from '@ionic-native/flashlight/ngx';
 
 export class FlashlightMocks extends Flashlight {
     /**
@@ -9,7 +9,7 @@ export class FlashlightMocks extends Flashlight {
         return new Promise((resolve, reject) => {
             resolve(true);
         });
-    };
+    }
     /**
      * Switches the flashlight on
      * @returns {Promise<boolean>}
@@ -18,7 +18,7 @@ export class FlashlightMocks extends Flashlight {
         return new Promise((resolve, reject) => {
             resolve(true);
         });
-    };
+    }
     /**
      * Switches the flashlight off
      * @returns {Promise<boolean>}
@@ -27,7 +27,7 @@ export class FlashlightMocks extends Flashlight {
         return new Promise((resolve, reject) => {
             resolve(true);
         });
-    };
+    }
     /**
      * Toggles the flashlight
      * @returns {Promise<any>}
@@ -36,12 +36,12 @@ export class FlashlightMocks extends Flashlight {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Checks if the flashlight is turned on.
      * @returns {boolean}
      */
     isSwitchedOn(): boolean {
         return true;
-    };
+    }
 }

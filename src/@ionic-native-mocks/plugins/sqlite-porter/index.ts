@@ -1,4 +1,4 @@
-import { SQLitePorter } from '@ionic-native/sqlite-porter';
+import { SQLitePorter } from '@ionic-native/sqlite-porter/ngx';
 
 export class SQLitePorterMock extends SQLitePorter {
     /**
@@ -11,7 +11,7 @@ export class SQLitePorterMock extends SQLitePorter {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Exports a SQLite DB as a set of SQL statements.
      * @param db {Object} Database object
@@ -21,7 +21,7 @@ export class SQLitePorterMock extends SQLitePorter {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Converts table structure and/or row data contained within a JSON structure into SQL statements that can be executed against a SQLite database. Can be used to import data into the database and/or create the table structure.
      * @param db {Object} Database object
@@ -32,7 +32,7 @@ export class SQLitePorterMock extends SQLitePorter {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Exports a SQLite DB as a JSON structure
      * @param db {Object} Database object
@@ -42,7 +42,7 @@ export class SQLitePorterMock extends SQLitePorter {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Wipes all data from a database by dropping all existing tables
      * @param db {Object} Database object
@@ -52,5 +52,5 @@ export class SQLitePorterMock extends SQLitePorter {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

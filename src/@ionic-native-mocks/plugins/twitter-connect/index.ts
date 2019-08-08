@@ -1,4 +1,4 @@
-import { TwitterConnect } from '@ionic-native/twitter-connect';
+import { TwitterConnect } from '@ionic-native/twitter-connect/ngx';
 export interface TwitterConnectResponse {
     /**
      * Twitter Username
@@ -28,7 +28,7 @@ export class TwitterConnectMock extends TwitterConnect {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Logs out
      * @returns {Promise<any>} returns a promise that resolves if logged out and rejects if failed to logout
@@ -37,7 +37,7 @@ export class TwitterConnectMock extends TwitterConnect {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Returns user's profile information
      * @returns {Promise<any>} returns a promise that resolves if user profile is successfully retrieved and rejects if request fails
@@ -46,5 +46,5 @@ export class TwitterConnectMock extends TwitterConnect {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

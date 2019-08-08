@@ -1,4 +1,4 @@
-import { FileTransfer, FileTransferObject } from '@ionic-native/file-transfer';
+import { FileTransfer, FileTransferObject } from '@ionic-native/file-transfer/ngx';
 
 export interface FileUploadOptions {
     /**
@@ -113,7 +113,7 @@ export class FileTransferMock extends FileTransfer {
      */
     create(): FileTransferObjectMock {
         return new FileTransferObjectMock();
-    };
+    }
 }
 /**
  * @hidden
@@ -122,7 +122,7 @@ export class FileTransferObjectMock extends FileTransferObject {
    // private _objectInstance;
     constructor() {
         super();
-    };
+    }
 
     /**
      * Sends a file to a server.
@@ -138,7 +138,7 @@ export class FileTransferObjectMock extends FileTransferObject {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Downloads a file from server.
      *
@@ -154,15 +154,15 @@ export class FileTransferObjectMock extends FileTransferObject {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Registers a listener that gets called whenever a new chunk of data is transferred.
      * @param listener {function} Listener that takes a progress event.
      */
-    onProgress(listener: (event: ProgressEvent) => any): void {};
+    onProgress(listener: (event: ProgressEvent) => any): void {}
     /**
      * Aborts an in-progress transfer. The onerror callback is passed a FileTransferError
      * object which has an error code of FileTransferError.ABORT_ERR.
      */
-    abort(): void {};
+    abort(): void {}
 }

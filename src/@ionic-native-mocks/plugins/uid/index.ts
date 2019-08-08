@@ -1,4 +1,4 @@
-import { Uid } from '@ionic-native/uid';
+import { Uid } from '@ionic-native/uid/ngx';
 
 export class UidMock extends Uid {
     /** Get the device Universally Unique Identifier (UUID). */

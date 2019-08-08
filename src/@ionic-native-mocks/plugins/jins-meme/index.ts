@@ -1,6 +1,6 @@
-import { JinsMeme } from '@ionic-native/jins-meme';
-import { Observable } from 'rxjs/Observable';
-import { Observer } from 'rxjs/Observer';
+import { JinsMeme } from '@ionic-native/jins-meme/ngx';
+import { Observable } from 'rxjs/internal/Observable';
+import { Observer } from 'rxjs/internal/types';
 
 export class JinsMemeMock extends JinsMeme {
     /**
@@ -16,7 +16,7 @@ export class JinsMemeMock extends JinsMeme {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Starts scanning for JINS MEME.
      * @returns {Observable<any>}
@@ -27,7 +27,7 @@ export class JinsMemeMock extends JinsMeme {
             observer.next(response);
             observer.complete();
         });
-    };
+    }
     /**
      * Stops scanning JINS MEME.
      * @returns {Promise<any>}
@@ -36,7 +36,7 @@ export class JinsMemeMock extends JinsMeme {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Establishes connection to JINS MEME.
      * @param {string} target
@@ -48,7 +48,7 @@ export class JinsMemeMock extends JinsMeme {
             observer.next(response);
             observer.complete();
         });
-    };
+    }
     /**
      * Set auto connection mode.
      *@param {Boolean} flag
@@ -58,7 +58,7 @@ export class JinsMemeMock extends JinsMeme {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Returns whether a connection to JINS MEME has been established.
      *@returns {Promise<any>}
@@ -67,7 +67,7 @@ export class JinsMemeMock extends JinsMeme {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Disconnects from JINS MEME.
      *@returns {Promise<any>}
@@ -76,7 +76,7 @@ export class JinsMemeMock extends JinsMeme {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Starts receiving realtime data.
      * @returns {Observable<any>}
@@ -87,7 +87,7 @@ export class JinsMemeMock extends JinsMeme {
             observer.next(response);
             observer.complete();
         });
-    };
+    }
     /**
     * Stops receiving data.
     *@returns {Promise<any>}
@@ -96,7 +96,7 @@ export class JinsMemeMock extends JinsMeme {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Returns SDK version.
      *
@@ -106,7 +106,7 @@ export class JinsMemeMock extends JinsMeme {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Returns JINS MEME connected with other apps.
      *@returns {Promise<any>}
@@ -115,7 +115,7 @@ export class JinsMemeMock extends JinsMeme {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Returns calibration status
      *@returns {Promise<any>}
@@ -124,7 +124,7 @@ export class JinsMemeMock extends JinsMeme {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Returns device type.
      *@returns {Promise<any>}
@@ -133,7 +133,7 @@ export class JinsMemeMock extends JinsMeme {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Returns hardware version.
      *@returns {Promise<any>}
@@ -142,7 +142,7 @@ export class JinsMemeMock extends JinsMeme {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Returns FW Version.
      *@returns {Promise<any>}
@@ -151,7 +151,7 @@ export class JinsMemeMock extends JinsMeme {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Returns HW Version.
      *@returns {Promise<any>}
@@ -160,7 +160,7 @@ export class JinsMemeMock extends JinsMeme {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Returns response about whether data was received or not.
      *@returns {Promise<any>}
@@ -169,5 +169,5 @@ export class JinsMemeMock extends JinsMeme {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

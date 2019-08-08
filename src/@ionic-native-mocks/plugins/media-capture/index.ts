@@ -1,6 +1,6 @@
-import { MediaCapture } from '@ionic-native/media-capture';
-import { Observable } from 'rxjs/Observable';
-import { Observer } from 'rxjs/Observer';
+import { MediaCapture } from '@ionic-native/media-capture/ngx';
+import { Observable } from 'rxjs/internal/Observable';
+import { Observer } from 'rxjs/internal/types';
 
 export interface MediaFile {
     /**
@@ -127,7 +127,7 @@ export class MediaCaptureMock extends MediaCapture {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Start the camera application and return information about captured image files.
      * @param options
@@ -138,7 +138,7 @@ export class MediaCaptureMock extends MediaCapture {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Start the video recorder application and return information about captured video clip files.
      * @param options
@@ -149,7 +149,7 @@ export class MediaCaptureMock extends MediaCapture {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * is fired if the capture call is successful
      * @returns {Observable<MediaFile[]>}
@@ -160,7 +160,7 @@ export class MediaCaptureMock extends MediaCapture {
             observer.next(response);
             observer.complete();
         });
-    };
+    }
     /**
      * is fired if the capture call is unsuccessful
      * @returns {Observable<CaptureError>}
@@ -171,5 +171,5 @@ export class MediaCaptureMock extends MediaCapture {
             observer.next(response);
             observer.complete();
         });
-    };
+    }
 }

@@ -1,4 +1,4 @@
-import { Instagram } from '@ionic-native/instagram';
+import { Instagram } from '@ionic-native/instagram/ngx';
 
 export class InstagramMock extends Instagram {
     /**
@@ -11,7 +11,7 @@ export class InstagramMock extends Instagram {
          return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Share an image on Instagram
      * Note: Instagram app stopped accepting pre-filled captions on both iOS and Android. As a work-around, the caption is copied to the clipboard. You have to inform your users to paste the caption.
@@ -24,7 +24,7 @@ export class InstagramMock extends Instagram {
          return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Share a library asset or video
      * @param assetLocalIdentifier A local fileURI
@@ -34,5 +34,5 @@ export class InstagramMock extends Instagram {
          return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

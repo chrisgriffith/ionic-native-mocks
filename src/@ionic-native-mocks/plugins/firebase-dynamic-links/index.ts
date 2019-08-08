@@ -1,6 +1,6 @@
-import { FirebaseDynamicLinks } from '@ionic-native/firebase-dynamic-links';
-import { Observable } from 'rxjs/Observable';
-import { Observer } from 'rxjs/Observer';
+import { FirebaseDynamicLinks } from '@ionic-native/firebase-dynamic-links/ngx';
+import { Observable } from 'rxjs/internal/Observable';
+import { Observer } from 'rxjs/internal/types';
 
 export interface IDynamicLink {
     matchType: 'Weak' | 'Strong';
@@ -18,5 +18,5 @@ export class FirebaseDynamicLinksMocks extends FirebaseDynamicLinks {
             observer.next( response  );
             observer.complete();
         });
-    };
+    }
 }

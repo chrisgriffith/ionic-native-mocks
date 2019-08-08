@@ -1,4 +1,4 @@
-import { FileOpener } from '@ionic-native/file-opener';
+import { FileOpener } from '@ionic-native/file-opener/ngx';
 
 export class FileOpenerMock extends FileOpener {
     /**
@@ -11,7 +11,7 @@ export class FileOpenerMock extends FileOpener {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Uninstalls a package
      * @param packageId {string}  Package ID
@@ -21,7 +21,7 @@ export class FileOpenerMock extends FileOpener {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Check if an app is already installed
      * @param packageId {string} Package ID
@@ -31,5 +31,5 @@ export class FileOpenerMock extends FileOpener {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

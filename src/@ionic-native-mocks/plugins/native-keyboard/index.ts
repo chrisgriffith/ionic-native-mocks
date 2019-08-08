@@ -1,4 +1,4 @@
-import { NativeKeyboard } from '@ionic-native/native-keyboard';
+import { NativeKeyboard } from '@ionic-native/native-keyboard/ngx';
 
 export interface NativeKeyboardOptions {
     /**
@@ -146,12 +146,12 @@ export class NativeKeyboarMock extends NativeKeyboard {
      * Show messenger
      * @param options {NativeKeyboardOptions}
      */
-    showMessenger(options: NativeKeyboardOptions): void {};
+    showMessenger(options: NativeKeyboardOptions): void {}
     /**
      * Hide messenger
      * @param options {NativeKeyboardOptions}
      */
-    hideMessenger(options: NativeKeyboardOptions): void {} ;
+    hideMessenger(options: NativeKeyboardOptions): void {}
     /**
      * Programmatically pop up the keyboard again if the user dismissed it.
      * @return {Promise<any>}
@@ -160,7 +160,7 @@ export class NativeKeyboarMock extends NativeKeyboard {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Programmatically hide the keyboard (but not the messenger bar)
      */
@@ -168,7 +168,7 @@ export class NativeKeyboarMock extends NativeKeyboard {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Manipulate the messenger while it's open. For instance if you want to update the text programmatically based on what the user typed.
      * @param options
@@ -177,5 +177,5 @@ export class NativeKeyboarMock extends NativeKeyboard {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

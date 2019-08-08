@@ -1,4 +1,4 @@
-import { HealthKit } from '@ionic-native/health-kit';
+import { HealthKit } from '@ionic-native/health-kit/ngx';
 
 export interface HealthKitOptions {
     /**
@@ -101,7 +101,7 @@ export class HealthKitMock extends HealthKit {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
    * Pass in a type and get back on of undetermined | denied | authorized
    * @param options {HealthKitOptions}
@@ -111,7 +111,7 @@ export class HealthKitMock extends HealthKit {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
    * Ask some or all permissions up front
    * @param options {HealthKitOptions}
@@ -121,7 +121,7 @@ export class HealthKitMock extends HealthKit {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
    * Formatted as yyyy-MM-dd
    * @returns {Promise<any>}
@@ -130,7 +130,7 @@ export class HealthKitMock extends HealthKit {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
    * Output = male|female|other|unknown
    * @returns {Promise<any>}
@@ -139,7 +139,7 @@ export class HealthKitMock extends HealthKit {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
    * Output = A+|A-|B+|B-|AB+|AB-|O+|O-|unknown
    * @returns {Promise<any>}
@@ -148,7 +148,7 @@ export class HealthKitMock extends HealthKit {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
    * Output = I|II|III|IV|V|VI|unknown
    * @returns {Promise<any>}
@@ -157,7 +157,7 @@ export class HealthKitMock extends HealthKit {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
    * Pass in unit (g=gram, kg=kilogram, oz=ounce, lb=pound, st=stone) and amount
    * @param options {HealthKitOptions}
@@ -167,7 +167,7 @@ export class HealthKitMock extends HealthKit {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
    * Pass in unit (g=gram, kg=kilogram, oz=ounce, lb=pound, st=stone)
    * @param options {HealthKitOptions}
@@ -177,7 +177,7 @@ export class HealthKitMock extends HealthKit {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
    * Pass in unit (mm=millimeter, cm=centimeter, m=meter, in=inch, ft=foot) and amount
    * @param options {HealthKitOptions}
@@ -187,7 +187,7 @@ export class HealthKitMock extends HealthKit {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
    * Pass in unit (mm=millimeter, cm=centimeter, m=meter, in=inch, ft=foot)
    * @param options {HealthKitOptions}
@@ -197,7 +197,7 @@ export class HealthKitMock extends HealthKit {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
    * no params yet, so this will return all workouts ever of any type
    * @returns {Promise<any>}
@@ -206,7 +206,7 @@ export class HealthKitMock extends HealthKit {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
    *
    * @param options {HealthKitOptions}
@@ -216,7 +216,7 @@ export class HealthKitMock extends HealthKit {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
    *
    * @param options {HealthKitOptions}
@@ -226,7 +226,7 @@ export class HealthKitMock extends HealthKit {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
    *
    * @param options {HealthKitOptions}
@@ -236,7 +236,7 @@ export class HealthKitMock extends HealthKit {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
    *
    * @param options {HealthKitOptions}
@@ -246,7 +246,7 @@ export class HealthKitMock extends HealthKit {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
    *
    * @param options {HealthKitOptions}
@@ -256,7 +256,7 @@ export class HealthKitMock extends HealthKit {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
    *
    * @param options {HealthKitOptions}
@@ -266,7 +266,7 @@ export class HealthKitMock extends HealthKit {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
    *
    * @param options {HealthKitOptions}
@@ -276,7 +276,7 @@ export class HealthKitMock extends HealthKit {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
    *
    * @param options {HealthKitOptions}
@@ -286,7 +286,7 @@ export class HealthKitMock extends HealthKit {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
    *
    * @param options {HealthKitOptions}
@@ -296,5 +296,5 @@ export class HealthKitMock extends HealthKit {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

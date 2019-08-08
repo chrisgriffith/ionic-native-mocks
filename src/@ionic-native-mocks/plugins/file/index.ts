@@ -1,4 +1,4 @@
-import { File } from '@ionic-native/file';
+import { File } from '@ionic-native/file/ngx';
 
 export interface IFile extends Blob {
     /**
@@ -566,7 +566,7 @@ export class FileMock extends File {
         return new Promise((resolve, reject) => {
             resolve(1);
         });
-    };
+    }
     /**
      * Check if a directory exists in a certain path, directory.
      *
@@ -578,7 +578,7 @@ export class FileMock extends File {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Creates a new directory in the specific path.
      * The replace boolean value determines whether to replace an existing directory with the same name.
@@ -594,7 +594,7 @@ export class FileMock extends File {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Remove a directory at a given path.
      *
@@ -607,7 +607,7 @@ export class FileMock extends File {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Move a directory to a given path.
      *
@@ -622,7 +622,7 @@ export class FileMock extends File {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Copy a directory in various methods. If destination directory exists, will fail to copy.
      *
@@ -637,7 +637,7 @@ export class FileMock extends File {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * List files and directory from a given path.
      *
@@ -650,7 +650,7 @@ export class FileMock extends File {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Removes all files and the directory from a desired location.
      *
@@ -663,7 +663,7 @@ export class FileMock extends File {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Check if a file exists in a certain path, directory.
      *
@@ -675,7 +675,7 @@ export class FileMock extends File {
         return new Promise((resolve, reject) => {
             resolve(true);
         });
-    };
+    }
     /**
      * Creates a new file in the specific path.
      * The replace boolean value determines whether to replace an existing file with the same name.
@@ -691,7 +691,7 @@ export class FileMock extends File {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Removes a file from a desired location.
      *
@@ -704,7 +704,7 @@ export class FileMock extends File {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /** Write a new file to the desired location.
      *
      * @param {string} path Base FileSystem. Please refer to the iOS and Android filesystems above
@@ -717,7 +717,7 @@ export class FileMock extends File {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /** Write content to FileEntry.
      *
      * @hidden
@@ -739,7 +739,7 @@ export class FileMock extends File {
         // return new Promise((resolve, reject) => {
         //     resolve();
         // });
-    };
+    }
     /**
      * Read the contents of a file as text.
      *
@@ -751,12 +751,12 @@ export class FileMock extends File {
         return new Promise((resolve, reject) => {
             resolve('');
         });
-    };
+    }
     /**
      * Read file and return data as a base64 encoded data url.
      * A data url is of the form:
      *      data: [<mediatype>][;base64],<data>
-  
+
      * @param {string} path Base FileSystem. Please refer to the iOS and Android filesystems above
      * @param {string} file Name of file, relative to path.
      * @returns {Promise<string>} Returns a Promise that resolves with the contents of the file as data URL or rejects with an error.
@@ -765,7 +765,7 @@ export class FileMock extends File {
         return new Promise((resolve, reject) => {
             resolve('');
         });
-    };
+    }
     /**
      * Read file and return data as a binary data.
      * @param {string} path Base FileSystem. Please refer to the iOS and Android filesystems above
@@ -776,7 +776,7 @@ export class FileMock extends File {
         return new Promise((resolve, reject) => {
             resolve('');
         });
-    };
+    }
     /**
      * Read file and return data as an ArrayBuffer.
      * @param {string} path Base FileSystem. Please refer to the iOS and Android filesystems above
@@ -788,7 +788,7 @@ export class FileMock extends File {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
 
     // private readFile<T>(path, file, readAs) ;
     /**
@@ -805,7 +805,7 @@ export class FileMock extends File {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Copy a file in various methods. If file exists, will fail to copy.
      *
@@ -820,7 +820,7 @@ export class FileMock extends File {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * @hidden
      */
@@ -835,7 +835,7 @@ export class FileMock extends File {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Resolves a local directory url
      * @param directoryUrl {string} directory system url
@@ -846,7 +846,7 @@ export class FileMock extends File {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Get a directory
      * @param directoryEntry {DirectoryEntry} Directory entry, obtained by resolveDirectoryUrl method
@@ -859,7 +859,7 @@ export class FileMock extends File {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Get a file
      * @param directoryEntry {DirectoryEntry} Directory entry, obtained by resolveDirectoryUrl method
@@ -872,5 +872,5 @@ export class FileMock extends File {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
 }

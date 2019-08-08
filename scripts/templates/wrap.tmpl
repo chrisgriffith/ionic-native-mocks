@@ -11,8 +11,8 @@
  *
  */
 import { Injectable } from '@angular/core';
-import { Plugin, Cordova, CordovaProperty, CordovaInstance, InstanceProperty, IonicNativePlugin } from '@ionic-native/core';
-import { Observable } from 'rxjs/Observable';
+import { Plugin, Cordova, CordovaProperty, CordovaInstance, InstanceProperty, IonicNativePlugin } from '@ionic-native/core/ngx';
+import { Observable } from 'rxjs/internal/Observable';
 
 /**
  * @name {{ Plugin_Name }}
@@ -21,7 +21,7 @@ import { Observable } from 'rxjs/Observable';
  *
  * @usage
  * ```typescript
- * import { {{ PluginName }} } from '@ionic-native/{{ plugin-name }}';
+ * import { {{ PluginName }} } from '@ionic-native/{{ plugin-name }}/ngx';
  *
  *
  * constructor(private {{ pluginName }}: {{ PluginName }}) { }

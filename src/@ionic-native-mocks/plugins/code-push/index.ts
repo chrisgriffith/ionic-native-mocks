@@ -1,6 +1,6 @@
-import { CodePush } from '@ionic-native/code-push';
-import { Observable } from 'rxjs/Observable';
-import { Observer } from 'rxjs/Observer';
+import { CodePush } from '@ionic-native/code-push/ngx';
+import { Observable } from 'rxjs/internal/Observable';
+import { Observer } from 'rxjs/internal/types';
 
 /**
  * Defines a package. All fields are non-nullable, except when retrieving the currently running package on the first run of the app,
@@ -228,7 +228,7 @@ export interface DownloadProgress {
  *
  * @usage
  * ```typescript
- * import { CodePush } from '@ionic-native/code-push';
+ * import { CodePush } from '@ionic-native/code-push/ngx';
  *
  * constructor(private codePush: CodePush) { }
  *
@@ -256,7 +256,7 @@ export class CodePushMock extends CodePush {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Gets the pending package information, if any. A pending package is one that has been installed but the application still runs the old code.
      * This happends only after a package has been installed using ON_NEXT_RESTART or ON_NEXT_RESUME mode, but the application was not restarted/resumed yet.
@@ -267,7 +267,7 @@ export class CodePushMock extends CodePush {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Checks with the CodePush server if an update package is available for download.
      *
@@ -283,7 +283,7 @@ export class CodePushMock extends CodePush {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Notifies the plugin that the update operation succeeded and that the application is ready.
      * Calling this function is required on the first run after an update. On every subsequent application run, calling this function is a noop.
@@ -293,13 +293,13 @@ export class CodePushMock extends CodePush {
      * @param notifyFailed Optional callback invoked in case of an error during notifying the plugin.
      * @returns {Promise<void>}
      */
-    notifyApplicationReady(): Promise<void> { return; };
+    notifyApplicationReady(): Promise<void> { return; }
     /**
      * Reloads the application. If there is a pending update package installed using ON_NEXT_RESTART or ON_NEXT_RESUME modes, the update
      * will be immediately visible to the user. Otherwise, calling this function will simply reload the current version of the application.
      * @returns {Promise<void>}
      */
-    restartApplication(): Promise<void> { return; };
+    restartApplication(): Promise<void> { return; }
     /**
      * Convenience method for installing updates in one method call.
      * This method is provided for simplicity, and its behavior can be replicated by using window.codePush.checkForUpdate(), RemotePackage's download() and LocalPackage's install() methods.
@@ -327,5 +327,5 @@ export class CodePushMock extends CodePush {
             observer.next(response);
             observer.complete();
         });
-    };
+    }
 }

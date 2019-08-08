@@ -1,4 +1,4 @@
-import { Camera } from '@ionic-native/camera';
+import { Camera } from '@ionic-native/camera/ngx';
 
 export interface CameraOptions {
     /** Picture quality in range 0-100. Default is 50 */

@@ -1,4 +1,4 @@
-import { FingerprintAIO } from '@ionic-native/fingerprint-aio';
+import { FingerprintAIO } from '@ionic-native/fingerprint-aio/ngx';
 export interface FingerprintOptions {
     /**
      * Key for platform keychain
@@ -23,7 +23,7 @@ export class FingerprintAIOMock extends FingerprintAIO {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Show authentication dialogue
      * @param options {FingerprintOptions} options for platform specific fingerprint API
@@ -33,5 +33,5 @@ export class FingerprintAIOMock extends FingerprintAIO {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

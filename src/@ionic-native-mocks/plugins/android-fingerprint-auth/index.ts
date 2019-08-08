@@ -1,4 +1,4 @@
-import { AndroidFingerprintAuth } from '@ionic-native/android-fingerprint-auth';
+import { AndroidFingerprintAuth } from '@ionic-native/android-fingerprint-auth/ngx';
 export interface AFAAuthOptions {
     /**
      * Required
@@ -110,7 +110,7 @@ export class AndroidFingerprintAuthMock extends AndroidFingerprintAuth {
         return new Promise((resolve, reject) => {
             resolve(reponse);
         });
-    };
+    }
     /**
      * Opens a native dialog fragment to use the device hardware fingerprint scanner to authenticate against fingerprints registered for the device.
      * @param options {AFAAuthOptions} Options
@@ -121,7 +121,7 @@ export class AndroidFingerprintAuthMock extends AndroidFingerprintAuth {
         return new Promise((resolve, reject) => {
             resolve(reponse);
         });
-    };
+    }
     /**
      * Check if service is available
      * @returns {Promise<any>} Returns a Promise that resolves if fingerprint auth is available on the device
@@ -135,7 +135,7 @@ export class AndroidFingerprintAuthMock extends AndroidFingerprintAuth {
         return new Promise((resolve, reject) => {
             resolve(reponse);
         });
-    };
+    }
     /**
      * Delete the cipher used for encryption and decryption by username
      * @returns {Promise<any>} Returns a Promise that resolves if the cipher was successfully deleted
@@ -150,5 +150,5 @@ export class AndroidFingerprintAuthMock extends AndroidFingerprintAuth {
         return new Promise((resolve, reject) => {
             resolve(reponse);
         });
-    };
+    }
 }

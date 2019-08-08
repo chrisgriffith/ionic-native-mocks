@@ -1,5 +1,5 @@
 
-import { AndroidPermissions } from '@ionic-native/android-permissions';
+import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
 
 export class AndroidPermissionsMock extends AndroidPermissions {
     PERMISSION: any;
@@ -12,7 +12,7 @@ export class AndroidPermissionsMock extends AndroidPermissions {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Request permission
      * @param permission {string} The name of the permission to request
@@ -22,7 +22,7 @@ export class AndroidPermissionsMock extends AndroidPermissions {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Request permissions
      * @param permissions {Array<string>} An array with permissions
@@ -32,7 +32,7 @@ export class AndroidPermissionsMock extends AndroidPermissions {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * This function still works now, will not support in the future.
      * @param permission {string} The name of the permission
@@ -42,5 +42,5 @@ export class AndroidPermissionsMock extends AndroidPermissions {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

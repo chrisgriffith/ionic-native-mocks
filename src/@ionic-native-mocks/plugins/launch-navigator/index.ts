@@ -1,4 +1,4 @@
-import { LaunchNavigator } from '@ionic-native/launch-navigator';
+import { LaunchNavigator } from '@ionic-native/launch-navigator/ngx';
 
 export interface LaunchNavigatorOptions {
     /**
@@ -56,7 +56,7 @@ export class LaunchNavigatorMock extends LaunchNavigator {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Determines if the given app is installed and available on the current device.
      * @param app {string}
@@ -66,7 +66,7 @@ export class LaunchNavigatorMock extends LaunchNavigator {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Returns a list indicating which apps are installed and available on the current device.
      * @returns {Promise<string[]>}
@@ -76,7 +76,7 @@ export class LaunchNavigatorMock extends LaunchNavigator {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Returns the display name of the specified app.
      * @param app {string}
@@ -85,7 +85,7 @@ export class LaunchNavigatorMock extends LaunchNavigator {
     getAppDisplayName(app: string): string {
         let response: string = '';
         return response;
-    };
+    }
     /**
      * Returns list of supported apps on a given platform.
      * @param platform {string}
@@ -94,7 +94,7 @@ export class LaunchNavigatorMock extends LaunchNavigator {
     getAppsForPlatform(platform: string): string[] {
         let response: Array<string> = [];
         return response;
-    };
+    }
     /**
      * Indicates if an app on a given platform supports specification of transport mode.
      * @param app {string} specified as a string, you can use one of the constants, e.g `LaunchNavigator.APP.GOOGLE_MAPS`
@@ -104,7 +104,7 @@ export class LaunchNavigatorMock extends LaunchNavigator {
     supportsTransportMode(app: string, platform: string): boolean {
              let response: boolean = true;
         return response;
-    };
+    }
     /**
      * Returns the list of transport modes supported by an app on a given platform.
      * @param app {string}
@@ -114,7 +114,7 @@ export class LaunchNavigatorMock extends LaunchNavigator {
     getTransportModes(app: string, platform: string): string[] {
         let response: Array<string> = [];
         return response;
-    };
+    }
     /**
      * Indicates if an app on a given platform supports specification of launch mode.
      * Note that currently only Google Maps on Android does.
@@ -125,7 +125,7 @@ export class LaunchNavigatorMock extends LaunchNavigator {
     supportsLaunchMode(app: string, platform: string): boolean {
              let response: boolean = true;
         return response;
-    };
+    }
     /**
      * Indicates if an app on a given platform supports specification of start location.
      * @param app {string}
@@ -135,7 +135,7 @@ export class LaunchNavigatorMock extends LaunchNavigator {
     supportsStart(app: string, platform: string): boolean {
              let response: boolean = true;
         return response;
-    };
+    }
     /**
      * @param app {string}
      * @param platform {string}
@@ -144,7 +144,7 @@ export class LaunchNavigatorMock extends LaunchNavigator {
     supportsStartName(app: string, platform: string): boolean {
         let response: boolean = true;
         return response;
-    };
+    }
     /**
      * @param app {string}
      * @param platform {string}
@@ -153,12 +153,12 @@ export class LaunchNavigatorMock extends LaunchNavigator {
     supportsDestName(app: string, platform: string): boolean {
         let response: boolean = true;
         return response;
-    };
+    }
     /**
      * @param destination {string | number[]}
      * @param options {LaunchNavigatorOptions}
      */
-    userSelect(destination: string | number[], options: LaunchNavigatorOptions): void {};
+    userSelect(destination: string | number[], options: LaunchNavigatorOptions): void {}
     APP: any;
     TRANSPORT_MODE: any;
 }

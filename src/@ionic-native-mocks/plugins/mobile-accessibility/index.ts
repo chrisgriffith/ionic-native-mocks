@@ -1,4 +1,4 @@
-import { MobileAccessibility } from '@ionic-native/mobile-accessibility';
+import { MobileAccessibility } from '@ionic-native/mobile-accessibility/ngx';
 
 export class MobileAccessibilityMock extends MobileAccessibility {
     MobileAccessibilityNotifications: {
@@ -30,7 +30,7 @@ export class MobileAccessibilityMock extends MobileAccessibility {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * An iOS-specific proxy for the MobileAccessibility.isScreenReaderRunning method
      * @returns {Promise<boolean>} A result method to receive the boolean result asynchronously from the native MobileAccessibility plugin.
@@ -40,7 +40,7 @@ export class MobileAccessibilityMock extends MobileAccessibility {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * An Android/Amazon Fire OS-specific proxy for the MobileAccessibility.isScreenReaderRunning method.
      * @returns {Promise<boolean>}  A result method to receive the boolean result asynchronously from the native MobileAccessibility plugin.
@@ -50,7 +50,7 @@ export class MobileAccessibilityMock extends MobileAccessibility {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * On Android, this method returns true if ChromeVox is active and properly initialized with access to the text to speech API in the WebView.
      * If TalkBack is running but ChromeVox is not active, this method is useful to alert the user of a potential problem.
@@ -61,7 +61,7 @@ export class MobileAccessibilityMock extends MobileAccessibility {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      *
      * @returns {Promise<boolean>} Returns the result
@@ -71,7 +71,7 @@ export class MobileAccessibilityMock extends MobileAccessibility {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      *
      * @returns {Promise<boolean>} Returns the result
@@ -81,7 +81,7 @@ export class MobileAccessibilityMock extends MobileAccessibility {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      *
      * @returns {Promise<boolean>} Returns the result
@@ -91,7 +91,7 @@ export class MobileAccessibilityMock extends MobileAccessibility {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      *
      * @returns {Promise<boolean>} Returns the result
@@ -101,7 +101,7 @@ export class MobileAccessibilityMock extends MobileAccessibility {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      *
      * @returns {Promise<boolean>} Returns the result
@@ -111,7 +111,7 @@ export class MobileAccessibilityMock extends MobileAccessibility {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      *
      * @returns {Promise<boolean>} Returns the result
@@ -121,7 +121,7 @@ export class MobileAccessibilityMock extends MobileAccessibility {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      *
      * @returns {Promise<boolean>} Returns the result
@@ -131,7 +131,7 @@ export class MobileAccessibilityMock extends MobileAccessibility {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      *
      * @returns {Promise<boolean>} Returns the result
@@ -141,7 +141,7 @@ export class MobileAccessibilityMock extends MobileAccessibility {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      *
      * @returns {Promise<boolean>} Returns the result
@@ -151,7 +151,7 @@ export class MobileAccessibilityMock extends MobileAccessibility {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      *
      * @returns {Promise<boolean>} Returns the result
@@ -161,7 +161,7 @@ export class MobileAccessibilityMock extends MobileAccessibility {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      *
      * @returns {Promise<boolean>} Returns the result
@@ -171,7 +171,7 @@ export class MobileAccessibilityMock extends MobileAccessibility {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      *
      * @returns {Promise<boolean>} Returns the result
@@ -181,7 +181,7 @@ export class MobileAccessibilityMock extends MobileAccessibility {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      *
      * @returns {Promise<boolean>} Returns the result
@@ -191,7 +191,7 @@ export class MobileAccessibilityMock extends MobileAccessibility {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      *
      * * @returns {Promise<number>} Returns the result
@@ -201,20 +201,20 @@ export class MobileAccessibilityMock extends MobileAccessibility {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * @param textZoom {number} A percentage value by which text in the WebView should be scaled.
      */
-    setTextZoom(textZoom: number): void {};
+    setTextZoom(textZoom: number): void {}
     /**
      *
      */
-    updateTextZoom(): void {};
+    updateTextZoom(): void {}
     /**
      * A Boolean value which specifies whether to use the preferred text zoom of a default percent value of 100.
      * @param value {boolean} Returns the result
      */
-    usePreferredTextZoom(value: boolean): void {};
+    usePreferredTextZoom(value: boolean): void {}
     /**
      * Posts a notification with a string for the screen reader to announce if it is running.
      * @param mobileAccessibilityNotification {any}
@@ -226,16 +226,16 @@ export class MobileAccessibilityMock extends MobileAccessibility {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Speaks a given string through the screenreader. On Android, if ChromeVox is active, it will use the specified queueMode and properties.
      * @param value {string}
      * @param queueMode {mumber}
      * @param properties {any}
      */
-    speak(value: string, queueMode?: number, properties?: any): void {};
+    speak(value: string, queueMode?: number, properties?: any): void {}
     /**
      * Stops speech.
      */
-    stop(): void {};
+    stop(): void {}
 }

@@ -1,4 +1,4 @@
-import { Dialogs } from '@ionic-native/dialogs';
+import { Dialogs } from '@ionic-native/dialogs/ngx';
 
 export interface DialogsPromptCallback {
     /**
@@ -23,7 +23,7 @@ export class DialogsMock extends Dialogs {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Displays a customizable confirmation dialog box.
      * @param {string} message Dialog message.
@@ -35,7 +35,7 @@ export class DialogsMock extends Dialogs {
         return new Promise((resolve, reject) => {
             resolve(1);
         });
-    };
+    }
     /**
      * Displays a native dialog box that is more customizable than the browser's prompt function.
      * @param {string} message Dialog message.
@@ -50,10 +50,10 @@ export class DialogsMock extends Dialogs {
             resolve(theResult);
         });
 
-    };
+    }
     /**
      * The device plays a beep sound.
      * @param {numbers} times The number of times to repeat the beep.
      */
-    beep(times: number): void {};
+    beep(times: number): void {}
 }

@@ -1,4 +1,4 @@
-import { QQSDK } from '@ionic-native/qqsdk';
+import { QQSDK } from '@ionic-native/qqsdk/ngx';
 export interface QQShareOptions {
     /**
      * The clinet type, QQ or TIM
@@ -65,12 +65,12 @@ export class QQSDKMock extends QQSDK {
          return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     logout(): Promise<any> {
          return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Detect if the QQ application or TIM application is installed on the device.
      *
@@ -80,7 +80,7 @@ export class QQSDKMock extends QQSDK {
          return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * shareText
      * @param options
@@ -90,7 +90,7 @@ export class QQSDKMock extends QQSDK {
          return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * shareImage
      * @param options
@@ -100,7 +100,7 @@ export class QQSDKMock extends QQSDK {
          return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * shareNews
      * @param options
@@ -110,7 +110,7 @@ export class QQSDKMock extends QQSDK {
          return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * shareAudio
      * @param options
@@ -120,5 +120,5 @@ export class QQSDKMock extends QQSDK {
          return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

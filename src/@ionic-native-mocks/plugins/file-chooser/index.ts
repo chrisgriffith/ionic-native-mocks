@@ -1,4 +1,4 @@
-import { FileChooser } from '@ionic-native/file-chooser';
+import { FileChooser } from '@ionic-native/file-chooser/ngx';
 
 export class FileChooserMock extends FileChooser {
     /**
@@ -9,5 +9,5 @@ export class FileChooserMock extends FileChooser {
         return new Promise((resolve, reject) => {
             resolve('');
         });
-    };
+    }
 }

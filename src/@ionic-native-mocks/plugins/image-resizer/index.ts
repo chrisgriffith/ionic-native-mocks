@@ -1,4 +1,4 @@
-import { ImageResizer } from '@ionic-native/image-resizer';
+import { ImageResizer } from '@ionic-native/image-resizer/ngx';
 
 export interface ImageResizerOptions {
     /**
@@ -39,5 +39,5 @@ export class ImageResizerMock extends ImageResizer {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

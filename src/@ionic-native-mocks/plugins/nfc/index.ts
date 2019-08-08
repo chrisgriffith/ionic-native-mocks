@@ -1,6 +1,6 @@
-import { NFC } from '@ionic-native/nfc';
-import { Observable } from 'rxjs/Observable';
-import { Observer } from 'rxjs/Observer';
+import { NFC } from '@ionic-native/nfc/ngx';
+import { Observable } from 'rxjs/internal/Observable';
+import { Observer } from 'rxjs/internal/types';
 
 export class NFCMock extends NFC {
     /**
@@ -14,7 +14,7 @@ export class NFCMock extends NFC {
             observer.next('');
             observer.complete();
         });
-    };
+    }
     /**
      * Registers an event listener for tags matching any tag type.
      * @param onSuccess
@@ -26,7 +26,7 @@ export class NFCMock extends NFC {
             observer.next('');
             observer.complete();
         });
-    };
+    }
     /**
      * Registers an event listener for NDEF tags matching a specified MIME type.
      * @param mimeType
@@ -39,7 +39,7 @@ export class NFCMock extends NFC {
             observer.next('');
             observer.complete();
         });
-    };
+    }
     /**
      * Registers an event listener for formatable NDEF tags.
      * @param onSuccess
@@ -51,7 +51,7 @@ export class NFCMock extends NFC {
             observer.next('');
             observer.complete();
         });
-    };
+    }
     /**
      * Writes an NdefMessage(array of ndef records) to a NFC tag.
      * @param message {any[]}
@@ -61,7 +61,7 @@ export class NFCMock extends NFC {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Makes a NFC tag read only. **Warning** this is permanent.
      * @returns {Promise<any>}
@@ -70,7 +70,7 @@ export class NFCMock extends NFC {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Shares an NDEF Message(array of ndef records) via peer-to-peer.
      * @param message An array of NDEF Records.
@@ -80,7 +80,7 @@ export class NFCMock extends NFC {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Stop sharing NDEF data via peer-to-peer.
      * @returns {Promise<any>}
@@ -89,7 +89,7 @@ export class NFCMock extends NFC {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Erase a NDEF tag
      */
@@ -97,7 +97,7 @@ export class NFCMock extends NFC {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Send a file to another device via NFC handover.
      * @param uris A URI as a String, or an array of URIs.
@@ -107,7 +107,7 @@ export class NFCMock extends NFC {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Stop sharing NDEF data via NFC handover.
      * @returns {Promise<any>}
@@ -116,7 +116,7 @@ export class NFCMock extends NFC {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Opens the device's NFC settings.
      * @returns {Promise<any>}
@@ -125,7 +125,7 @@ export class NFCMock extends NFC {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Check if NFC is available and enabled on this device.
      * @returns {Promise<any>}
@@ -134,7 +134,7 @@ export class NFCMock extends NFC {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
     * @{ NFC } class utility methods
     * for use with
@@ -147,7 +147,7 @@ export class NFCMock extends NFC {
     bytesToString(bytes: number[]): string {
         let response: string = '';
         return response;
-    };
+    }
     /**
      * Convert string to byte array.
      * @param str {string}
@@ -156,7 +156,7 @@ export class NFCMock extends NFC {
     stringToBytes(str: string): number[] {
         let response: Array<number> = [];
         return response;
-    };
+    }
     /**
      * Convert byte array to hex string
      *
@@ -166,14 +166,14 @@ export class NFCMock extends NFC {
     bytesToHexString(bytes: number[]): string {
         let response: string = '';
         return response;
-    };
+    }
 }
 /**
  * @hidden
  */
 export class Ndef {
-    uriRecord(uri: string): any { return; };
-    textRecord(text: string): any { return; };
-    mimeMediaRecord(mimeType: string, payload: string): any { return; };
-    androidApplicationRecord(packageName: string): any { return; };
+    uriRecord(uri: string): any { return; }
+    textRecord(text: string): any { return; }
+    mimeMediaRecord(mimeType: string, payload: string): any { return; }
+    androidApplicationRecord(packageName: string): any { return; }
 }

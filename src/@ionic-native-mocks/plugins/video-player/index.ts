@@ -1,4 +1,4 @@
-import { VideoPlayer } from '@ionic-native/video-player';
+import { VideoPlayer } from '@ionic-native/video-player/ngx';
 /**
  * Options for the video playback using the `play` function.
  */
@@ -26,9 +26,9 @@ export class VideoPlayerMock extends VideoPlayer {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Stops the video playback immediatly.
      */
-    close(): void {};
+    close(): void {}
 }

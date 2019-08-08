@@ -1,6 +1,6 @@
-import { DBMeter } from '@ionic-native/db-meter';
-import { Observable } from 'rxjs/Observable';
-import { Observer } from 'rxjs/Observer';
+import { DBMeter } from '@ionic-native/db-meter/ngx';
+import { Observable } from 'rxjs/internal/Observable';
+import { Observer } from 'rxjs/internal/types';
 
 export class DBMeterMock extends DBMeter {
     start(): Observable<any> {
@@ -8,7 +8,7 @@ export class DBMeterMock extends DBMeter {
             observer.next('');
             observer.complete();
         });
-    };
+    }
     /**
      * Stops listening
      * @hidden
@@ -17,7 +17,7 @@ export class DBMeterMock extends DBMeter {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Check if the DB Meter is listening
      * @returns {Promise<boolean>} Returns a promise that resolves with a boolean that tells us whether the DB meter is listening
@@ -26,7 +26,7 @@ export class DBMeterMock extends DBMeter {
         return new Promise((resolve, reject) => {
             resolve(true);
         });
-    };
+    }
     /**
      * Delete the DB Meter instance
      * @returns {Promise<any>} Returns a promise that will resolve if the instance has been deleted, and rejects if errors occur.
@@ -35,5 +35,5 @@ export class DBMeterMock extends DBMeter {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

@@ -11,7 +11,7 @@ export class NativeStorageMock extends NativeStorage {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Gets a stored item
      * @param reference {string}
@@ -21,7 +21,7 @@ export class NativeStorageMock extends NativeStorage {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Retrieving all keys
      * @returns {Promise<any>}
@@ -30,7 +30,7 @@ export class NativeStorageMock extends NativeStorage {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Removes a single stored item
      * @param reference {string}
@@ -40,7 +40,7 @@ export class NativeStorageMock extends NativeStorage {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Removes all stored values.
      * @returns {Promise<any>}
@@ -49,5 +49,5 @@ export class NativeStorageMock extends NativeStorage {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

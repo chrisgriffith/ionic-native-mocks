@@ -1,4 +1,4 @@
-import { Base64 } from '@ionic-native/base64';
+import { Base64 } from '@ionic-native/base64/ngx';
 
 export class Base64Mock extends Base64 {
     /**
@@ -10,5 +10,5 @@ export class Base64Mock extends Base64 {
         return new Promise((resolve, reject) => {
             resolve('');
         });
-    };
+    }
 }

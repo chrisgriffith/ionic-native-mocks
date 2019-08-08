@@ -1,5 +1,5 @@
 
-import { AppUpdate } from '@ionic-native/app-update';
+import { AppUpdate } from '@ionic-native/app-update/ngx';
 
 export class AppUpdateMock extends AppUpdate {
     /**
@@ -11,5 +11,5 @@ export class AppUpdateMock extends AppUpdate {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

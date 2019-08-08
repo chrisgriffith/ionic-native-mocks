@@ -1,6 +1,6 @@
-import { Firebase } from '@ionic-native/firebase';
-import { Observable } from 'rxjs/Observable';
-import { Observer } from 'rxjs/Observer';
+import { Firebase } from '@ionic-native/firebase/ngx';
+import { Observable } from 'rxjs/internal/Observable';
+import { Observer } from 'rxjs/internal/types';
 
 export class FirebaseMock extends Firebase {
     /**
@@ -11,7 +11,7 @@ export class FirebaseMock extends Firebase {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Get notified when a token is refreshed
      * @return {Observable<any>}
@@ -21,7 +21,7 @@ export class FirebaseMock extends Firebase {
             observer.next('');
             observer.complete();
         });
-    };
+    }
     /**
      * Get notified when the user opens a notification
      * @return {Observable<any>}
@@ -31,7 +31,7 @@ export class FirebaseMock extends Firebase {
             observer.next('');
             observer.complete();
         });
-    };
+    }
     /**
      * Grant permission to receive push notifications
      * @return {Promise<any>}
@@ -40,7 +40,7 @@ export class FirebaseMock extends Firebase {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
    * Check permission to receive push notifications
    * @return {Promise<any>}
@@ -49,7 +49,7 @@ export class FirebaseMock extends Firebase {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Set icon badge number. Set to 0 to clear the badge.
      * @param badgeNumber {number}
@@ -59,7 +59,7 @@ export class FirebaseMock extends Firebase {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Get icon badge number
      * @return {Promise<any>}
@@ -68,7 +68,7 @@ export class FirebaseMock extends Firebase {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Subscribe to a topic
      * @param topic {string}
@@ -78,7 +78,7 @@ export class FirebaseMock extends Firebase {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Unsubscribe from a topic
      * @param topic {string}
@@ -88,7 +88,7 @@ export class FirebaseMock extends Firebase {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Log an event using Analytics
      * @param type {string}
@@ -99,7 +99,7 @@ export class FirebaseMock extends Firebase {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Log an Error using FirebaseCrash
      * @param message {string}
@@ -109,7 +109,7 @@ export class FirebaseMock extends Firebase {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Set the name of the current screen in Analytics
      * @param name {string} Screen name
@@ -119,7 +119,7 @@ export class FirebaseMock extends Firebase {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Set a user id for use in Analytics
      * @param userId {string}
@@ -129,7 +129,7 @@ export class FirebaseMock extends Firebase {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Set a user property for use in Analytics
      * @param name {string}
@@ -140,7 +140,7 @@ export class FirebaseMock extends Firebase {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Fetch Remote Config parameter values for your app
      * @param cacheExpirationSeconds
@@ -150,7 +150,7 @@ export class FirebaseMock extends Firebase {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Activate the Remote Config fetched config
      * @return {Promise<any>}
@@ -159,7 +159,7 @@ export class FirebaseMock extends Firebase {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Retrieve a Remote Config value
      * @param key {string}
@@ -170,7 +170,7 @@ export class FirebaseMock extends Firebase {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Retrieve a Remote Config byte array
      * @param key {string}
@@ -181,7 +181,7 @@ export class FirebaseMock extends Firebase {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Get the current state of the FirebaseRemoteConfig singleton object
      * @return {Promise<any>}
@@ -190,7 +190,7 @@ export class FirebaseMock extends Firebase {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Change the settings for the FirebaseRemoteConfig object's operations
      * @param settings {Object}
@@ -200,7 +200,7 @@ export class FirebaseMock extends Firebase {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Set defaults in the Remote Config
      * @param defaults {Object}
@@ -211,5 +211,5 @@ export class FirebaseMock extends Firebase {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

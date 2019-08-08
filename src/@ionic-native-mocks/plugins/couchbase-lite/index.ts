@@ -1,4 +1,4 @@
-import { CouchbaseLite } from '@ionic-native/couchbase-lite';
+import { CouchbaseLite } from '@ionic-native/couchbase-lite/ngx';
 
 export class CouchbaseLiteMock extends CouchbaseLite {
     /**
@@ -9,5 +9,5 @@ export class CouchbaseLiteMock extends CouchbaseLite {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

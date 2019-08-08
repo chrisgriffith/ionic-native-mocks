@@ -1,4 +1,4 @@
-import { KeychainTouchId } from '@ionic-native/keychain-touch-id';
+import { KeychainTouchId } from '@ionic-native/keychain-touch-id/ngx';
 
 export class KeychainTouchIdMock extends KeychainTouchId {
     /**
@@ -10,7 +10,7 @@ export class KeychainTouchIdMock extends KeychainTouchId {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Encrypts and Saves a password under the key in the device keychain, which can be retrieved after
      * successful authentication using fingerprint
@@ -23,7 +23,7 @@ export class KeychainTouchIdMock extends KeychainTouchId {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Opens the fingerprint dialog, for the given key, showing an additional message. Promise will resolve
      * with the password stored in keychain or will resolve an error code, where -1 indicated not available.
@@ -36,7 +36,7 @@ export class KeychainTouchIdMock extends KeychainTouchId {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Checks if there is a password stored within the keychain for the given key.
      * @param key {string} the key you want to check from keychain
@@ -47,7 +47,7 @@ export class KeychainTouchIdMock extends KeychainTouchId {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Deletes the password stored under given key from the keychain.
      * @param key {string} the key you want to delete from keychain
@@ -58,10 +58,10 @@ export class KeychainTouchIdMock extends KeychainTouchId {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Sets the language of the fingerprint dialog
      * @param locale {string} locale subtag from [this list](https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry).
      */
-    setLocale(locale: string): void {};
+    setLocale(locale: string): void {}
 }

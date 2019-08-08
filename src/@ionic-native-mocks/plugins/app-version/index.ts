@@ -1,4 +1,4 @@
-import { AppVersion } from '@ionic-native/app-version';
+import { AppVersion } from '@ionic-native/app-version/ngx';
 
 export class AppVersionMock extends AppVersion {
     /**
@@ -9,7 +9,7 @@ export class AppVersionMock extends AppVersion {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Returns the package name of the app
      * @returns {Promise<any>}
@@ -18,7 +18,7 @@ export class AppVersionMock extends AppVersion {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Returns the build identifier of the app
      * @returns {Promise<any>}
@@ -27,7 +27,7 @@ export class AppVersionMock extends AppVersion {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Returns the version of the app
      * @returns {Promise<any>}
@@ -36,5 +36,5 @@ export class AppVersionMock extends AppVersion {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

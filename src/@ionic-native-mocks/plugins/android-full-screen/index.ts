@@ -1,4 +1,4 @@
-import { AndroidFullScreen } from '@ionic-native/android-full-screen';
+import { AndroidFullScreen } from '@ionic-native/android-full-screen/ngx';
 
 export class AndroidFullScreenMock extends AndroidFullScreen {
     /**
@@ -9,7 +9,7 @@ export class AndroidFullScreenMock extends AndroidFullScreen {
         return new Promise((resolve, reject) => {
             resolve(null);
         });
-    };
+    }
 
     /**
      * Is immersive mode supported?
@@ -19,7 +19,7 @@ export class AndroidFullScreenMock extends AndroidFullScreen {
         return new Promise((resolve, reject) => {
             resolve(null);
         });
-    };
+    }
     /**
      * The width of the screen in immersive mode.
      * @return {Promise<number>}
@@ -29,7 +29,7 @@ export class AndroidFullScreenMock extends AndroidFullScreen {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * The height of the screen in immersive mode.
      * @return {Promise<number>}
@@ -39,7 +39,7 @@ export class AndroidFullScreenMock extends AndroidFullScreen {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Hide system UI until user interacts.
      * @return {Promise<void>}
@@ -48,7 +48,7 @@ export class AndroidFullScreenMock extends AndroidFullScreen {
         return new Promise((resolve, reject) => {
             resolve(null);
         });
-    };
+    }
     /**
      * Show system UI.
      * @return {Promise<void>}
@@ -57,7 +57,7 @@ export class AndroidFullScreenMock extends AndroidFullScreen {
         return new Promise((resolve, reject) => {
             resolve(null);
         });
-    };
+    }
     /**
      * Extend your app underneath the status bar (Android 4.4+ only).
      * @return {Promise<void>}
@@ -66,7 +66,7 @@ export class AndroidFullScreenMock extends AndroidFullScreen {
         return new Promise((resolve, reject) => {
             resolve(null);
         });
-    };
+    }
     /**
      * Extend your app underneath the system UI (Android 4.4+ only).
      * @return {Promise<void>}
@@ -75,7 +75,7 @@ export class AndroidFullScreenMock extends AndroidFullScreen {
         return new Promise((resolve, reject) => {
             resolve(null);
         });
-    };
+    }
     /**
      * Hide system UI and keep it hidden (Android 4.4+ only).
      * @return {Promise<void>}
@@ -84,5 +84,5 @@ export class AndroidFullScreenMock extends AndroidFullScreen {
         return new Promise((resolve, reject) => {
             resolve(null);
         });
-    };
+    }
 }

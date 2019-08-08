@@ -1,6 +1,6 @@
-import { DeviceOrientation } from '@ionic-native/device-orientation';
-import { Observable } from 'rxjs/Observable';
-import { Observer } from 'rxjs/Observer';
+import { DeviceOrientation } from '@ionic-native/device-orientation/ngx';
+import { Observable } from 'rxjs/internal/Observable';
+import { Observer } from 'rxjs/internal/types';
 
 export interface DeviceOrientationCompassHeading {
     /**
@@ -39,7 +39,7 @@ export class DeviceOrientationMock extends DeviceOrientation {
         return new Promise((resolve, reject) => {
             resolve(data);
         });
-};
+}
     /**
      * Get the device current heading at a regular interval
      *
@@ -54,5 +54,5 @@ export class DeviceOrientationMock extends DeviceOrientation {
             observer.next(data);
             observer.complete();
         });
-    };
+    }
 }

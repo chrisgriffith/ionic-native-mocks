@@ -1,4 +1,4 @@
-import { NativeRingtones } from '@ionic-native/native-ringtones';
+import { NativeRingtones } from '@ionic-native/native-ringtones/ngx';
 
 export class NativeRingtonesMock extends NativeRingtones {
     /**
@@ -9,7 +9,7 @@ export class NativeRingtonesMock extends NativeRingtones {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * This function starts playing the ringtone
      * @param {string} ringtoneUri The path to the ringtone file
@@ -19,7 +19,7 @@ export class NativeRingtonesMock extends NativeRingtones {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * This function stops playing the ringtone
      * @param {string} ringtoneUri The path to the ringtone file
@@ -29,5 +29,5 @@ export class NativeRingtonesMock extends NativeRingtones {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

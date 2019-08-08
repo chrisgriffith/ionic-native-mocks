@@ -1,4 +1,4 @@
-import { SMS } from '@ionic-native/sms';
+import { SMS } from '@ionic-native/sms/ngx';
 /**
  * Options for sending an SMS
  */
@@ -28,7 +28,7 @@ export class SMSMock extends SMS {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * This function lets you know if the app has permission to send SMS
      * @return {Promise<boolean>} returns a promise that resolves with a boolean that indicates if we have permission
@@ -38,5 +38,5 @@ export class SMSMock extends SMS {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
 }

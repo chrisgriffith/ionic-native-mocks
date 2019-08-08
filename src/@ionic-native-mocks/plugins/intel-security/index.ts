@@ -1,4 +1,4 @@
-import { IntelSecurity, IntelSecurityData, IntelSecurityStorage } from '@ionic-native/intel-security';
+import { IntelSecurity, IntelSecurityData, IntelSecurityStorage } from '@ionic-native/intel-security/ngx';
 
 export interface IntelSecurityDataOptions {
     /** Non-empty string. **/
@@ -51,7 +51,7 @@ export class IntelSecurityDataMock extends IntelSecurityData {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * This creates a new instance of secure data (using sealed data)
      * @param options {Object}
@@ -65,7 +65,7 @@ export class IntelSecurityDataMock extends IntelSecurityData {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * This returns the plain-text data of the secure data instance.
      * @param instanceID {Number} Secure data instance ID.
@@ -76,7 +76,7 @@ export class IntelSecurityDataMock extends IntelSecurityData {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * This returns the sealed chunk of a secure data instance.
      * @param instanceID {any} Secure data instance ID.
@@ -86,7 +86,7 @@ export class IntelSecurityDataMock extends IntelSecurityData {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * This returns the tag of the secure data instance.
      * @param instanceID {any} Secure data instance ID.
@@ -97,7 +97,7 @@ export class IntelSecurityDataMock extends IntelSecurityData {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * This returns the data policy of the secure data instance.
      * @param instanceID {any} Secure data instance ID.
@@ -107,7 +107,7 @@ export class IntelSecurityDataMock extends IntelSecurityData {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * This returns an array of the data owners unique IDs.
      * @param instanceID {any} Secure data instance ID.
@@ -118,7 +118,7 @@ export class IntelSecurityDataMock extends IntelSecurityData {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * This returns the data creator unique ID.
      * @param instanceID {any} Secure data instance ID.
@@ -129,7 +129,7 @@ export class IntelSecurityDataMock extends IntelSecurityData {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * This returns an array of the trusted web domains of the secure data instance.
      * @param instanceID {any} Secure data instance ID.
@@ -140,7 +140,7 @@ export class IntelSecurityDataMock extends IntelSecurityData {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * This changes the extra key of a secure data instance. To successfully replace the extra key, the calling application must have sufficient access to the plain-text data.
      * @param options {Object}
@@ -152,7 +152,7 @@ export class IntelSecurityDataMock extends IntelSecurityData {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * This releases a secure data instance.
      * @param instanceID {any} Secure data instance ID.
@@ -162,7 +162,7 @@ export class IntelSecurityDataMock extends IntelSecurityData {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }
 /**
  * @hidden
@@ -182,7 +182,7 @@ export class IntelSecurityStorageMock extends IntelSecurityStorage {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * This reads the data from secure storage (indicated by id) and creates a new secure data instance.
      * @param options {Object}
@@ -200,7 +200,7 @@ export class IntelSecurityStorageMock extends IntelSecurityStorage {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * This writes the data contained in a secure data instance into secure storage.
      * @param options {Object}
@@ -217,5 +217,5 @@ export class IntelSecurityStorageMock extends IntelSecurityStorage {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

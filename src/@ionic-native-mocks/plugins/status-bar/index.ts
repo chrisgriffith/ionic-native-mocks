@@ -1,4 +1,4 @@
-import { StatusBar } from '@ionic-native/status-bar';
+import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 export class StatusBarMock extends StatusBar {
      /**
@@ -12,23 +12,23 @@ export class StatusBarMock extends StatusBar {
      *
      * @param {boolean} doesOverlay  Whether the status bar overlays the main app view.
      */
-    overlaysWebView(doesOverlay: boolean): void {};
+    overlaysWebView(doesOverlay: boolean): void {}
     /**
      * Use the default statusbar (dark text, for light backgrounds).
      */
-    styleDefault(): void {};
+    styleDefault(): void {}
     /**
      * Use the lightContent statusbar (light text, for dark backgrounds).
      */
-    styleLightContent(): void {};
+    styleLightContent(): void {}
     /**
      * Use the blackTranslucent statusbar (light text, for dark backgrounds).
      */
-    styleBlackTranslucent(): void {};
+    styleBlackTranslucent(): void {}
     /**
      * Use the blackOpaque statusbar (light text, for dark backgrounds).
      */
-    styleBlackOpaque(): void {};
+    styleBlackOpaque(): void {}
     /**
      * Set the status bar to a specific named color. Valid options:
      * black, darkGray, lightGray, white, gray, red, green, blue, cyan, yellow, magenta, orange, purple, brown.
@@ -37,7 +37,7 @@ export class StatusBarMock extends StatusBar {
      *
      * @param {string} colorName  The name of the color (from above)
      */
-    backgroundColorByName(colorName: string): void {};
+    backgroundColorByName(colorName: string): void {}
     /**
      * Set the status bar to a specific hex color (CSS shorthand supported!).
      *
@@ -45,13 +45,13 @@ export class StatusBarMock extends StatusBar {
      *
      * @param {string} hexString  The hex value of the color.
      */
-    backgroundColorByHexString(hexString: string): void {};
+    backgroundColorByHexString(hexString: string): void {}
     /**
      * Hide the StatusBar
      */
-    hide(): void {};
+    hide(): void {}
     /**
     * Show the StatusBar
     */
-    show(): void {};
+    show(): void {}
 }

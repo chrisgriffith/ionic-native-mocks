@@ -1,4 +1,4 @@
-import { CameraPreview } from '@ionic-native/camera-preview';
+import { CameraPreview } from '@ionic-native/camera-preview/ngx';
 
 export interface CameraPreviewDimensions {
     /** The width of the camera preview, default to window.screen.width */
@@ -83,7 +83,7 @@ export class CameraPreviewMock extends CameraPreview {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Stops the camera preview instance. (iOS & Android)
      * @return {Promise<any>}
@@ -92,7 +92,7 @@ export class CameraPreviewMock extends CameraPreview {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Switch from the rear camera and front camera, if available.
      * @return {Promise<any>}
@@ -101,7 +101,7 @@ export class CameraPreviewMock extends CameraPreview {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Hide the camera preview box.
      * @return {Promise<any>}
@@ -110,7 +110,7 @@ export class CameraPreviewMock extends CameraPreview {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Show the camera preview box.
      * @return {Promise<any>}
@@ -119,7 +119,7 @@ export class CameraPreviewMock extends CameraPreview {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Take the picture (base64)
      * @param [options] {CameraPreviewPictureOptions} size and quality of the picture to take
@@ -129,7 +129,7 @@ export class CameraPreviewMock extends CameraPreview {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      *
      * Set camera color effect.
@@ -141,7 +141,7 @@ export class CameraPreviewMock extends CameraPreview {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Set the zoom (Android)
      * @param [zoom] {number} Zoom value
@@ -151,7 +151,7 @@ export class CameraPreviewMock extends CameraPreview {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
        * Get the maximum zoom (Android)
        * @return {Promise<any>}
@@ -160,7 +160,7 @@ export class CameraPreviewMock extends CameraPreview {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Get current zoom (Android)
      * @return {Promise<any>}
@@ -169,7 +169,7 @@ export class CameraPreviewMock extends CameraPreview {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Set the preview Size
      * @param [dimensions] {CameraPreviewDimensions}
@@ -179,7 +179,7 @@ export class CameraPreviewMock extends CameraPreview {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Get focus mode
      * @return {Promise<any>}
@@ -188,7 +188,7 @@ export class CameraPreviewMock extends CameraPreview {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Set the focus mode
      * @param [focusMode] {string} 'fixed', 'auto', 'continuous-picture', 'continuous-video' (iOS & Android), 'edof', 'infinity', 'macro' (Android Only)
@@ -198,7 +198,7 @@ export class CameraPreviewMock extends CameraPreview {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Get supported focus modes
      * @return {Promise<any>}
@@ -207,7 +207,7 @@ export class CameraPreviewMock extends CameraPreview {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Get the current flash mode
      * @return {Promise<any>}
@@ -216,7 +216,7 @@ export class CameraPreviewMock extends CameraPreview {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Set the flashmode
      * @param [flashMode] {string} 'off' (iOS & Android), 'on' (iOS & Android), 'auto' (iOS & Android), 'torch' (Android)
@@ -226,7 +226,7 @@ export class CameraPreviewMock extends CameraPreview {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Get supported flash modes
      * @return {Promise<any>}
@@ -235,7 +235,7 @@ export class CameraPreviewMock extends CameraPreview {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Get supported picture sizes
      * @return {Promise<any>}
@@ -244,7 +244,7 @@ export class CameraPreviewMock extends CameraPreview {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Get exposure mode
      * @return {Promise<any>}
@@ -253,7 +253,7 @@ export class CameraPreviewMock extends CameraPreview {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Get exposure modes
      * @return {Promise<any>}
@@ -262,7 +262,7 @@ export class CameraPreviewMock extends CameraPreview {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Set exposure mode
      * @param [lock] {string}
@@ -272,7 +272,7 @@ export class CameraPreviewMock extends CameraPreview {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Get exposure compensation (Android)
      * @return {Promise<any>}
@@ -281,7 +281,7 @@ export class CameraPreviewMock extends CameraPreview {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Set exposure compensation (Android)
      * @param [exposureCompensation] {number}
@@ -291,7 +291,7 @@ export class CameraPreviewMock extends CameraPreview {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Get exposure compensation range (Android)
      * @return {Promise<any>}
@@ -300,7 +300,7 @@ export class CameraPreviewMock extends CameraPreview {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Set specific focus point. Note, this assumes the camera is full-screen.
      * @param xPoint {number}
@@ -311,5 +311,5 @@ export class CameraPreviewMock extends CameraPreview {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

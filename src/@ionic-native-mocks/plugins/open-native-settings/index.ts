@@ -1,4 +1,4 @@
-import { OpenNativeSettings } from '@ionic-native/open-native-settings';
+import { OpenNativeSettings } from '@ionic-native/open-native-settings/ngx';
 
 export class OpenNativeSettingsMock extends OpenNativeSettings {
     /**
@@ -10,5 +10,5 @@ export class OpenNativeSettingsMock extends OpenNativeSettings {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

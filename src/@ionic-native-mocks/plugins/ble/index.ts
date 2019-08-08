@@ -1,6 +1,6 @@
-import { BLE } from '@ionic-native/ble';
-import { Observable } from 'rxjs/Observable';
-import { Observer } from 'rxjs/Observer';
+import { BLE } from '@ionic-native/ble/ngx';
+import { Observable } from 'rxjs/internal/Observable';
+import { Observer } from 'rxjs/internal/types';
 
 export class BLEMock extends BLE {
   /**
@@ -21,7 +21,7 @@ export class BLEMock extends BLE {
       observer.next('');
       observer.complete();
     });
-  };
+  }
   /**
        * Scan and discover BLE peripherals until `stopScan` is called.
        *
@@ -121,7 +121,7 @@ export class BLEMock extends BLE {
     return new Promise((resolve, reject) => {
       resolve();
     });
-  };
+  }
   /**
        * Read the value of a characteristic.
        *
@@ -134,7 +134,7 @@ export class BLEMock extends BLE {
     return new Promise((resolve, reject) => {
       resolve();
     });
-  };
+  }
   /**
       * Write the value of a characteristic.
       * @usage

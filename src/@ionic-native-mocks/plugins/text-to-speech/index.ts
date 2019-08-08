@@ -1,4 +1,4 @@
-import { TextToSpeech } from '@ionic-native/text-to-speech';
+import { TextToSpeech } from '@ionic-native/text-to-speech/ngx';
 
 export interface TTSOptions {
     /** text to speak */
@@ -19,7 +19,7 @@ export class TextToSpeechMock extends TextToSpeech {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Stop any current TTS playback
      * @return {Promise<any>}
@@ -28,5 +28,5 @@ export class TextToSpeechMock extends TextToSpeech {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

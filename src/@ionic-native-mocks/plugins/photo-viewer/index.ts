@@ -1,4 +1,4 @@
-import { PhotoViewer } from '@ionic-native/photo-viewer';
+import { PhotoViewer } from '@ionic-native/photo-viewer/ngx';
 
 export class PhotoViewerMock extends PhotoViewer {
     /**
@@ -9,5 +9,5 @@ export class PhotoViewerMock extends PhotoViewer {
      */
     show(url: string, title?: string, options?: {
         share?: boolean;
-    }): void {};
+    }): void {}
 }

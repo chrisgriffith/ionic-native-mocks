@@ -1,4 +1,4 @@
-import { DeviceAccounts } from '@ionic-native/device-accounts';
+import { DeviceAccounts } from '@ionic-native/device-accounts/ngx';
 
 export class DeviceAccountsMocks extends DeviceAccounts {
     /**
@@ -9,7 +9,7 @@ export class DeviceAccountsMocks extends DeviceAccounts {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      *  Get all accounts registered on Android device for requested type
      * @returns {Promise<any>}
@@ -18,7 +18,7 @@ export class DeviceAccountsMocks extends DeviceAccounts {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      *  Get all emails registered on Android device (accounts with 'com.google' type)
      * @returns {Promise<any>}
@@ -27,7 +27,7 @@ export class DeviceAccountsMocks extends DeviceAccounts {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      *  Get the first email registered on Android device
      * @returns {Promise<any>}
@@ -36,5 +36,5 @@ export class DeviceAccountsMocks extends DeviceAccounts {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

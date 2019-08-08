@@ -17,6 +17,7 @@
     "lib": ["es2015", "dom"],
     "sourceMap": true,
     "inlineSources": true,
+    "inlineSourceMap": true,
     "noImplicitAny": true
   },
   "files": []

@@ -1,11 +1,11 @@
-import { Network } from '@ionic-native/network';
-import { Observable } from 'rxjs/Observable';
-import { Observer } from 'rxjs/Observer';
+import { Network } from '@ionic-native/network/ngx';
+import { Observable } from 'rxjs/internal/Observable';
+import { Observer } from 'rxjs/internal/types';
 import 'rxjs/add/observable/merge';
 
 export class NetworkMock extends Network {
     /**
-     * Connection type 
+     * Connection type
      * The `type` property will return one of the following connection types: `unknown`, `ethernet`, `wifi`, `2g`, `3g`, `4g`, `cellular`, `none`
      * @return {string}
      */
@@ -24,7 +24,7 @@ export class NetworkMock extends Network {
             observer.next('');
             observer.complete();
         });
-    };
+    }
     /**
      * Get notified when the device goes offline
      * @returns {Observable<any>} Returns an observable.
@@ -34,7 +34,7 @@ export class NetworkMock extends Network {
             observer.next('');
             observer.complete();
         });
-    };
+    }
     /**
      * Get notified when the device goes online
      * @returns {Observable<any>} Returns an observable.
@@ -44,5 +44,5 @@ export class NetworkMock extends Network {
             observer.next('');
             observer.complete();
         });
-    };
+    }
 }

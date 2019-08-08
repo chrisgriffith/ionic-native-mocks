@@ -1,6 +1,6 @@
-import { AppPreferences } from '@ionic-native/app-preferences';
-import { Observable } from 'rxjs/Observable';
-import { Observer } from 'rxjs/Observer';
+import { AppPreferences } from '@ionic-native/app-preferences/ngx';
+import { Observable } from 'rxjs/internal/Observable';
+import { Observer } from 'rxjs/internal/types';
 
 export class AppPreferencesMock extends AppPreferences {
     /**
@@ -14,7 +14,7 @@ export class AppPreferencesMock extends AppPreferences {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Set a preference value
      *
@@ -39,7 +39,7 @@ export class AppPreferencesMock extends AppPreferences {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Clear preferences
      *
@@ -49,7 +49,7 @@ export class AppPreferencesMock extends AppPreferences {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Show native preferences interface
      *
@@ -59,7 +59,7 @@ export class AppPreferencesMock extends AppPreferences {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Show native preferences interface
      *
@@ -71,7 +71,7 @@ export class AppPreferencesMock extends AppPreferences {
             observer.next('');
             observer.complete();
         });
-    };
+    }
     /**
      * Return named configuration context
      * In iOS you'll get a suite configuration, on Android — named file
@@ -79,8 +79,8 @@ export class AppPreferencesMock extends AppPreferences {
      * @param {string} suiteName suite name
      * @returns {Object} Custom object, bound to that suite
      */
-    suite(suiteName: string): any {};
-    iosSuite(suiteName: string): any {};
+    suite(suiteName: string): any {}
+    iosSuite(suiteName: string): any {}
     /**
      * Return cloud synchronized configuration context
      * Currently supports Windows and iOS/macOS
@@ -88,7 +88,7 @@ export class AppPreferencesMock extends AppPreferences {
      */
     cloudSync(): Object {
         return new Object;
-    };
+    }
     /**
      * Return default configuration context
      * Currently supports Windows and iOS/macOS
@@ -96,5 +96,5 @@ export class AppPreferencesMock extends AppPreferences {
      */
     defaults(): Object {
         return new Object;
-    };
+    }
 }

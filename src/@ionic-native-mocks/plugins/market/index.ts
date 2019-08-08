@@ -1,4 +1,4 @@
-import { Market } from '@ionic-native/market';
+import { Market } from '@ionic-native/market/ngx';
 
 export class MarketMock extends Market {
     /**
@@ -10,7 +10,7 @@ export class MarketMock extends Market {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Search apps by keyword
      * @param keyword {string} Keyword
@@ -20,5 +20,5 @@ export class MarketMock extends Market {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

@@ -1,6 +1,6 @@
-import { BluetoothSerial } from '@ionic-native/bluetooth-serial';
-import { Observable } from 'rxjs/Observable';
-import { Observer } from 'rxjs/Observer';
+import { BluetoothSerial } from '@ionic-native/bluetooth-serial/ngx';
+import { Observable } from 'rxjs/internal/Observable';
+import { Observer } from 'rxjs/internal/types';
 
 export class BluetoothSerialMock extends BluetoothSerial {
     /**
@@ -179,10 +179,10 @@ export class BluetoothSerialMock extends BluetoothSerial {
      * Sets the human readable device name that is broadcasted to other devices
      * @param {string} newName Desired name of device
      */
-    setName(newName: string): void { };
+    setName(newName: string): void { }
     /**
      * Makes the device discoverable by other devices
      * @param {number} discoverableDuration Desired number of seconds device should be discoverable for
      */
-    setDiscoverable(discoverableDuration: number): void { };
+    setDiscoverable(discoverableDuration: number): void { }
 }

@@ -1,6 +1,6 @@
-import { BatteryStatus } from '@ionic-native/battery-status';
-import { Observable } from 'rxjs/Observable';
-import { Observer } from 'rxjs/Observer';
+import { BatteryStatus } from '@ionic-native/battery-status/ngx';
+import { Observable } from 'rxjs/internal/Observable';
+import { Observer } from 'rxjs/internal/types';
 
 export interface BatteryStatusResponse {
     /**
@@ -24,7 +24,7 @@ export class BatteryStatusMock extends BatteryStatus {
             observer.next(response);
             observer.complete();
         });
-    };
+    }
     /**
      * Watch when the battery level goes low
      * @returns {Observable<BatteryStatusResponse>} Returns an observable that pushes a status object
@@ -35,7 +35,7 @@ export class BatteryStatusMock extends BatteryStatus {
             observer.next(response);
             observer.complete();
         });
-    };
+    }
     /**
      * Watch when the battery level goes to critial
      * @returns {Observable<BatteryStatusResponse>} Returns an observable that pushes a status object
@@ -46,5 +46,5 @@ export class BatteryStatusMock extends BatteryStatus {
             observer.next(response);
             observer.complete();
         });
-    };
+    }
 }

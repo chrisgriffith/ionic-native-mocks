@@ -1,6 +1,6 @@
-import { QRScanner } from '@ionic-native/qr-scanner';
-import { Observable } from 'rxjs/Observable';
-import { Observer } from 'rxjs/Observer';
+import { QRScanner } from '@ionic-native/qr-scanner/ngx';
+import { Observable } from 'rxjs/internal/Observable';
+import { Observer } from 'rxjs/internal/types';
 
 export interface QRScannerStatus {
     /**
@@ -68,7 +68,7 @@ export class QRScannerMock extends QRScanner {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Call this method to enable scanning. You must then call the `show` method to make the camera preview visible.
      * @return {Observable<string>} returns an Observable that emits the scanned text. Unsubscribe from the observable to stop scanning.
@@ -79,7 +79,7 @@ export class QRScannerMock extends QRScanner {
             observer.next(response);
             observer.complete();
         });
-    };
+    }
     /**
      * Configures the native webview to have a transparent background, then sets the background of the <body> and <html> DOM elements to transparent, allowing the webview to re-render with the transparent background.
      * @returns {Promise<QRScannerStatus>}
@@ -89,7 +89,7 @@ export class QRScannerMock extends QRScanner {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Configures the native webview to be opaque with a white background, covering the video preview.
      * @returns {Promise<QRScannerStatus>}
@@ -99,7 +99,7 @@ export class QRScannerMock extends QRScanner {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Enable the device's light (for scanning in low-light environments).
      * @returns {Promise<QRScannerStatus>}
@@ -109,7 +109,7 @@ export class QRScannerMock extends QRScanner {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Disable the device's light.
      * @return {Promise<QRScannerStatus>}
@@ -119,7 +119,7 @@ export class QRScannerMock extends QRScanner {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Use front camera
      * @return {Promise<QRScannerStatus>}
@@ -129,7 +129,7 @@ export class QRScannerMock extends QRScanner {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Use back camera
      * @return {Promise<QRScannerStatus>}
@@ -139,7 +139,7 @@ export class QRScannerMock extends QRScanner {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Set camera to be used.
      * @param camera {number} Provide `0` for back camera, and `1` for front camera.
@@ -150,7 +150,7 @@ export class QRScannerMock extends QRScanner {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Pauses the video preview on the current frame and pauses scanning.
      * @return {Promise<QRScannerStatus>}
@@ -160,7 +160,7 @@ export class QRScannerMock extends QRScanner {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Resumse the video preview and resumes scanning.
      * @return {Promise<QRScannerStatus>}
@@ -170,7 +170,7 @@ export class QRScannerMock extends QRScanner {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Returns permission status
      * @return {Promise<QRScannerStatus>}
@@ -180,9 +180,9 @@ export class QRScannerMock extends QRScanner {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Opens settings to edit app permissions.
      */
-    openSettings(): void {};
+    openSettings(): void {}
 }

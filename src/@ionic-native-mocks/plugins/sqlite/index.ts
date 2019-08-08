@@ -1,4 +1,4 @@
-import { SQLite } from '@ionic-native/sqlite';
+import { SQLite } from '@ionic-native/sqlite/ngx';
 
 export interface SQLiteDatabaseConfig {
     /**
@@ -81,7 +81,7 @@ export class SQLiteMock extends SQLite {
         return new Promise((resolve, reject) => {
             resolve(theResult);
         });
-    };
+    }
     /**
      * Verify that both the Javascript and native part of this plugin are installed in your application
      * @returns {Promise<any>}
@@ -90,7 +90,7 @@ export class SQLiteMock extends SQLite {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Deletes a database
      * @param config {SQLiteDatabaseConfig} database configuration
@@ -100,6 +100,6 @@ export class SQLiteMock extends SQLite {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 
 }

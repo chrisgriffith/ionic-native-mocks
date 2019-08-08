@@ -1,5 +1,5 @@
 
-import { AppMinimize } from '@ionic-native/app-minimize';
+import { AppMinimize } from '@ionic-native/app-minimize/ngx';
 
 export class AppMinimizeMock extends AppMinimize {
     /**
@@ -10,5 +10,5 @@ export class AppMinimizeMock extends AppMinimize {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

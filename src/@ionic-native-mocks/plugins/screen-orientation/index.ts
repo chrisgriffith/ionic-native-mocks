@@ -1,6 +1,6 @@
-import { ScreenOrientation } from '@ionic-native/screen-orientation';
-import { Observable } from 'rxjs/Observable';
-import { Observer } from 'rxjs/Observer';
+import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
+import { Observable } from 'rxjs/internal/Observable';
+import { Observer } from 'rxjs/internal/types';
 
 export class ScreenOrientationMock extends ScreenOrientation {
     /**
@@ -23,7 +23,7 @@ export class ScreenOrientationMock extends ScreenOrientation {
         return Observable.create((observer: Observer<any>) => {
             observer.complete();
         });
-    };
+    }
     /**
      * Lock the orientation to the passed value.
      * See below for accepted values
@@ -34,11 +34,11 @@ export class ScreenOrientationMock extends ScreenOrientation {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Unlock and allow all orientations.
      */
-    unlock(): void { };
+    unlock(): void { }
     /**
      * Get the current orientation of the device.
      */

@@ -1,4 +1,4 @@
-import { Push, PushObject } from '@ionic-native/push';
+import { Push, PushObject } from '@ionic-native/push/ngx';
 
 export declare type EventResponse = RegistrationEventResponse & NotificationEventResponse & Error;
 export interface RegistrationEventResponse {
@@ -174,7 +174,7 @@ export class PushMock extends Push {
     init(options: PushOptions): PushObject {
         let response: PushObject = new PushObject( options );
         return response;
-    };
+    }
     /**
      * Check whether the push notification permission has been granted.
      * @return {Promise<{isEnabled: boolean}>} Returns a Promise that resolves with an object with one property: isEnabled, a boolean that indicates if permission has been granted.
@@ -184,5 +184,5 @@ export class PushMock extends Push {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
 }

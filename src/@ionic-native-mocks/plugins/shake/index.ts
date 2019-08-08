@@ -1,6 +1,6 @@
-import { Shake } from '@ionic-native/shake';
-import { Observable } from 'rxjs/Observable';
-import { Observer } from 'rxjs/Observer';
+import { Shake } from '@ionic-native/shake/ngx';
+import { Observable } from 'rxjs/internal/Observable';
+import { Observer } from 'rxjs/internal/types';
 
 export class ShakeMock extends Shake {
     /**
@@ -13,5 +13,5 @@ export class ShakeMock extends Shake {
             observer.next('');
             observer.complete();
         });
-    };
+    }
 }

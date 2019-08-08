@@ -1,6 +1,6 @@
-import { DeviceMotion } from '@ionic-native/device-motion';
-import { Observable } from 'rxjs/Observable';
-import { Observer } from 'rxjs/Observer';
+import { DeviceMotion } from '@ionic-native/device-motion/ngx';
+import { Observable } from 'rxjs/internal/Observable';
+import { Observer } from 'rxjs/internal/types';
 
 export interface DeviceMotionAccelerationData {
     /**
@@ -35,7 +35,7 @@ export class DeviceMotionMock extends DeviceMotion {
             resolve(data );
         });
 
-     };
+     }
     /**
      * Watch the device acceleration. Clear the watch by unsubscribing from the observable.
      * @param {AccelerometerOptions} options list of options for the accelerometer.
@@ -48,5 +48,5 @@ export class DeviceMotionMock extends DeviceMotion {
             observer.next(data);
             observer.complete();
         });
-    };
+    }
 }

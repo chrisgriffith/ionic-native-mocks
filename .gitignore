@@ -1,4 +1,5 @@
 node_modules/
 dist/
 .tmp/
+.vscode/
 .DS_Store

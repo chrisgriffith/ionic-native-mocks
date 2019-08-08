@@ -1,5 +1,5 @@
-import { IBeacon } from '@ionic-native/ibeacon';
-import { Observable } from 'rxjs/Observable';
+import { IBeacon } from '@ionic-native/ibeacon/ngx';
+import { Observable } from 'rxjs/internal/Observable';
 
 export interface Beacon {
     /**
@@ -196,7 +196,7 @@ export class IBeaconMock extends IBeacon {
     Delegate(): IBeaconDelegate {
         let response: IBeaconDelegate;
         return response;
-    };
+    }
     /**
      * Creates a new BeaconRegion
      *
@@ -212,14 +212,14 @@ export class IBeaconMock extends IBeacon {
     BeaconRegion(identifer: string, uuid: string, major?: number, minor?: number, notifyEntryStateOnDisplay?: boolean): BeaconRegion {
         let response: BeaconRegion;
         return response;
-    };
+    }
     /**
      * @returns {IBeaconDelegate} Returns the IBeaconDelegate
      */
     getDelegate(): IBeaconDelegate {
         let response: IBeaconDelegate;
         return response;
-    };
+    }
     /**
      * @param {IBeaconDelegate} delegate An instance of a delegate to register with the native layer.
      *
@@ -228,7 +228,7 @@ export class IBeaconMock extends IBeacon {
     setDelegate(delegate: IBeaconDelegate): IBeaconDelegate {
         let response: IBeaconDelegate;
         return response;
-    };
+    }
     /**
      * Signals the native layer that the client side is ready to consume messages.
      * Readiness here means that it has a {IBeaconDelegate} set by the consumer javascript
@@ -253,7 +253,7 @@ export class IBeaconMock extends IBeacon {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Determines if bluetooth is switched on, according to the native layer.
      * @returns {Promise<boolean>} Returns a promise which is resolved with a {Boolean}
@@ -264,7 +264,7 @@ export class IBeaconMock extends IBeacon {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Enables Bluetooth using the native Layer. (ANDROID ONLY)
      *
@@ -275,7 +275,7 @@ export class IBeaconMock extends IBeacon {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Disables Bluetooth using the native Layer. (ANDROID ONLY)
      *
@@ -286,7 +286,7 @@ export class IBeaconMock extends IBeacon {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Start monitoring the specified region.
      *
@@ -309,7 +309,7 @@ export class IBeaconMock extends IBeacon {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Stop monitoring the specified region.  It is valid to call
      * stopMonitoringForRegion: for a region that was registered for monitoring
@@ -328,7 +328,7 @@ export class IBeaconMock extends IBeacon {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Request state the for specified region. When result is ready
      * didDetermineStateForRegion is triggered. This can be any region,
@@ -346,7 +346,7 @@ export class IBeaconMock extends IBeacon {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Start ranging the specified beacon region.
      *
@@ -365,7 +365,7 @@ export class IBeaconMock extends IBeacon {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Stop ranging the specified region.  It is valid to call
      * stopMonitoringForRegion: for a region that was registered for ranging
@@ -384,7 +384,7 @@ export class IBeaconMock extends IBeacon {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Queries the native layer to determine the current authorization in effect.
      *
@@ -396,7 +396,7 @@ export class IBeaconMock extends IBeacon {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * For iOS 8 and above only. The permission model has changed by Apple in iOS 8, making it necessary for apps to
      * explicitly request permissions via methods like these:
@@ -410,7 +410,7 @@ export class IBeaconMock extends IBeacon {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * See the documentation of {@code requestWhenInUseAuthorization} for further details.
      *
@@ -421,7 +421,7 @@ export class IBeaconMock extends IBeacon {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      *
      * @returns {Promise<Region[]>} Returns a promise which is resolved with an {Array}
@@ -432,7 +432,7 @@ export class IBeaconMock extends IBeacon {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      *
      * @returns {Promise<Region[]>} Returns a promise which is resolved with an {Array}
@@ -443,7 +443,7 @@ export class IBeaconMock extends IBeacon {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Determines if ranging is available or not, according to the native layer.
      * @returns {Promise<boolean>} Returns a promise which is resolved with a {Boolean}
@@ -454,7 +454,7 @@ export class IBeaconMock extends IBeacon {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Determines if region type is supported or not, according to the native layer.
      *
@@ -469,7 +469,7 @@ export class IBeaconMock extends IBeacon {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Start advertising the specified region.
      *
@@ -491,7 +491,7 @@ export class IBeaconMock extends IBeacon {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Stop advertising as a beacon.
      *
@@ -504,7 +504,7 @@ export class IBeaconMock extends IBeacon {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Determines if advertising is available or not, according to the native layer.
      * @returns {Promise<any>} Returns a promise which is resolved with a {Boolean}
@@ -515,7 +515,7 @@ export class IBeaconMock extends IBeacon {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Determines if advertising is currently active, according to the native layer.
      * @returns {Promise<any>} Returns a promise which is resolved with a {Boolean}
@@ -526,7 +526,7 @@ export class IBeaconMock extends IBeacon {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Disables debug logging in the native layer. Use this method if you want
      * to prevent this plugin from writing to the device logs.
@@ -538,7 +538,7 @@ export class IBeaconMock extends IBeacon {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Enables the posting of debug notifications in the native layer. Use this method if you want
      * to allow the plugin the posting local notifications.
@@ -551,7 +551,7 @@ export class IBeaconMock extends IBeacon {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Disables the posting of debug notifications in the native layer. Use this method if you want
      * to prevent the plugin from posting local notifications.
@@ -563,7 +563,7 @@ export class IBeaconMock extends IBeacon {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Enables debug logging in the native layer. Use this method if you want
      * a debug the inner workings of this plugin.
@@ -575,7 +575,7 @@ export class IBeaconMock extends IBeacon {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Appends the provided [message] to the device logs.
      * Note: If debug logging is turned off, this won't do anything.
@@ -590,5 +590,5 @@ export class IBeaconMock extends IBeacon {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

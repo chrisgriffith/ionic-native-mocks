@@ -1,7 +1,7 @@
 
-import { Broadcaster } from '@ionic-native/broadcaster';
-import { Observable } from 'rxjs/Observable';
-import { Observer } from 'rxjs/Observer';
+import { Broadcaster } from '@ionic-native/broadcaster/ngx';
+import { Observable } from 'rxjs/internal/Observable';
+import { Observer } from 'rxjs/internal/types';
 
 export class BroadcasteMock extends Broadcaster {
     /**
@@ -15,7 +15,7 @@ export class BroadcasteMock extends Broadcaster {
             observer.next(response);
             observer.complete();
         });
-    };
+    }
     /**
      * This function sends data to the native code
      * @param eventName {string}
@@ -26,5 +26,5 @@ export class BroadcasteMock extends Broadcaster {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

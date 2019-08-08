@@ -1,6 +1,6 @@
-import { IndexAppContent } from '@ionic-native/index-app-content';
-import { Observable } from 'rxjs/Observable';
-import { Observer } from 'rxjs/Observer';
+import { IndexAppContent } from '@ionic-native/index-app-content/ngx';
+import { Observable } from 'rxjs/internal/Observable';
+import { Observer } from 'rxjs/internal/types';
 
 export interface IndexItem {
     domain: string;
@@ -32,7 +32,7 @@ export class IndexAppContentMock extends IndexAppContent {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Add or change items to spotlight index
      * @param {Array<IndexItem>} Array of items to index
@@ -43,7 +43,7 @@ export class IndexAppContentMock extends IndexAppContent {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * If user taps on a search result in spotlight then the app will be launched.
      * You can register a Javascript handler to get informed when this happens.
@@ -54,7 +54,7 @@ export class IndexAppContentMock extends IndexAppContent {
             observer.next('');
             observer.complete();
         });
-    };
+    }
     /**
      * Clear all items stored for a given array of domains
      * @param {Array<string>} Array of domains to clear
@@ -65,7 +65,7 @@ export class IndexAppContentMock extends IndexAppContent {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Clear all items stored for a given array of identifiers
      * @param {Array<string>} Array of identifiers to clear
@@ -76,11 +76,11 @@ export class IndexAppContentMock extends IndexAppContent {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * You might want to avoid to update spotlight index too frequently.
      * Without calling this function a subsequent call to manipulate the index is only possible after 1440 minutes (= 24 hours)!
      * @param {number} Numeric value => 0
      */
-    setIndexingInterval(intervalMinutes: number): void {};
+    setIndexingInterval(intervalMinutes: number): void {}
 }

@@ -1,4 +1,4 @@
-import { Stripe } from '@ionic-native/stripe';
+import { Stripe } from '@ionic-native/stripe/ngx';
 
 export class StripeMock extends Stripe {
     /**
@@ -10,7 +10,7 @@ export class StripeMock extends Stripe {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Create Credit Card Token
      * @param params {StripeCardTokenParams} Credit card information
@@ -32,7 +32,7 @@ export class StripeMock extends Stripe {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Create a bank account token
      * @param params {StripeBankAccountParams} Bank account information
@@ -43,7 +43,7 @@ export class StripeMock extends Stripe {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Validates a credit card number
      * @param cardNumber {string} Credit card number
@@ -53,7 +53,7 @@ export class StripeMock extends Stripe {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Validates a CVC number
      * @param cvc {string} CVC number
@@ -63,7 +63,7 @@ export class StripeMock extends Stripe {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Validates an expiry date
      * @param expMonth {string} expiry month
@@ -74,7 +74,7 @@ export class StripeMock extends Stripe {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Get a card type from card number
      * @param cardNumber {string} Card number
@@ -85,7 +85,7 @@ export class StripeMock extends Stripe {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
 }
 
 export interface StripeCardTokenParams {

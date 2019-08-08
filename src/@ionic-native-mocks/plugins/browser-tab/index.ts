@@ -1,4 +1,4 @@
-import { BrowserTab } from '@ionic-native/browser-tab';
+import { BrowserTab } from '@ionic-native/browser-tab/ngx';
 
 export class BrowserTabMock extends BrowserTab {
     /**
@@ -9,7 +9,7 @@ export class BrowserTabMock extends BrowserTab {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Opens the provided URL using a browser tab
      * @param {string} url  The URL you want to open
@@ -19,7 +19,7 @@ export class BrowserTabMock extends BrowserTab {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Closes browser tab
      * @return {Promise<any>} Returns a promise that resolves when close was finished
@@ -28,5 +28,5 @@ export class BrowserTabMock extends BrowserTab {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

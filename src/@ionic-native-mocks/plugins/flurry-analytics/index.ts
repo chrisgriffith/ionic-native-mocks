@@ -1,4 +1,4 @@
-import { FlurryAnalytics, FlurryAnalyticsObject } from '@ionic-native/flurry-analytics';
+import { FlurryAnalytics, FlurryAnalyticsObject } from '@ionic-native/flurry-analytics/ngx';
 
 export interface FlurryAnalyticsOptions {
     /** Flurry API key is required */
@@ -76,7 +76,7 @@ export class FlurryAnalyticsObjectMock extends FlurryAnalyticsObject {
     // private _objectInstance;
     constructor(_objectInstance: any) {
         super(_objectInstance);
-    };
+    }
     /**
      * This function set the Event
      * @param eventName {string} Name of the event
@@ -87,7 +87,7 @@ export class FlurryAnalyticsObjectMock extends FlurryAnalyticsObject {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Start a timed event
      * @param eventName {string} Name of the event
@@ -98,7 +98,7 @@ export class FlurryAnalyticsObjectMock extends FlurryAnalyticsObject {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Complete a timed event
      * @param eventName {string} Name of the event
@@ -109,7 +109,7 @@ export class FlurryAnalyticsObjectMock extends FlurryAnalyticsObject {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * This function log an error
      * @param code
@@ -120,7 +120,7 @@ export class FlurryAnalyticsObjectMock extends FlurryAnalyticsObject {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * This function log a page view
      * @return {Promise<any>}
@@ -129,7 +129,7 @@ export class FlurryAnalyticsObjectMock extends FlurryAnalyticsObject {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * This function set the location for the event
      * (this is will only be used for very course grained statistics like city)
@@ -141,7 +141,7 @@ export class FlurryAnalyticsObjectMock extends FlurryAnalyticsObject {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * This function start the session
      * Only needed for older versions of Android
@@ -151,7 +151,7 @@ export class FlurryAnalyticsObjectMock extends FlurryAnalyticsObject {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * This function end the session
      * Only needed for older versions of Android
@@ -161,7 +161,7 @@ export class FlurryAnalyticsObjectMock extends FlurryAnalyticsObject {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }
 
 export class FlurryAnalyticsMocks extends FlurryAnalytics {
@@ -173,5 +173,5 @@ export class FlurryAnalyticsMocks extends FlurryAnalytics {
     create(options: FlurryAnalyticsOptions): FlurryAnalyticsObject {
         let response: FlurryAnalyticsObject;
         return response;
-    };
+    }
 }

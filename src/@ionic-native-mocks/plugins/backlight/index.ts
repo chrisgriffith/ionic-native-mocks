@@ -1,4 +1,4 @@
-import { Backlight } from '@ionic-native/backlight';
+import { Backlight } from '@ionic-native/backlight/ngx';
 
 export class BacklightMock extends Backlight {
     /**
@@ -9,7 +9,7 @@ export class BacklightMock extends Backlight {
           return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * This function turns backlight off
      * @return {Promise<any>} Returns a promise that resolves when the backlight is off
@@ -18,5 +18,5 @@ export class BacklightMock extends Backlight {
           return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

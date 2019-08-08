@@ -1,4 +1,4 @@
-import { AppRate } from '@ionic-native/app-rate';
+import { AppRate } from '@ionic-native/app-rate/ngx';
 export interface AppRatePreferences {
     /**
      * Custom BCP 47 language tag
@@ -84,9 +84,9 @@ export class AppRateMock extends AppRate {
      * Prompts the user for rating
      * @param {boolean} immediately  Show the rating prompt immediately.
      */
-    promptForRating(immediately: boolean): void { };
+    promptForRating(immediately: boolean): void { }
     /**
      * Immediately send the user to the app store rating page
      */
-    navigateToAppStore(): void { };
+    navigateToAppStore(): void { }
 }

@@ -1,4 +1,4 @@
-import { UniqueDeviceID } from '@ionic-native/unique-device-id';
+import { UniqueDeviceID } from '@ionic-native/unique-device-id/ngx';
 
 export class UniqueDeviceIDMock extends UniqueDeviceID {
     /**
@@ -10,5 +10,5 @@ export class UniqueDeviceIDMock extends UniqueDeviceID {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
 }

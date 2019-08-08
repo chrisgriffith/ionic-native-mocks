@@ -1,4 +1,4 @@
-import { Insomnia } from '@ionic-native/insomnia';
+import { Insomnia } from '@ionic-native/insomnia/ngx';
 
 export class InsomniaMock extends Insomnia {
     /**
@@ -9,7 +9,7 @@ export class InsomniaMock extends Insomnia {
           return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Allows the application to sleep again
      * @returns {Promise<any>}
@@ -18,5 +18,5 @@ export class InsomniaMock extends Insomnia {
           return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

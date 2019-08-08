@@ -1,4 +1,4 @@
-import { HyperTrack } from '@ionic-native/hyper-track';
+import { HyperTrack } from '@ionic-native/hyper-track/ngx';
 
 export class HyperTrackMock extends HyperTrack {
     /**
@@ -10,7 +10,7 @@ export class HyperTrackMock extends HyperTrack {
         return new Promise((resolve, reject) => {
             resolve('');
         });
-    };
+    }
     /**
      * Create a new user to identify the current device or get a user from a lookup id.
      * @param {String} name User's name
@@ -23,7 +23,7 @@ export class HyperTrackMock extends HyperTrack {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Set UserId for the SDK created using HyperTrack APIs. This is useful if you already have a user previously created.
      * @param {String} userId User's ID
@@ -33,7 +33,7 @@ export class HyperTrackMock extends HyperTrack {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Enable the SDK and start tracking. This will fail if there is no user set.
      * @returns {Promise<any>} Returns a Promise that resolves with the userId (String) of the User being tracked if successful, or it gets rejected if an error ocurred. One example of an error is not setting a User with getOrCreateUser() or setUserId() before calling this function.
@@ -42,7 +42,7 @@ export class HyperTrackMock extends HyperTrack {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Create and assign an action to the current user using specified parameters
      * @param {String} type The action type. Can be one from "pickup", "delivery", "dropoff", "visit", "stopover" or "task"
@@ -56,7 +56,7 @@ export class HyperTrackMock extends HyperTrack {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Complete an action from the SDK by its ID
      * @param {String} actionId ID of the Action that will be marked as completed
@@ -66,7 +66,7 @@ export class HyperTrackMock extends HyperTrack {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Complete an action from the SDK using Action's lookupId as parameter
      * @param {String} lookupId Lookup ID of the Action that will be marked as completed
@@ -76,7 +76,7 @@ export class HyperTrackMock extends HyperTrack {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Disable the SDK and stop tracking.
      * Needs user setting (via getOrCreateUser() or setUserId()) first.
@@ -86,7 +86,7 @@ export class HyperTrackMock extends HyperTrack {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Get user's current location from the SDK
      * @returns {Promise<any>} Returns a Promise that resolves with a string representation of the Location's JSON, or it gets rejected if an error ocurred.
@@ -95,7 +95,7 @@ export class HyperTrackMock extends HyperTrack {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Check if Location permission has been granted to the app (for Android).
      * Returns "true" or "false" in success method accordingly.
@@ -105,7 +105,7 @@ export class HyperTrackMock extends HyperTrack {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Request user to grant Location access to the app (for Anrdoid).
      * For Android Marshmallow and above. In other platforms, the Promise is never resolved.
@@ -115,7 +115,7 @@ export class HyperTrackMock extends HyperTrack {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Check if Location services are enabled on the device (for Android).
      * Returns "true" or "false" in success method accordingly.
@@ -125,7 +125,7 @@ export class HyperTrackMock extends HyperTrack {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Request user to enable Location services on the device.
      * For Android Marshmallow and above. In other platforms, the Promise is never resolved.
@@ -135,5 +135,5 @@ export class HyperTrackMock extends HyperTrack {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
 }

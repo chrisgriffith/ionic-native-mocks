@@ -1,4 +1,4 @@
-import { SocialSharing } from '@ionic-native/social-sharing';
+import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 
 export class SocialSharingMock extends SocialSharing {
     /**
@@ -13,7 +13,7 @@ export class SocialSharingMock extends SocialSharing {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Shares using the share sheet with additional options and returns a result object or an error message (requires plugin version 5.1.0+)
      * @param options {object} The options object with the message, subject, files, url and chooserTitle properties.
@@ -29,7 +29,7 @@ export class SocialSharingMock extends SocialSharing {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Checks if you can share via a specific app.
      * @param appName {string} App name or package name. Examples: instagram or com.apple.social.facebook
@@ -43,7 +43,7 @@ export class SocialSharingMock extends SocialSharing {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Shares directly to Twitter
      * @param message {string}
@@ -55,7 +55,7 @@ export class SocialSharingMock extends SocialSharing {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Shares directly to Facebook
      * @param message {string}
@@ -67,7 +67,7 @@ export class SocialSharingMock extends SocialSharing {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Shares directly to Facebook with a paste message hint
      * @param message {string}
@@ -80,7 +80,7 @@ export class SocialSharingMock extends SocialSharing {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Shares directly to Instagram
      * @param message {string}
@@ -91,7 +91,7 @@ export class SocialSharingMock extends SocialSharing {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Shares directly to WhatsApp
      * @param message {string}
@@ -103,7 +103,7 @@ export class SocialSharingMock extends SocialSharing {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Shares directly to a WhatsApp Contact
      * @param receiver {string} Pass phone number on Android, and Addressbook ID (abid) on iOS
@@ -116,7 +116,7 @@ export class SocialSharingMock extends SocialSharing {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Share via SMS
      * @param messge {string} message to send
@@ -127,7 +127,7 @@ export class SocialSharingMock extends SocialSharing {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Checks if you can share via email
      * @returns {Promise<any>}
@@ -136,7 +136,7 @@ export class SocialSharingMock extends SocialSharing {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Share via Email
      * @param message {string}
@@ -151,7 +151,7 @@ export class SocialSharingMock extends SocialSharing {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Share via AppName
      * @param appName {string} App name or package name. Examples: instagram or com.apple.social.facebook
@@ -165,10 +165,10 @@ export class SocialSharingMock extends SocialSharing {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * defines the popup position before call the share method.
      * @param targetBounds {string} left, top, width, height
      */
-    setIPadPopupCoordinates(targetBounds: string): void { };
+    setIPadPopupCoordinates(targetBounds: string): void { }
 }

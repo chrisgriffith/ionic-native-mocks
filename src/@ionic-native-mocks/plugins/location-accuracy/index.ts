@@ -1,4 +1,4 @@
-import { LocationAccuracy } from '@ionic-native/location-accuracy';
+import { LocationAccuracy } from '@ionic-native/location-accuracy/ngx';
 
 export class LocationAccuracyMock extends LocationAccuracy {
     /**
@@ -10,7 +10,7 @@ export class LocationAccuracyMock extends LocationAccuracy {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Indicates if a request is currently in progress
      * @returns {Promise<boolean>} Returns a promise that resolves with a boolean that indicates if a request is currently in progress
@@ -20,7 +20,7 @@ export class LocationAccuracyMock extends LocationAccuracy {
         return new Promise((resolve, reject) => {
             resolve(response);
         });
-    };
+    }
     /**
      * Requests accurate location
      * @param accuracy {number} Accuracy, from 0 to 4. You can use the static properties of this class that start with REQUEST_PRIORITY_
@@ -30,7 +30,7 @@ export class LocationAccuracyMock extends LocationAccuracy {
         return new Promise((resolve, reject) => {
             resolve();
         });
-    };
+    }
     /**
      * Convenience constant
      * @type {number}
