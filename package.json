@@ -206,7 +206,7 @@
     "gulp-replace": "0.5.4",
     "gulp-tslint": "6.1.2",
     "jasmine-core": "^2.99.1",
-    "karma": "^1.7.0",
+    "karma": "^6.3.14",
     "karma-cli": "^1.0.1",
     "karma-jasmine": "^1.1.2",
     "karma-phantomjs-launcher": "^1.0.4",
