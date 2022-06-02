@@ -8,7 +8,7 @@
   "devDependencies": {
     "@angular/compiler": "4.4.4",
     "@angular/compiler-cli": "4.4.4",
-    "@angular/core": "4.4.4",
+    "@angular/core": "11.0.5",
     "@ionic-native/action-sheet": "^4.9.1",
     "@ionic-native/admob-free": "^4.9.1",
     "@ionic-native/admob-pro": "^4.9.1",
