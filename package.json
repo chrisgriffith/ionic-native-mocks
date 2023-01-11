@@ -210,7 +210,7 @@
     "karma-cli": "^1.0.1",
     "karma-jasmine": "^1.1.2",
     "karma-phantomjs-launcher": "^1.0.4",
-    "karma-typescript": "^3.0.12",
+    "karma-typescript": "^5.5.3",
     "karma-typescript-es6-transform": "^5.5.3",
     "lodash": "^4.17.10",
     "minimist": "1.2.6",
