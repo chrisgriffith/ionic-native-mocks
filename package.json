@@ -169,6 +169,7 @@
     "@ionic-native/stepcounter": "^4.9.1",
     "@ionic-native/streaming-media": "^4.9.1",
     "@ionic-native/stripe": "^4.9.1",
+    "@ionic-native/sum-up": "^5.9.0",
     "@ionic-native/taptic-engine": "^4.9.1",
     "@ionic-native/text-to-speech": "^4.9.1",
     "@ionic-native/themeable-browser": "^4.9.1",
